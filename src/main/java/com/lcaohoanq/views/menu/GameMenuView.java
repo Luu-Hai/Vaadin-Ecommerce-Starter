@@ -1,7 +1,9 @@
 package com.lcaohoanq.views.menu;
 
 import com.lcaohoanq.views.MainLayout;
+import com.lcaohoanq.views.userslogin.UsersLoginView;
 import com.vaadin.flow.component.Composite;
+import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.H3;
 import com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment;
@@ -9,6 +11,7 @@ import com.vaadin.flow.component.orderedlayout.FlexComponent.JustifyContentMode;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
+import com.vaadin.flow.server.VaadinSession;
 
 @PageTitle("Snake Game Menu")
 @Route(value = "menu", layout = MainLayout.class)
@@ -23,6 +26,12 @@ public class GameMenuView extends Composite<VerticalLayout> {
     private Button button_Exit = new Button("Exit");
 
     public GameMenuView() {
+
+        if (VaadinSession.getCurrent().getAttribute("user") == null) {
+            UI.getCurrent().navigate(UsersLoginView.class);
+            return;
+        }
+
         getContent().setWidth("100%");
         getContent().getStyle().set("flex-grow", "1");
         getContent().setJustifyContentMode(JustifyContentMode.CENTER);

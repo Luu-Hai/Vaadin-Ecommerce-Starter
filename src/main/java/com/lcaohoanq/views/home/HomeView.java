@@ -1,6 +1,7 @@
 package com.lcaohoanq.views.home;
 
 import com.lcaohoanq.views.MainLayout;
+import com.lcaohoanq.views.menu.GameMenuView;
 import com.lcaohoanq.views.userslogin.UsersLoginView;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
@@ -12,6 +13,7 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.RouteAlias;
+import com.vaadin.flow.server.VaadinSession;
 import com.vaadin.flow.theme.lumo.LumoUtility.Margin;
 
 @PageTitle("Home")
@@ -20,6 +22,11 @@ import com.vaadin.flow.theme.lumo.LumoUtility.Margin;
 public class HomeView extends VerticalLayout {
 
     public HomeView() {
+
+        if(VaadinSession.getCurrent().getAttribute("user") != null){
+            return;
+        }
+
         setSpacing(false);
 
         Image img = new Image("images/empty-plant.png", "placeholder plant");

@@ -2,7 +2,7 @@ package com.lcaohoanq.views.userslogin;
 
 import com.lcaohoanq.utils.ApiUtils;
 import com.lcaohoanq.views.MainLayout;
-import com.lcaohoanq.views.admin.SnakeGameManagement;
+import com.lcaohoanq.views.admin.MenuManagement;
 import com.lcaohoanq.views.menu.GameMenuView;
 import com.vaadin.flow.component.Composite;
 import com.vaadin.flow.component.UI;
@@ -12,7 +12,6 @@ import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.H3;
 import com.vaadin.flow.component.login.LoginForm;
 import com.vaadin.flow.component.login.LoginI18n;
-import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment;
 import com.vaadin.flow.component.orderedlayout.FlexComponent.JustifyContentMode;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
@@ -30,6 +29,12 @@ import java.util.Map;
 public class UsersLoginView extends Composite<VerticalLayout> {
 
     public UsersLoginView() {
+        // Check if the user is already logged in
+        if (VaadinSession.getCurrent().getAttribute("user") != null) {
+            UI.getCurrent().navigate(GameMenuView.class);
+            return;
+        }
+
         VerticalLayout layoutColumn2 = new VerticalLayout();
         LoginForm loginForm = new LoginForm();
         getContent().setWidth("100%");
@@ -112,7 +117,7 @@ public class UsersLoginView extends Composite<VerticalLayout> {
 
     private void checkIsAdmin(String email_phone, String password){
         if(email_phone.equals("admin") && password.equals("admin")){
-            UI.getCurrent().navigate(SnakeGameManagement.class);
+            UI.getCurrent().navigate(MenuManagement.class);
         }
     }
 
