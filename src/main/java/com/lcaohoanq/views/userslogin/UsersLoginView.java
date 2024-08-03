@@ -23,9 +23,11 @@ import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpResponse;
 import java.util.Map;
+import lombok.extern.slf4j.Slf4j;
 
 @PageTitle("Snake Game")
 @Route(value = "users/login", layout = MainLayout.class)
+@Slf4j
 public class UsersLoginView extends Composite<VerticalLayout> {
 
     public UsersLoginView() {
@@ -85,6 +87,8 @@ public class UsersLoginView extends Composite<VerticalLayout> {
 
                         successDialog.add(new H3("Login Successful!"), new Div(closeButton));
                         successDialog.open();
+
+                        log.info("Login successful");
 
                         VaadinSession.getCurrent().setAttribute("user", email_phone);
                         break;
