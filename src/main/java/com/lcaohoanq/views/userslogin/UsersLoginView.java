@@ -50,6 +50,7 @@ public class UsersLoginView extends Composite<VerticalLayout> {
         layoutColumn2.setHeight("min-content");
         layoutColumn2.setJustifyContentMode(JustifyContentMode.CENTER);
         layoutColumn2.setAlignItems(Alignment.CENTER);
+        layoutColumn2.getStyle().set("height", "80vh");
         getContent().add(layoutColumn2);
         layoutColumn2.add(loginForm);
 
