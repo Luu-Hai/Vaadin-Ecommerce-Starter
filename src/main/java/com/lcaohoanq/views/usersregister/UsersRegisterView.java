@@ -6,10 +6,12 @@ import com.lcaohoanq.views.MainLayout;
 import com.vaadin.flow.component.Composite;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
+import com.vaadin.flow.component.checkbox.Checkbox;
 import com.vaadin.flow.component.combobox.ComboBox;
 import com.vaadin.flow.component.datepicker.DatePicker;
 import com.vaadin.flow.component.dialog.Dialog;
 import com.vaadin.flow.component.formlayout.FormLayout;
+import com.vaadin.flow.component.html.Anchor;
 import com.vaadin.flow.component.html.H3;
 import com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment;
 import com.vaadin.flow.component.orderedlayout.FlexComponent.JustifyContentMode;
@@ -52,9 +54,13 @@ public class UsersRegisterView extends Composite<VerticalLayout> {
     private PasswordField textField_Confirmed_Password = new PasswordField("Confirmed password");
     private FormLayout formLayout2Col = new FormLayout();
     private HorizontalLayout layoutRow = new HorizontalLayout();
+    private VerticalLayout buttonLayout = new VerticalLayout();
+    private HorizontalLayout termAndPolicy = new HorizontalLayout();
     private VerticalLayout layoutColumn2 = new VerticalLayout();
+    private Anchor link_Terms = new Anchor("https://www.example.com/terms", "Terms of Service");
+    private Anchor link_Policy = new Anchor("https://www.example.com/privacy", "Privacy Policy");
+    private Checkbox checkbox = new Checkbox();
     private Button button_Save = new Button("Save");
-    private Button button_Cancel = new Button("Cancel");
 
     public UsersRegisterView() {
         getContent().setWidth("100%");
@@ -91,21 +97,15 @@ public class UsersRegisterView extends Composite<VerticalLayout> {
         layoutColumn2.setMaxWidth("800px");
         layoutColumn2.setHeight("min-content");
         layoutColumn2.setFlexGrow(1.0, layoutRow);
+        layoutColumn2.getStyle().set("height", "80vh");
 
-        button_Save.setWidth("min-content");
+        button_Save.setWidth("100%");
         button_Save.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
         button_Save.getStyle().set("cursor", "pointer");
-
-        button_Cancel.setWidth("min-content");
 
         getContent().setFlexGrow(1.0, layoutColumn2);
 
         formLayout2Col.setWidth("100%");
-
-        getContent().add(layoutColumn2);
-        layoutColumn2.add(title);
-        layoutColumn2.add(textField_Email_Phone);
-        layoutColumn2.add(formLayout2Col);
         formLayout2Col.add(textField_First_Name);
         formLayout2Col.add(textField_Last_Name);
         formLayout2Col.add(textField_Address);
@@ -113,9 +113,30 @@ public class UsersRegisterView extends Composite<VerticalLayout> {
         formLayout2Col.add(textField_Password);
         formLayout2Col.add(textField_Confirmed_Password);
         formLayout2Col.add(select_G);
+
+        layoutColumn2.add(title);
+        layoutColumn2.add(textField_Email_Phone);
+        layoutColumn2.add(formLayout2Col);
+        layoutColumn2.add(termAndPolicy);
         layoutColumn2.add(layoutRow);
-        layoutRow.add(button_Save);
-        layoutRow.add(button_Cancel);
+        getContent().add(layoutColumn2);
+
+        checkbox.setLabel("I accept the terms and conditions");
+
+        buttonLayout.setWidthFull();
+        buttonLayout.setPadding(false);
+        buttonLayout.setSpacing(true);
+        buttonLayout.setAlignItems(Alignment.CENTER);
+        buttonLayout.add(link_Terms, button_Save);
+
+        termAndPolicy.setWidthFull();
+        termAndPolicy.setPadding(false);
+        termAndPolicy.setSpacing(true);
+        termAndPolicy.setAlignItems(Alignment.START);
+        termAndPolicy.setJustifyContentMode(JustifyContentMode.START);
+        termAndPolicy.add(checkbox, link_Terms, link_Policy);
+
+        layoutRow.add(buttonLayout);
     }
 
     private void validateFields(String fieldName) {
@@ -132,22 +153,22 @@ public class UsersRegisterView extends Composite<VerticalLayout> {
 
         switch (fieldName) {
             case "emailPhone":
-                if(textField_Email_Phone.isEmpty()){
+                if (textField_Email_Phone.isEmpty()) {
                     textField_Email_Phone.setErrorMessage("Email or Phone Number is required");
                     textField_Email_Phone.setInvalid(true);
-                }else {
-                    if(ValidateUtils.checkTypeAccount(emailPhone)){
+                } else {
+                    if (ValidateUtils.checkTypeAccount(emailPhone)) {
                         if (!emailPhone.matches("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$")) {
                             textField_Email_Phone.setErrorMessage("Invalid email format");
                             textField_Email_Phone.setInvalid(true);
                         } else {
                             textField_Email_Phone.setInvalid(false);
                         }
-                    }else{
+                    } else {
                         if (!emailPhone.matches("(84|0[3|5|7|8|9])[0-9]{8}")) {
                             textField_Email_Phone.setErrorMessage("Invalid phone number format");
                             textField_Email_Phone.setInvalid(true);
-                        }else{
+                        } else {
                             textField_Email_Phone.setInvalid(false);
                         }
                     }
@@ -162,37 +183,38 @@ public class UsersRegisterView extends Composite<VerticalLayout> {
                 break;
             case "lastName":
                 textField_Last_Name.setInvalid(false);
-                if(lastName.isEmpty()){
+                if (lastName.isEmpty()) {
                     textField_Last_Name.setErrorMessage("Last name is required");
                     textField_Last_Name.setInvalid(true);
                 }
                 break;
             case "password":
                 textField_Password.setInvalid(false);
-                if(password.isEmpty()){
+                if (password.isEmpty()) {
                     textField_Password.setErrorMessage("Password is required");
                     textField_Password.setInvalid(true);
                 }
                 break;
             case "confirmedPassword":
                 textField_Confirmed_Password.setInvalid(false);
-                if(confirmedPassword.isEmpty()){
+                if (confirmedPassword.isEmpty()) {
                     textField_Confirmed_Password.setErrorMessage("Confirmed password is required");
                     textField_Confirmed_Password.setInvalid(true);
-                } else if(!confirmedPassword.equals(password)){
-                    textField_Confirmed_Password.setErrorMessage("Confirmed password does not match");
+                } else if (!confirmedPassword.equals(password)) {
+                    textField_Confirmed_Password.setErrorMessage(
+                        "Confirmed password does not match");
                     textField_Confirmed_Password.setInvalid(true);
                 }
                 break;
             case "address":
                 textField_Address.setInvalid(false);
-                if(address.isEmpty()){
+                if (address.isEmpty()) {
                     textField_Address.setErrorMessage("Address is required");
                     textField_Address.setInvalid(true);
                 }
                 break;
             case "birthday":
-                if(birthday == null){
+                if (birthday == null) {
                     datePicker_Birthday.setInvalid(true);
                     datePicker_Birthday.setErrorMessage("Birthday is required");
                 } else {
@@ -218,37 +240,42 @@ public class UsersRegisterView extends Composite<VerticalLayout> {
 
         button_Save.addClickListener(event -> {
             validateAllFields();
-            if (isFormValid()) {
-                try {
-                    HttpResponse<String> response = ApiUtils.postRequest(
-                        "http://localhost:8081/users/register", fetchData());
-                    Dialog dialog;
-                    switch (response.statusCode()) {
-                        case 200:
-                            dialog = new Dialog();
-                            dialog.add(new H3("Register successfully"));
-                            dialog.open();
-                            break;
-                        case 400:
-                            dialog = new Dialog();
-                            dialog.add(new H3("Either email or phone must be provided"));
-                            dialog.open();
-                            break;
-                        default:
-                            dialog = new Dialog();
-                            dialog.add(new H3("An error occurred while creating a new user"));
-                            dialog.open();
-                            break;
+            if(isCheckedBox()){
+                if (isFormValid()) {
+                    try {
+                        HttpResponse<String> response = ApiUtils.postRequest(
+                            "http://localhost:8081/users/register", fetchData());
+                        Dialog dialog;
+                        switch (response.statusCode()) {
+                            case 200:
+                                dialog = new Dialog();
+                                dialog.add(new H3("Register successfully"));
+                                dialog.open();
+                                break;
+                            case 400:
+                                dialog = new Dialog();
+                                dialog.add(new H3("Either email or phone must be provided"));
+                                dialog.open();
+                                break;
+                            default:
+                                dialog = new Dialog();
+                                dialog.add(new H3("An error occurred while creating a new user"));
+                                dialog.open();
+                                break;
+                        }
+                    } catch (Exception e) {
+                        System.out.println(
+                            "An error occurred while creating a new user: " + e.getMessage());
                     }
-                } catch (Exception e) {
-                    System.out.println(
-                        "An error occurred while creating a new user: " + e.getMessage());
                 }
+            }else{
+                checkbox.setErrorMessage("You must accept the terms and conditions");
+                checkbox.setInvalid(true);
             }
         });
     }
 
-    private Map<String, Object> fetchData(){
+    private Map<String, Object> fetchData() {
         String email_phone = textField_Email_Phone.getValue();
         String first_name = textField_First_Name.getValue();
         String last_name = textField_Last_Name.getValue();
@@ -318,6 +345,10 @@ public class UsersRegisterView extends Composite<VerticalLayout> {
             !textField_Address.isInvalid() &&
             (datePicker_Birthday.getValue() != null) &&
             (select_G.getValue() != null);
+    }
+
+    private boolean isCheckedBox(){
+        return checkbox.getValue();
     }
 
     record SampleItem(String value, String label, Boolean disabled) {

@@ -12,6 +12,7 @@ import com.lcaohoanq.views.userslogin.UsersLoginView;
 import com.vaadin.flow.component.Composite;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.button.ButtonVariant;
 import com.vaadin.flow.component.dialog.Dialog;
 import com.vaadin.flow.component.html.H3;
 import com.vaadin.flow.component.notification.Notification;
@@ -56,9 +57,9 @@ public class ForgotPasswordView extends Composite<VerticalLayout> {
     private void initComponent(){
 
         textField_Email_Phone.setWidth("30%");
-        button_Send.setWidth("max-content");
-        button_Send.getStyle().set("background-color", "#006AF5");
-        button_Send.getStyle().set("color", "#FFFFFF");
+        button_Send.setWidth("30%");
+        button_Send.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
+        button_Send.getStyle().set("cursor", "pointer");
 
         layoutColumn2.add(textField_Email_Phone, button_Send);
         layoutColumn2.setAlignItems(Alignment.CENTER);
