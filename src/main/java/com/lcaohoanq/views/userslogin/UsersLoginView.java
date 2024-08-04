@@ -117,6 +117,20 @@ public class UsersLoginView extends Composite<VerticalLayout> {
             }
         });
 
+        // Add forgot password listener
+        loginForm.addForgotPasswordListener(event -> {
+            try {
+                // Specify the URL of the website
+                URI uri = new URI("http://localhost:3000/forgot-password");
+                // Open the website in the default browser
+                if (Desktop.isDesktopSupported() && Desktop.getDesktop().isSupported(Desktop.Action.BROWSE)) {
+                    Desktop.getDesktop().browse(uri);
+                }
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        });
+
     }
 
     private void checkIsAdmin(String email_phone, String password){

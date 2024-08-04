@@ -5,6 +5,8 @@ import com.lcaohoanq.models.User;
 import com.lcaohoanq.utils.ApiUtils;
 import com.lcaohoanq.utils.ValidateUtils;
 import com.lcaohoanq.views.MainLayout;
+import com.lcaohoanq.views.home.HomeView;
+import com.lcaohoanq.views.menu.GameMenuView;
 import com.lcaohoanq.views.resetpassword.ResetPasswordView;
 import com.lcaohoanq.views.userslogin.UsersLoginView;
 import com.vaadin.flow.component.Composite;
@@ -31,7 +33,6 @@ import lombok.Setter;
 @Setter
 public class ForgotPasswordView extends Composite<VerticalLayout> {
 
-    private H3 title = new H3();
     private TextField textField_Email_Phone = new TextField("Email or Phone Number");
     private Button button_Send = new Button("Send");
     private VerticalLayout layoutRow = new VerticalLayout();
@@ -39,6 +40,11 @@ public class ForgotPasswordView extends Composite<VerticalLayout> {
     private User user = new User();
 
     public ForgotPasswordView() {
+        // Check if the user is already logged in
+        if (VaadinSession.getCurrent().getAttribute("user") != null) {
+            return;
+        }
+
         getContent().setWidth("100%");
         getContent().getStyle().set("flex-grow", "1");
         getContent().setJustifyContentMode(JustifyContentMode.CENTER);
@@ -48,23 +54,25 @@ public class ForgotPasswordView extends Composite<VerticalLayout> {
     }
 
     private void initComponent(){
-        title.setText("Forgot Password");
-        title.setWidth("max-content");
 
         textField_Email_Phone.setWidth("30%");
-        button_Send.setWidth("min-content");
+        button_Send.setWidth("max-content");
+        button_Send.getStyle().set("background-color", "#006AF5");
+        button_Send.getStyle().set("color", "#FFFFFF");
 
-        layoutColumn2.add(title, textField_Email_Phone, button_Send);
+        layoutColumn2.add(textField_Email_Phone, button_Send);
         layoutColumn2.setAlignItems(Alignment.CENTER);
-        layoutColumn2.setJustifyContentMode(JustifyContentMode.START);
+        layoutColumn2.setJustifyContentMode(JustifyContentMode.CENTER);
+        layoutColumn2.getStyle().set("height", "80vh");
         layoutColumn2.setPadding(true);
         layoutColumn2.setSpacing(true);
 
         layoutRow.add(layoutColumn2);
-        layoutRow.setAlignItems(Alignment.CENTER);
+        layoutRow.setAlignItems(Alignment.START);
         layoutRow.setJustifyContentMode(JustifyContentMode.START);
         layoutRow.setPadding(true);
         layoutRow.setSpacing(true);
+        layoutRow.getStyle().set("height", "80vh");
 
         getContent().add(layoutRow);
     }

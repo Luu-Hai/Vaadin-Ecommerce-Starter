@@ -132,8 +132,6 @@ public class MainLayout extends AppLayout {
             return new MenuItemInfo[]{ //
                 new MenuItemInfo("Home", LineAwesomeIcon.HOUSE_DAMAGE_SOLID.create(), HomeView.class), //
 
-                new MenuItemInfo("Forgot Password", LineAwesomeIcon.SAD_CRY.create(), ForgotPasswordView.class), //
-
                 new MenuItemInfo("Game Menu", LineAwesomeIcon.GAMEPAD_SOLID.create(), GameMenuView.class), //
 
                 new MenuItemInfo("Scores", LineAwesomeIcon.LIST_SOLID.create(), ScoresView.class), //
@@ -147,6 +145,8 @@ public class MainLayout extends AppLayout {
                 new MenuItemInfo("Login", LineAwesomeIcon.KEY_SOLID.create(), UsersLoginView.class), //
 
                 new MenuItemInfo("Register", LineAwesomeIcon.KEY_SOLID.create(), UsersRegisterView.class), //
+
+                new MenuItemInfo("Forgot Password", LineAwesomeIcon.KEY_SOLID.create(), ForgotPasswordView.class), //
             };
         }
     }
