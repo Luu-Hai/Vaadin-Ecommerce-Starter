@@ -1,7 +1,6 @@
 # Spring-Snake-Game-FE
 
-This project can be used as a starting point to create your own Vaadin application with Spring Boot.
-It contains all the necessary configuration and some placeholder files to get you started.
+![image](https://github.com/user-attachments/assets/68404892-670d-473c-b621-15a8892de98c)
 
 ## Running the application
 
