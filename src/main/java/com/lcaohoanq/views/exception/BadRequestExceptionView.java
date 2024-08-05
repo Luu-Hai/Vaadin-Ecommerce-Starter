@@ -8,10 +8,11 @@ import com.vaadin.flow.router.Route;
 
 @PageTitle("Bad request")
 @Route(value = "errors/bad-request", layout = MainLayout.class)
-public class BadRequestExceptionView extends Composite<VerticalLayout> {
+public class BadRequestExceptionView extends AbstractExceptionView {
 
     public BadRequestExceptionView() {
-        getContent().add("Error 400 Bad request");
+        super();
+        title.setText("Error 400 Bad request");
     }
 
 }

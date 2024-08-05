@@ -6,12 +6,13 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
-@PageTitle("Internal server error")
+@PageTitle("Internal Server Error")
 @Route(value = "errors", layout = MainLayout.class)
-public class InternalServerErrorExceptionView extends Composite<VerticalLayout> {
+public class InternalServerErrorExceptionView extends AbstractExceptionView {
 
     public InternalServerErrorExceptionView() {
-        getContent().add("Internal server error");
+        super();
+        title.setText("Error 500 Internal server error");
     }
 
 }
