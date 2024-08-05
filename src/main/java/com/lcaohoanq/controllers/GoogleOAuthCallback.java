@@ -1,6 +1,8 @@
 package com.lcaohoanq.controllers;
 
 import com.lcaohoanq.constant.GoogleAuthentication;
+import com.lcaohoanq.models.User;
+import com.lcaohoanq.models.UserGoogle;
 import com.lcaohoanq.utils.EnvUtil;
 import com.vaadin.flow.component.Composite;
 import com.vaadin.flow.component.UI;
@@ -8,6 +10,9 @@ import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.VaadinSession;
 import java.util.Map;
+import org.springframework.http.ResponseEntity;
+import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 
 @Route("oauth2/callback/google")
@@ -21,7 +26,7 @@ public class GoogleOAuthCallback extends Composite<Div> {
             String accessToken = getAccessToken(authorizationCode);
 
             // Retrieve user information
-            Map<String, Object> userInfo = getUserInfo(accessToken);
+            UserGoogle userInfo = getUserInfo(accessToken);
 
             // Handle user information (e.g., store in session, redirect, etc.)
             handleUserLogin(userInfo);
@@ -43,29 +48,38 @@ public class GoogleOAuthCallback extends Composite<Div> {
 
         RestTemplate restTemplate = new RestTemplate();
 
-        Map<String, String> requestBody = Map.of(
-            "code", authorizationCode,
-            "client_id", clientId,
-            "client_secret", clientSecret,
-            "redirect_uri", redirectUri,
-            "grant_type", grantType
-        );
+        MultiValueMap<String, String> requestBody = new LinkedMultiValueMap<>();
+        requestBody.add("code", authorizationCode);
+        requestBody.add("client_id", clientId);
+        requestBody.add("client_secret", clientSecret);
+        requestBody.add("redirect_uri", redirectUri);
+        requestBody.add("grant_type", grantType);
 
-        Map<String, Object> response = restTemplate.postForObject(tokenEndpoint, requestBody, Map.class);
-        return (String) response.get("access_token");
+        ResponseEntity<Map> response = restTemplate.postForEntity(tokenEndpoint, requestBody, Map.class);
+
+        if (response.getBody() != null && response.getBody().containsKey("access_token")) {
+            return (String) response.getBody().get("access_token");
+        } else {
+            throw new RuntimeException("Failed to retrieve access token. Response: " + response.getBody());
+        }
     }
 
-    private Map<String, Object> getUserInfo(String accessToken) {
+    private UserGoogle getUserInfo(String accessToken) {
         String userInfoEndpoint = GoogleAuthentication.GOOGLE_LINK_GET_USER_INFO; //https://www.googleapis.com/oauth2/v1/userinfo?access_token=
         String url = userInfoEndpoint + accessToken;
 
         RestTemplate restTemplate = new RestTemplate();
+        ResponseEntity<UserGoogle> response = restTemplate.getForEntity(url, UserGoogle.class);
 
-        return restTemplate.getForObject(url, Map.class);
+        if (response.getBody() != null) {
+            return response.getBody();
+        } else {
+            throw new RuntimeException("Failed to retrieve user info. URL: " + url);
+        }
     }
 
-    private void handleUserLogin(Map<String, Object> userInfo) {
-        String email = (String) userInfo.get("email");
+    private void handleUserLogin(UserGoogle userInfo) {
+        String email = userInfo.getEmail();
         VaadinSession.getCurrent().setAttribute("user", email);
         UI.getCurrent().getPage().setLocation("http://localhost:3000"); // Redirect to the home page after successful login
     }

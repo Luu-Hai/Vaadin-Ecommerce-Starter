@@ -13,6 +13,7 @@ import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.H1;
+import com.vaadin.flow.component.html.H3;
 import com.vaadin.flow.component.html.Header;
 import com.vaadin.flow.component.html.ListItem;
 import com.vaadin.flow.component.html.Nav;
@@ -118,6 +119,9 @@ public class MainLayout extends AppLayout {
                 VaadinSession.getCurrent().close();
                 UI.getCurrent().getPage().setLocation("users/login");
             });
+            H3 username = new H3();
+            username.setText("Welcome, " + session.getAttribute("user"));
+            layout.add(username);
             layout.add(logoutButton);
         }
 

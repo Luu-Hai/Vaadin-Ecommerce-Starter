@@ -28,7 +28,7 @@ import java.net.http.HttpResponse;
 import java.util.Map;
 import lombok.extern.slf4j.Slf4j;
 
-@PageTitle("Snake Game")
+@PageTitle("Login")
 @Route(value = "users/login", layout = MainLayout.class)
 @Slf4j
 public class UsersLoginView extends Composite<VerticalLayout> {

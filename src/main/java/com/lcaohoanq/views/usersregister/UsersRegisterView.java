@@ -33,7 +33,7 @@ import java.util.Map;
 import lombok.Getter;
 import lombok.Setter;
 
-@PageTitle("Snake Game")
+@PageTitle("Register")
 @Getter
 @Setter
 @Route(value = "users/register", layout = MainLayout.class)
