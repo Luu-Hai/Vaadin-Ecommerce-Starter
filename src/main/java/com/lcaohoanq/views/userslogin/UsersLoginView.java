@@ -1,5 +1,6 @@
 package com.lcaohoanq.views.userslogin;
 
+import com.lcaohoanq.exception.InternalServerException;
 import com.lcaohoanq.utils.ApiUtils;
 import com.lcaohoanq.utils.EnvUtil;
 import com.lcaohoanq.views.MainLayout;
@@ -27,6 +28,7 @@ import java.net.URI;
 import java.net.http.HttpResponse;
 import java.util.Map;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.client.HttpServerErrorException.InternalServerError;
 
 @PageTitle("Login")
 @Route(value = "users/login", layout = MainLayout.class)
@@ -134,18 +136,7 @@ public class UsersLoginView extends Composite<VerticalLayout> {
                         loginForm.setError(true);
                         break;
                     default:
-                        try {
-                            // Specify the URL of the website
-                            URI uri = new URI("http://localhost:3000/error/internal");
-                            // Open the website in the default browser
-                            if (Desktop.isDesktopSupported() && Desktop.getDesktop()
-                                .isSupported(Desktop.Action.BROWSE)) {
-                                Desktop.getDesktop().browse(uri);
-                            }
-                        } catch (Exception ex) {
-                            ex.printStackTrace();
-                        }
-                        break;
+                        throw new InternalServerException("Error 500 Internal server error");
                 }
 
             } catch (IOException e) {
