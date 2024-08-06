@@ -1,0 +1,792 @@
+2024-08-04 10:30:02 - Starting Application using Java 18.0.2.1 with PID 3632 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 10:30:02 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 10:30:02 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 10:30:15 - Started Application in 14.292 seconds (process running for 26.243)
+2024-08-04 11:07:15 - Starting Application using Java 18.0.2.1 with PID 17780 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:07:15 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:07:15 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:07:23 - Started Application in 8.703 seconds (process running for 9.436)
+2024-08-04 11:08:57 - Starting Application using Java 18.0.2.1 with PID 14920 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:08:57 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:08:57 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:09:05 - Started Application in 8.776 seconds (process running for 9.503)
+2024-08-04 11:13:24 - Starting Application using Java 18.0.2.1 with PID 17532 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:13:24 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:13:24 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:13:32 - Started Application in 8.844 seconds (process running for 9.334)
+2024-08-04 11:14:00 - Login successful
+2024-08-04 11:15:47 - Starting Application using Java 18.0.2.1 with PID 17532 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:15:47 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:15:47 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:15:49 - Starting Application using Java 18.0.2.1 with PID 268 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:15:49 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:15:49 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:16:03 - Starting Application using Java 18.0.2.1 with PID 16244 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:16:03 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:16:03 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:16:12 - Started Application in 9.34 seconds (process running for 10.273)
+2024-08-04 11:17:05 - Login successful
+2024-08-04 11:18:18 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:18:18 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:18:18 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:18:26 - Started Application in 8.161 seconds (process running for 8.877)
+2024-08-04 11:22:59 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:22:59 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:22:59 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:23:05 - Started Application in 5.603 seconds (process running for 287.618)
+2024-08-04 11:23:05 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:23:05 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:23:05 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:23:13 - Started Application in 7.909 seconds (process running for 296.125)
+2024-08-04 11:23:19 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:23:19 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:23:19 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:23:24 - Started Application in 4.537 seconds (process running for 306.552)
+2024-08-04 11:23:24 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:23:24 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:23:24 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:23:28 - Started Application in 4.349 seconds (process running for 311.21)
+2024-08-04 11:24:38 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:24:38 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:24:38 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:24:42 - Started Application in 4.153 seconds (process running for 385.534)
+2024-08-04 11:24:43 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:24:43 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:24:43 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:24:47 - Started Application in 4.256 seconds (process running for 390.128)
+2024-08-04 11:25:07 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:25:07 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:25:07 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:25:11 - Started Application in 4.021 seconds (process running for 414.47)
+2024-08-04 11:25:12 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:25:12 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:25:12 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:25:16 - Started Application in 4.29 seconds (process running for 419.077)
+2024-08-04 11:27:23 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:27:23 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:27:23 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:27:27 - Started Application in 4.019 seconds (process running for 549.607)
+2024-08-04 11:27:27 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:27:27 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:27:27 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:27:31 - Started Application in 4.076 seconds (process running for 553.98)
+2024-08-04 11:29:45 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:29:45 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:29:45 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:29:49 - Started Application in 3.987 seconds (process running for 691.983)
+2024-08-04 11:29:49 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:29:49 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:29:49 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:29:53 - Started Application in 4.097 seconds (process running for 696.407)
+2024-08-04 11:30:24 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:30:24 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:30:24 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:30:28 - Started Application in 4.109 seconds (process running for 731.089)
+2024-08-04 11:30:28 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:30:28 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:30:28 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:30:33 - Started Application in 4.868 seconds (process running for 736.258)
+2024-08-04 11:30:38 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:30:38 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:30:38 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:30:42 - Started Application in 4.053 seconds (process running for 744.899)
+2024-08-04 11:30:42 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:30:42 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:30:42 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:30:46 - Started Application in 4.118 seconds (process running for 749.32)
+2024-08-04 11:31:00 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:31:00 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:31:00 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:31:05 - Started Application in 4.265 seconds (process running for 767.796)
+2024-08-04 11:31:05 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:31:05 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:31:05 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:31:09 - Started Application in 4.212 seconds (process running for 772.363)
+2024-08-04 11:31:52 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:31:52 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:31:52 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:31:56 - Started Application in 4.04 seconds (process running for 819.257)
+2024-08-04 11:31:57 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:31:57 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:31:57 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:32:01 - Started Application in 4.249 seconds (process running for 823.9)
+2024-08-04 11:32:25 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:32:25 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:32:25 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:32:29 - Started Application in 3.963 seconds (process running for 852.275)
+2024-08-04 11:32:30 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:32:30 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:32:30 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:32:34 - Started Application in 4.045 seconds (process running for 856.656)
+2024-08-04 11:32:59 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:32:59 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:32:59 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:33:03 - Started Application in 4.258 seconds (process running for 886.398)
+2024-08-04 11:33:04 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:33:04 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:33:04 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:33:08 - Started Application in 4.236 seconds (process running for 891.029)
+2024-08-04 11:33:48 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:33:48 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:33:48 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:33:52 - Started Application in 4.354 seconds (process running for 935.072)
+2024-08-04 11:33:52 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:33:52 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:33:52 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:33:57 - Started Application in 4.114 seconds (process running for 939.578)
+2024-08-04 11:34:08 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:34:08 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:34:08 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:34:12 - Started Application in 3.901 seconds (process running for 954.702)
+2024-08-04 11:34:12 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:34:12 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:34:12 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:34:16 - Started Application in 4.14 seconds (process running for 959.15)
+2024-08-04 11:34:31 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:34:31 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:34:31 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:34:35 - Started Application in 3.878 seconds (process running for 978.23)
+2024-08-04 11:34:36 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:34:36 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:34:36 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:34:39 - Started Application in 3.995 seconds (process running for 982.542)
+2024-08-04 11:34:55 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:34:55 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:34:55 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:34:59 - Started Application in 4.175 seconds (process running for 1001.977)
+2024-08-04 11:34:59 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:34:59 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:34:59 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:35:03 - Started Application in 4.145 seconds (process running for 1006.501)
+2024-08-04 11:35:13 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:35:13 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:35:13 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:35:17 - Started Application in 3.967 seconds (process running for 1019.557)
+2024-08-04 11:35:17 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:35:17 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:35:17 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:35:22 - Started Application in 4.691 seconds (process running for 1024.577)
+2024-08-04 11:35:33 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:35:33 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:35:33 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:35:37 - Started Application in 3.88 seconds (process running for 1039.966)
+2024-08-04 11:35:37 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:35:37 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:35:37 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:35:42 - Started Application in 4.889 seconds (process running for 1045.185)
+2024-08-04 11:36:16 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:36:16 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:36:16 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:36:20 - Started Application in 3.882 seconds (process running for 1082.803)
+2024-08-04 11:36:20 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:36:20 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:36:20 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:36:24 - Started Application in 3.995 seconds (process running for 1087.141)
+2024-08-04 11:38:15 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:38:15 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:38:15 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:38:19 - Started Application in 3.86 seconds (process running for 1201.637)
+2024-08-04 11:38:19 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:38:19 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:38:19 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:38:24 - Started Application in 4.651 seconds (process running for 1206.627)
+2024-08-04 11:39:19 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:39:19 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:39:19 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:39:24 - Started Application in 4.559 seconds (process running for 1266.931)
+2024-08-04 11:39:24 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:39:24 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:39:24 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:39:28 - Started Application in 4.219 seconds (process running for 1271.495)
+2024-08-04 11:40:33 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:40:33 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:40:33 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:40:37 - Started Application in 4.21 seconds (process running for 1339.908)
+2024-08-04 11:40:37 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:40:37 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:40:37 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:40:42 - Started Application in 4.54 seconds (process running for 1344.79)
+2024-08-04 11:40:42 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:40:42 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:40:42 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:40:46 - Started Application in 4.049 seconds (process running for 1349.233)
+2024-08-04 11:43:26 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:43:26 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:43:26 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:43:30 - Started Application in 4.024 seconds (process running for 1512.85)
+2024-08-04 11:43:30 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:43:30 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:43:30 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:43:34 - Started Application in 4.314 seconds (process running for 1517.527)
+2024-08-04 11:45:29 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:45:29 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:45:29 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:45:33 - Started Application in 4.434 seconds (process running for 1636.175)
+2024-08-04 11:45:33 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:45:33 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:45:33 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:45:38 - Started Application in 4.882 seconds (process running for 1641.4)
+2024-08-04 11:45:56 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:45:56 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:45:56 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:46:01 - Started Application in 4.626 seconds (process running for 1664.023)
+2024-08-04 11:46:01 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:46:01 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:46:01 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:46:06 - Started Application in 4.702 seconds (process running for 1669.046)
+2024-08-04 11:47:00 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:47:00 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:47:00 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:47:04 - Started Application in 3.938 seconds (process running for 1726.629)
+2024-08-04 11:47:04 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:47:04 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:47:04 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:47:08 - Started Application in 4.259 seconds (process running for 1731.224)
+2024-08-04 11:47:51 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:47:51 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:47:51 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:47:55 - Started Application in 3.873 seconds (process running for 1778.145)
+2024-08-04 11:47:55 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:47:55 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:47:55 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:48:00 - Started Application in 4.17 seconds (process running for 1782.654)
+2024-08-04 11:48:07 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:48:07 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:48:07 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:48:11 - Started Application in 4.159 seconds (process running for 1793.79)
+2024-08-04 11:48:11 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:48:11 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:48:11 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:48:16 - Started Application in 5.051 seconds (process running for 1799.22)
+2024-08-04 11:48:24 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:48:24 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:48:24 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:48:28 - Started Application in 4.253 seconds (process running for 1811.413)
+2024-08-04 11:48:29 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:48:29 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:48:29 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:48:33 - Started Application in 4.015 seconds (process running for 1816.109)
+2024-08-04 11:50:51 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:50:51 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:50:51 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:50:55 - Started Application in 4.308 seconds (process running for 1958.361)
+2024-08-04 11:50:56 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:50:56 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:50:56 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:51:00 - Started Application in 4.069 seconds (process running for 1962.767)
+2024-08-04 11:52:03 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:52:03 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:52:03 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:52:09 - Started Application in 6.231 seconds (process running for 2032.306)
+2024-08-04 11:52:14 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:52:14 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:52:14 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:52:18 - Started Application in 4.243 seconds (process running for 2040.946)
+2024-08-04 11:52:26 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:52:26 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:52:26 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:52:30 - Started Application in 4.148 seconds (process running for 2053.189)
+2024-08-04 11:52:30 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:52:30 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:52:30 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:52:35 - Started Application in 4.194 seconds (process running for 2057.702)
+2024-08-04 11:54:08 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:54:08 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:54:08 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:54:12 - Started Application in 4.038 seconds (process running for 2155.214)
+2024-08-04 11:54:13 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:54:13 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:54:13 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:54:17 - Started Application in 4.315 seconds (process running for 2159.887)
+2024-08-04 11:56:13 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:56:13 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:56:13 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:56:17 - Started Application in 4.841 seconds (process running for 2280.527)
+2024-08-04 11:56:18 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:56:18 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:56:18 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:56:23 - Started Application in 5.303 seconds (process running for 2286.225)
+2024-08-04 11:56:24 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:56:24 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:56:24 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:56:29 - Started Application in 5.653 seconds (process running for 2292.488)
+2024-08-04 11:56:31 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:56:31 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:56:31 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:56:35 - Started Application in 3.989 seconds (process running for 2297.776)
+2024-08-04 11:58:50 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:58:50 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:58:50 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:58:55 - Started Application in 4.682 seconds (process running for 2437.959)
+2024-08-04 11:58:55 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:58:55 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:58:55 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:59:00 - Started Application in 4.831 seconds (process running for 2443.165)
+2024-08-04 11:59:32 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:59:32 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:59:32 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:59:36 - Started Application in 4.202 seconds (process running for 2478.86)
+2024-08-04 11:59:36 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 11:59:36 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 11:59:36 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 11:59:41 - Started Application in 4.435 seconds (process running for 2483.663)
+2024-08-04 12:02:14 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 12:02:14 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 12:02:14 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 12:02:18 - Started Application in 4.259 seconds (process running for 2641.535)
+2024-08-04 12:02:19 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 12:02:19 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 12:02:19 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 12:02:24 - Started Application in 5.434 seconds (process running for 2647.325)
+2024-08-04 12:02:41 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 12:02:41 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 12:02:41 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 12:02:47 - Started Application in 5.16 seconds (process running for 2669.552)
+2024-08-04 12:02:47 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 12:02:47 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 12:02:47 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 12:02:52 - Started Application in 5.263 seconds (process running for 2675.207)
+2024-08-04 12:03:37 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 12:03:37 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 12:03:37 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 12:03:42 - Started Application in 5.379 seconds (process running for 2725.142)
+2024-08-04 12:03:43 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 12:03:43 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 12:03:43 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 12:03:48 - Started Application in 5.155 seconds (process running for 2730.69)
+2024-08-04 12:03:57 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 12:03:57 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 12:03:57 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 12:04:02 - Started Application in 4.99 seconds (process running for 2745.357)
+2024-08-04 12:04:04 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 12:04:04 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 12:04:04 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 12:04:09 - Started Application in 5.255 seconds (process running for 2752.165)
+2024-08-04 12:04:24 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 12:04:24 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 12:04:24 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 12:04:29 - Started Application in 4.673 seconds (process running for 2772.027)
+2024-08-04 12:04:29 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 12:04:29 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 12:04:29 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 12:04:34 - Started Application in 4.805 seconds (process running for 2777.172)
+2024-08-04 12:07:14 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 12:07:14 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 12:07:14 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 12:07:20 - Started Application in 5.236 seconds (process running for 2942.639)
+2024-08-04 12:07:21 - Starting Application using Java 18.0.2.1 with PID 9144 (D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe\target\classes started by hoang in D:\PERSONAL\Java\spring-snake-game-fe\spring-snake-game-fe)
+2024-08-04 12:07:21 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-04 12:07:21 - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 12:07:26 - Started Application in 4.869 seconds (process running for 2949.174)
+2024-08-05 20:45:47 - Starting Application using Java 18.0.2.1 with PID 11048 (D:\PERSONAL\Java\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin-Snake-Game)
+2024-08-05 20:45:47 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-05 20:45:47 - No active profile set, falling back to 1 default profile: "default"
+2024-08-05 20:45:56 - Started Application in 10.552 seconds (process running for 12.728)
+2024-08-05 20:46:01 - Starting Application using Java 18.0.2.1 with PID 11048 (D:\PERSONAL\Java\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin-Snake-Game)
+2024-08-05 20:46:01 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-05 20:46:01 - No active profile set, falling back to 1 default profile: "default"
+2024-08-05 20:46:06 - Started Application in 4.66 seconds (process running for 22.587)
+2024-08-05 20:46:08 - Starting Application using Java 18.0.2.1 with PID 11048 (D:\PERSONAL\Java\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin-Snake-Game)
+2024-08-05 20:46:08 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-05 20:46:08 - No active profile set, falling back to 1 default profile: "default"
+2024-08-05 20:46:15 - Started Application in 6.713 seconds (process running for 31.558)
+2024-08-05 20:48:00 - Starting Application using Java 18.0.2.1 with PID 11048 (D:\PERSONAL\Java\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin-Snake-Game)
+2024-08-05 20:48:00 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-05 20:48:00 - No active profile set, falling back to 1 default profile: "default"
+2024-08-05 20:48:04 - Started Application in 4.394 seconds (process running for 140.716)
+2024-08-05 20:48:05 - Starting Application using Java 18.0.2.1 with PID 11048 (D:\PERSONAL\Java\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin-Snake-Game)
+2024-08-05 20:48:05 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-05 20:48:05 - No active profile set, falling back to 1 default profile: "default"
+2024-08-05 20:48:10 - Started Application in 5.016 seconds (process running for 146.05)
+2024-08-05 20:50:00 - Starting Application using Java 18.0.2.1 with PID 11048 (D:\PERSONAL\Java\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin-Snake-Game)
+2024-08-05 20:50:00 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-05 20:50:00 - No active profile set, falling back to 1 default profile: "default"
+2024-08-05 20:50:05 - Started Application in 5.102 seconds (process running for 261.633)
+2024-08-05 20:50:06 - Starting Application using Java 18.0.2.1 with PID 11048 (D:\PERSONAL\Java\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin-Snake-Game)
+2024-08-05 20:50:06 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-05 20:50:06 - No active profile set, falling back to 1 default profile: "default"
+2024-08-05 20:50:11 - Started Application in 5.235 seconds (process running for 267.277)
+2024-08-05 20:50:46 - Starting Application using Java 18.0.2.1 with PID 16232 (D:\PERSONAL\Java\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin-Snake-Game)
+2024-08-05 20:50:46 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-05 20:50:46 - No active profile set, falling back to 1 default profile: "default"
+2024-08-05 20:50:55 - Started Application in 8.97 seconds (process running for 9.871)
+2024-08-05 20:54:51 - Starting Application using Java 18.0.2.1 with PID 16232 (D:\PERSONAL\Java\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin-Snake-Game)
+2024-08-05 20:54:51 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-05 20:54:51 - No active profile set, falling back to 1 default profile: "default"
+2024-08-05 20:54:53 - Starting Application using Java 18.0.2.1 with PID 16232 (D:\PERSONAL\Java\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin-Snake-Game)
+2024-08-05 20:54:53 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-05 20:54:53 - No active profile set, falling back to 1 default profile: "default"
+2024-08-05 20:54:58 - Started Application in 4.897 seconds (process running for 253.418)
+2024-08-05 20:55:17 - Starting Application using Java 18.0.2.1 with PID 16232 (D:\PERSONAL\Java\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin-Snake-Game)
+2024-08-05 20:55:17 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-05 20:55:17 - No active profile set, falling back to 1 default profile: "default"
+2024-08-05 20:55:21 - Started Application in 4.679 seconds (process running for 276.458)
+2024-08-05 20:55:22 - Starting Application using Java 18.0.2.1 with PID 16232 (D:\PERSONAL\Java\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin-Snake-Game)
+2024-08-05 20:55:22 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-05 20:55:22 - No active profile set, falling back to 1 default profile: "default"
+2024-08-05 20:55:26 - Started Application in 4.166 seconds (process running for 280.998)
+2024-08-05 20:56:03 - Starting Application using Java 18.0.2.1 with PID 16232 (D:\PERSONAL\Java\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin-Snake-Game)
+2024-08-05 20:56:03 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-05 20:56:03 - No active profile set, falling back to 1 default profile: "default"
+2024-08-05 20:56:05 - Starting Application using Java 18.0.2.1 with PID 16232 (D:\PERSONAL\Java\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin-Snake-Game)
+2024-08-05 20:56:05 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-05 20:56:05 - No active profile set, falling back to 1 default profile: "default"
+2024-08-05 20:56:10 - Started Application in 4.498 seconds (process running for 324.725)
+2024-08-05 20:57:32 - Starting Application using Java 18.0.2.1 with PID 16232 (D:\PERSONAL\Java\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin-Snake-Game)
+2024-08-05 20:57:32 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-05 20:57:32 - No active profile set, falling back to 1 default profile: "default"
+2024-08-05 20:57:33 - Starting Application using Java 18.0.2.1 with PID 16232 (D:\PERSONAL\Java\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin-Snake-Game)
+2024-08-05 20:57:33 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-05 20:57:33 - No active profile set, falling back to 1 default profile: "default"
+2024-08-05 20:57:37 - Started Application in 3.975 seconds (process running for 412.531)
+2024-08-05 21:02:26 - Starting Application using Java 18.0.2.1 with PID 16232 (D:\PERSONAL\Java\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin-Snake-Game)
+2024-08-05 21:02:26 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-05 21:02:26 - No active profile set, falling back to 1 default profile: "default"
+2024-08-05 21:02:30 - Started Application in 4.334 seconds (process running for 705.048)
+2024-08-05 21:06:27 - Starting Application using Java 18.0.2.1 with PID 16232 (D:\PERSONAL\Java\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin-Snake-Game)
+2024-08-05 21:06:27 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-05 21:06:27 - No active profile set, falling back to 1 default profile: "default"
+2024-08-05 21:06:31 - Started Application in 4.691 seconds (process running for 946.578)
+2024-08-05 21:06:33 - Starting Application using Java 18.0.2.1 with PID 16232 (D:\PERSONAL\Java\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin-Snake-Game)
+2024-08-05 21:06:33 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-05 21:06:33 - No active profile set, falling back to 1 default profile: "default"
+2024-08-05 21:06:37 - Started Application in 4.103 seconds (process running for 951.984)
+2024-08-05 21:08:20 - Starting Application using Java 18.0.2.1 with PID 16232 (D:\PERSONAL\Java\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin-Snake-Game)
+2024-08-05 21:08:20 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-05 21:08:20 - No active profile set, falling back to 1 default profile: "default"
+2024-08-05 21:08:24 - Started Application in 4.085 seconds (process running for 1059.413)
+2024-08-05 21:08:25 - Starting Application using Java 18.0.2.1 with PID 16232 (D:\PERSONAL\Java\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin-Snake-Game)
+2024-08-05 21:08:25 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-05 21:08:25 - No active profile set, falling back to 1 default profile: "default"
+2024-08-05 21:08:29 - Started Application in 4.405 seconds (process running for 1064.176)
+2024-08-05 21:08:40 - Starting Application using Java 18.0.2.1 with PID 16232 (D:\PERSONAL\Java\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin-Snake-Game)
+2024-08-05 21:08:40 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-05 21:08:40 - No active profile set, falling back to 1 default profile: "default"
+2024-08-05 21:08:44 - Started Application in 4.242 seconds (process running for 1079.389)
+2024-08-05 21:08:45 - Starting Application using Java 18.0.2.1 with PID 16232 (D:\PERSONAL\Java\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin-Snake-Game)
+2024-08-05 21:08:45 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-05 21:08:45 - No active profile set, falling back to 1 default profile: "default"
+2024-08-05 21:08:49 - Started Application in 4.23 seconds (process running for 1084.004)
+2024-08-05 21:12:57 - Starting Application using Java 18.0.2.1 with PID 16232 (D:\PERSONAL\Java\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin-Snake-Game)
+2024-08-05 21:12:57 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-05 21:12:57 - No active profile set, falling back to 1 default profile: "default"
+2024-08-05 21:13:03 - Started Application in 6.009 seconds (process running for 1338.426)
+2024-08-05 21:13:04 - Starting Application using Java 18.0.2.1 with PID 16232 (D:\PERSONAL\Java\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin-Snake-Game)
+2024-08-05 21:13:04 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-05 21:13:04 - No active profile set, falling back to 1 default profile: "default"
+2024-08-05 21:13:11 - Started Application in 7.457 seconds (process running for 1346.307)
+2024-08-05 21:14:15 - Starting Application using Java 18.0.2.1 with PID 16232 (D:\PERSONAL\Java\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin-Snake-Game)
+2024-08-05 21:14:15 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-05 21:14:15 - No active profile set, falling back to 1 default profile: "default"
+2024-08-05 21:14:20 - Started Application in 4.198 seconds (process running for 1414.784)
+2024-08-05 21:14:20 - Starting Application using Java 18.0.2.1 with PID 16232 (D:\PERSONAL\Java\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin-Snake-Game)
+2024-08-05 21:14:20 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-05 21:14:20 - No active profile set, falling back to 1 default profile: "default"
+2024-08-05 21:14:24 - Started Application in 4.413 seconds (process running for 1419.556)
+2024-08-05 21:15:54 - Starting Application using Java 18.0.2.1 with PID 16232 (D:\PERSONAL\Java\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin-Snake-Game)
+2024-08-05 21:15:54 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-05 21:15:54 - No active profile set, falling back to 1 default profile: "default"
+2024-08-05 21:15:57 - Starting Application using Java 18.0.2.1 with PID 16232 (D:\PERSONAL\Java\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin-Snake-Game)
+2024-08-05 21:15:57 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-05 21:15:57 - No active profile set, falling back to 1 default profile: "default"
+2024-08-05 21:16:01 - Started Application in 4.432 seconds (process running for 1516.298)
+2024-08-05 21:17:06 - Starting Application using Java 18.0.2.1 with PID 16232 (D:\PERSONAL\Java\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin-Snake-Game)
+2024-08-05 21:17:06 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-05 21:17:06 - No active profile set, falling back to 1 default profile: "default"
+2024-08-05 21:17:12 - Started Application in 5.505 seconds (process running for 1587.077)
+2024-08-05 21:17:25 - Starting Application using Java 18.0.2.1 with PID 16232 (D:\PERSONAL\Java\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin-Snake-Game)
+2024-08-05 21:17:25 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-05 21:17:25 - No active profile set, falling back to 1 default profile: "default"
+2024-08-05 21:17:30 - Started Application in 5.627 seconds (process running for 1605.579)
+2024-08-05 21:17:32 - Starting Application using Java 18.0.2.1 with PID 16232 (D:\PERSONAL\Java\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin-Snake-Game)
+2024-08-05 21:17:32 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-05 21:17:32 - No active profile set, falling back to 1 default profile: "default"
+2024-08-05 21:17:36 - Started Application in 4.11 seconds (process running for 1610.956)
+2024-08-05 21:27:10 - Starting Application using Java 18.0.2.1 with PID 16232 (D:\PERSONAL\Java\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin-Snake-Game)
+2024-08-05 21:27:10 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-05 21:27:10 - No active profile set, falling back to 1 default profile: "default"
+2024-08-05 21:27:15 - Started Application in 4.784 seconds (process running for 2189.726)
+2024-08-05 21:27:15 - Starting Application using Java 18.0.2.1 with PID 16232 (D:\PERSONAL\Java\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin-Snake-Game)
+2024-08-05 21:27:15 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-05 21:27:15 - No active profile set, falling back to 1 default profile: "default"
+2024-08-05 21:27:21 - Started Application in 5.595 seconds (process running for 2196.024)
+2024-08-05 21:32:55 - Starting Application using Java 18.0.2.1 with PID 8008 (D:\PERSONAL\Java\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin-Snake-Game)
+2024-08-05 21:32:55 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-05 21:32:55 - No active profile set, falling back to 1 default profile: "default"
+2024-08-05 21:33:03 - Started Application in 9.181 seconds (process running for 9.974)
+2024-08-05 21:34:20 - Starting Application using Java 18.0.2.1 with PID 8008 (D:\PERSONAL\Java\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin-Snake-Game)
+2024-08-05 21:34:20 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-05 21:34:20 - No active profile set, falling back to 1 default profile: "default"
+2024-08-05 21:34:25 - Started Application in 5.078 seconds (process running for 91.628)
+2024-08-05 21:34:25 - Starting Application using Java 18.0.2.1 with PID 8008 (D:\PERSONAL\Java\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin-Snake-Game)
+2024-08-05 21:34:25 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-05 21:34:25 - No active profile set, falling back to 1 default profile: "default"
+2024-08-05 21:34:30 - Started Application in 4.46 seconds (process running for 96.453)
+2024-08-05 21:36:38 - Starting Application using Java 18.0.2.1 with PID 8008 (D:\PERSONAL\Java\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin-Snake-Game)
+2024-08-05 21:36:38 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-05 21:36:38 - No active profile set, falling back to 1 default profile: "default"
+2024-08-05 21:36:43 - Started Application in 4.907 seconds (process running for 229.773)
+2024-08-05 21:36:44 - Starting Application using Java 18.0.2.1 with PID 8008 (D:\PERSONAL\Java\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin-Snake-Game)
+2024-08-05 21:36:44 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-05 21:36:44 - No active profile set, falling back to 1 default profile: "default"
+2024-08-05 21:36:48 - Started Application in 4.37 seconds (process running for 234.504)
+2024-08-06 16:51:55 - Starting Application using Java 18.0.2.1 with PID 6480 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 16:51:55 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 16:51:55 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 16:52:04 - Started Application in 9.513 seconds (process running for 10.326)
+2024-08-06 16:52:08 - Starting Application using Java 18.0.2.1 with PID 6480 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 16:52:08 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 16:52:08 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 16:52:13 - Started Application in 4.85 seconds (process running for 19.521)
+2024-08-06 16:52:13 - Starting Application using Java 18.0.2.1 with PID 6480 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 16:52:13 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 16:52:13 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 16:52:21 - Started Application in 7.265 seconds (process running for 27.148)
+2024-08-06 16:52:24 - Starting Application using Java 18.0.2.1 with PID 6480 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 16:52:24 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 16:52:24 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 16:52:29 - Started Application in 4.863 seconds (process running for 35.491)
+2024-08-06 17:02:18 - Starting Application using Java 18.0.2.1 with PID 9284 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 17:02:18 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 17:02:18 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 17:02:29 - Started Application in 11.989 seconds (process running for 12.785)
+2024-08-06 17:05:33 - Starting Application using Java 18.0.2.1 with PID 9284 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 17:05:33 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 17:05:33 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 17:05:36 - Starting Application using Java 18.0.2.1 with PID 9284 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 17:05:36 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 17:05:36 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 17:05:42 - Started Application in 5.512 seconds (process running for 205.52)
+2024-08-06 17:06:19 - Starting Application using Java 18.0.2.1 with PID 9284 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 17:06:19 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 17:06:19 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 17:06:23 - Starting Application using Java 18.0.2.1 with PID 9284 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 17:06:23 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 17:06:23 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 17:06:30 - Started Application in 7.248 seconds (process running for 254.14)
+2024-08-06 17:06:59 - Starting Application using Java 18.0.2.1 with PID 7872 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 17:06:59 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 17:06:59 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 17:07:11 - Started Application in 11.953 seconds (process running for 12.759)
+2024-08-06 17:09:52 - Starting Application using Java 18.0.2.1 with PID 7872 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 17:09:52 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 17:09:52 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 17:09:54 - Starting Application using Java 18.0.2.1 with PID 7872 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 17:09:54 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 17:09:54 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 17:09:58 - Started Application in 4.295 seconds (process running for 180.23)
+2024-08-06 17:10:46 - Starting Application using Java 18.0.2.1 with PID 7872 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 17:10:46 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 17:10:46 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 17:10:51 - Started Application in 4.589 seconds (process running for 232.668)
+2024-08-06 17:10:51 - Starting Application using Java 18.0.2.1 with PID 7872 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 17:10:51 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 17:10:51 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 17:10:56 - Started Application in 4.658 seconds (process running for 237.658)
+2024-08-06 17:15:00 - Starting Application using Java 18.0.2.1 with PID 7872 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 17:15:00 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 17:15:00 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 17:15:05 - Started Application in 4.557 seconds (process running for 486.797)
+2024-08-06 17:15:06 - Starting Application using Java 18.0.2.1 with PID 7872 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 17:15:06 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 17:15:06 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 17:15:10 - Started Application in 4.406 seconds (process running for 492.126)
+2024-08-06 17:16:05 - Starting Application using Java 18.0.2.1 with PID 7872 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 17:16:05 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 17:16:05 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 17:16:08 - Starting Application using Java 18.0.2.1 with PID 7872 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 17:16:08 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 17:16:08 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 17:16:13 - Started Application in 4.445 seconds (process running for 554.933)
+2024-08-06 17:18:22 - Starting Application using Java 18.0.2.1 with PID 7872 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 17:18:22 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 17:18:22 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 17:18:28 - Started Application in 5.651 seconds (process running for 689.62)
+2024-08-06 17:18:29 - Starting Application using Java 18.0.2.1 with PID 7872 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 17:18:29 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 17:18:29 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 17:18:34 - Started Application in 4.857 seconds (process running for 695.872)
+2024-08-06 17:21:46 - Starting Application using Java 18.0.2.1 with PID 7872 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 17:21:46 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 17:21:46 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 17:21:50 - Starting Application using Java 18.0.2.1 with PID 7872 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 17:21:50 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 17:21:50 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 17:21:55 - Started Application in 5.05 seconds (process running for 896.929)
+2024-08-06 17:24:18 - Starting Application using Java 18.0.2.1 with PID 7872 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 17:24:18 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 17:24:18 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 17:24:23 - Started Application in 4.623 seconds (process running for 1045.124)
+2024-08-06 17:24:24 - Starting Application using Java 18.0.2.1 with PID 7872 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 17:24:24 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 17:24:24 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 17:24:28 - Started Application in 4.653 seconds (process running for 1050.358)
+2024-08-06 17:24:29 - Starting Application using Java 18.0.2.1 with PID 7872 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 17:24:29 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 17:24:29 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 17:24:33 - Started Application in 4.466 seconds (process running for 1055.572)
+2024-08-06 17:24:34 - Starting Application using Java 18.0.2.1 with PID 7872 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 17:24:34 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 17:24:34 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 17:24:39 - Started Application in 4.817 seconds (process running for 1060.774)
+2024-08-06 17:30:47 - Starting Application using Java 18.0.2.1 with PID 7872 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 17:30:47 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 17:30:47 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 17:30:52 - Started Application in 4.477 seconds (process running for 1433.741)
+2024-08-06 17:30:52 - Starting Application using Java 18.0.2.1 with PID 7872 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 17:30:52 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 17:30:52 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 17:30:57 - Started Application in 4.533 seconds (process running for 1438.643)
+2024-08-06 17:32:21 - Starting Application using Java 18.0.2.1 with PID 7872 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 17:32:21 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 17:32:21 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 17:32:26 - Started Application in 4.397 seconds (process running for 1527.773)
+2024-08-06 17:34:41 - Starting Application using Java 18.0.2.1 with PID 7872 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 17:34:41 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 17:34:41 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 17:34:47 - Started Application in 5.4 seconds (process running for 1668.882)
+2024-08-06 17:34:47 - Starting Application using Java 18.0.2.1 with PID 7872 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 17:34:47 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 17:34:47 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 17:34:52 - Started Application in 4.847 seconds (process running for 1674.163)
+2024-08-06 17:36:46 - Starting Application using Java 18.0.2.1 with PID 5500 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 17:36:46 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 17:36:46 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 17:36:57 - Started Application in 11.734 seconds (process running for 12.668)
+2024-08-06 17:39:37 - Starting Application using Java 18.0.2.1 with PID 5500 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 17:39:37 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 17:39:37 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 17:39:42 - Started Application in 4.963 seconds (process running for 177.117)
+2024-08-06 17:39:42 - Starting Application using Java 18.0.2.1 with PID 5500 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 17:39:42 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 17:39:42 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 17:39:47 - Started Application in 4.892 seconds (process running for 182.91)
+2024-08-06 17:39:48 - Starting Application using Java 18.0.2.1 with PID 5500 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 17:39:48 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 17:39:48 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 17:39:53 - Started Application in 4.989 seconds (process running for 188.183)
+2024-08-06 17:43:26 - Starting Application using Java 18.0.2.1 with PID 5500 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 17:43:26 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 17:43:26 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 17:43:31 - Started Application in 4.759 seconds (process running for 406.664)
+2024-08-06 17:43:34 - Starting Application using Java 18.0.2.1 with PID 5500 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 17:43:34 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 17:43:34 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 17:43:39 - Started Application in 4.597 seconds (process running for 414.082)
+2024-08-06 17:43:54 - Starting Application using Java 18.0.2.1 with PID 5500 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 17:43:54 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 17:43:54 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 17:43:58 - Started Application in 4.688 seconds (process running for 434.072)
+2024-08-06 17:43:59 - Starting Application using Java 18.0.2.1 with PID 5500 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 17:43:59 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 17:43:59 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 17:44:03 - Started Application in 4.174 seconds (process running for 438.927)
+2024-08-06 17:51:31 - Starting Application using Java 18.0.2.1 with PID 5500 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 17:51:31 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 17:51:31 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 17:51:35 - Started Application in 4.455 seconds (process running for 890.594)
+2024-08-06 17:51:35 - Starting Application using Java 18.0.2.1 with PID 5500 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 17:51:35 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 17:51:35 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 17:51:39 - Started Application in 4.152 seconds (process running for 895.067)
+2024-08-06 20:07:50 - Starting Application using Java 18.0.2.1 with PID 13124 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 20:07:50 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 20:07:50 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 20:08:01 - Started Application in 11.935 seconds (process running for 12.849)
+2024-08-06 20:17:32 - Starting Application using Java 18.0.2.1 with PID 13124 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 20:17:32 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 20:17:32 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 20:17:36 - Started Application in 4.341 seconds (process running for 588.053)
+2024-08-06 20:17:37 - Starting Application using Java 18.0.2.1 with PID 13124 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 20:17:37 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 20:17:37 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 20:17:41 - Started Application in 4.283 seconds (process running for 592.665)
+2024-08-06 20:21:53 - Starting Application using Java 18.0.2.1 with PID 13124 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 20:21:53 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 20:21:53 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 20:21:58 - Started Application in 4.533 seconds (process running for 849.168)
+2024-08-06 20:24:27 - Starting Application using Java 18.0.2.1 with PID 8520 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 20:24:27 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 20:24:27 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 20:24:40 - Started Application in 13.449 seconds (process running for 14.273)
+2024-08-06 20:25:57 - Starting Application using Java 18.0.2.1 with PID 8520 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 20:25:57 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 20:25:57 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 20:26:02 - Started Application in 4.994 seconds (process running for 96.368)
+2024-08-06 20:26:02 - Starting Application using Java 18.0.2.1 with PID 8520 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 20:26:02 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 20:26:02 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 20:26:06 - Started Application in 4.241 seconds (process running for 100.934)
+2024-08-06 20:33:00 - Starting Application using Java 18.0.2.1 with PID 8520 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 20:33:00 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 20:33:00 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 20:33:04 - Started Application in 4.485 seconds (process running for 518.585)
+2024-08-06 20:33:04 - Starting Application using Java 18.0.2.1 with PID 8520 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 20:33:04 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 20:33:04 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 20:33:09 - Started Application in 4.714 seconds (process running for 523.603)
+2024-08-06 20:56:37 - Starting Application using Java 18.0.2.1 with PID 12076 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 20:56:37 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 20:56:37 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 20:56:48 - Started Application in 11.247 seconds (process running for 12.406)
+2024-08-06 21:00:00 - Starting Application using Java 18.0.2.1 with PID 12076 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 21:00:00 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 21:00:00 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 21:00:05 - Started Application in 4.853 seconds (process running for 209.437)
+2024-08-06 21:00:05 - Starting Application using Java 18.0.2.1 with PID 12076 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 21:00:05 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 21:00:05 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 21:00:10 - Started Application in 4.945 seconds (process running for 214.778)
+2024-08-06 21:01:25 - Starting Application using Java 18.0.2.1 with PID 12076 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 21:01:25 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 21:01:25 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 21:01:30 - Started Application in 5.177 seconds (process running for 294.743)
+2024-08-06 21:01:33 - Starting Application using Java 18.0.2.1 with PID 12076 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 21:01:33 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 21:01:33 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 21:01:38 - Started Application in 4.773 seconds (process running for 302.417)
+2024-08-06 21:02:21 - Starting Application using Java 18.0.2.1 with PID 12076 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 21:02:21 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 21:02:21 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 21:02:25 - Started Application in 4.274 seconds (process running for 349.949)
+2024-08-06 21:02:25 - Starting Application using Java 18.0.2.1 with PID 12076 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 21:02:25 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 21:02:25 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 21:02:30 - Started Application in 4.432 seconds (process running for 354.704)
+2024-08-06 21:18:46 - Starting Application using Java 18.0.2.1 with PID 13392 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 21:18:46 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 21:18:46 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 21:18:57 - Started Application in 11.548 seconds (process running for 12.524)
+2024-08-06 21:22:22 - Starting Application using Java 18.0.2.1 with PID 13392 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 21:22:22 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 21:22:22 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 21:22:27 - Started Application in 4.943 seconds (process running for 222.297)
+2024-08-06 21:22:28 - Starting Application using Java 18.0.2.1 with PID 13392 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 21:22:28 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 21:22:28 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 21:22:33 - Started Application in 4.965 seconds (process running for 227.671)
+2024-08-06 21:23:56 - Starting Application using Java 18.0.2.1 with PID 13392 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 21:23:56 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 21:23:56 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 21:24:00 - Started Application in 4.662 seconds (process running for 315.294)
+2024-08-06 21:24:01 - Starting Application using Java 18.0.2.1 with PID 13392 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 21:24:01 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 21:24:01 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 21:24:06 - Started Application in 4.701 seconds (process running for 320.798)
+2024-08-06 21:24:43 - Login successful
+2024-08-06 21:26:55 - Starting Application using Java 18.0.2.1 with PID 13392 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 21:26:55 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 21:26:55 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 21:27:00 - Started Application in 5.013 seconds (process running for 495.249)
+2024-08-06 21:27:01 - Starting Application using Java 18.0.2.1 with PID 13392 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 21:27:01 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 21:27:01 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 21:27:06 - Started Application in 5.199 seconds (process running for 500.929)
+2024-08-06 21:27:40 - Starting Application using Java 18.0.2.1 with PID 13392 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 21:27:40 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 21:27:40 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 21:27:45 - Started Application in 5.004 seconds (process running for 540.048)
+2024-08-06 23:00:51 - Starting Application using Java 18.0.2.1 with PID 11168 (D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game\target\classes started by hoang in D:\PERSONAL\Java\Vaadin\Vaadin-Snake-Game)
+2024-08-06 23:00:51 - Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06 23:00:51 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 23:01:00 - Started Application in 9.609 seconds (process running for 20.932)

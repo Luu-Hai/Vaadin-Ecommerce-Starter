@@ -58,8 +58,9 @@ public class MainLayout extends AppLayout {
             this.view = view;
             RouterLink link = new RouterLink();
             // Use Lumo classnames for various styling
-            link.addClassNames(Display.FLEX, Gap.XSMALL, Height.MEDIUM, AlignItems.CENTER, Padding.Horizontal.SMALL,
-                    TextColor.BODY);
+            link.addClassNames(Display.FLEX, Gap.XSMALL, Height.MEDIUM, AlignItems.CENTER,
+                Padding.Horizontal.SMALL,
+                TextColor.BODY);
             link.setRoute(view);
 
             Span text = new Span(menuTitle);
@@ -90,7 +91,7 @@ public class MainLayout extends AppLayout {
         return header;
     }
 
-    private void refreshHeader(){
+    private void refreshHeader() {
         Div layout = new Div();
         layout.addClassNames(Display.FLEX, AlignItems.CENTER, Padding.Horizontal.LARGE);
 
@@ -99,7 +100,8 @@ public class MainLayout extends AppLayout {
         layout.add(appName);
 
         Nav nav = new Nav();
-        nav.addClassNames(Display.FLEX, FlexDirection.ROW, JustifyContent.END, Overflow.AUTO, Padding.Horizontal.MEDIUM, Padding.Vertical.XSMALL);
+        nav.addClassNames(Display.FLEX, FlexDirection.ROW, JustifyContent.END, Overflow.AUTO,
+            Padding.Horizontal.MEDIUM, Padding.Vertical.XSMALL);
 
         // Wrap the links in a list; improves accessibility
         UnorderedList list = new UnorderedList();
@@ -114,13 +116,25 @@ public class MainLayout extends AppLayout {
         // Add the logout button if the user is logged in
         VaadinSession session = VaadinSession.getCurrent();
         if (session.getAttribute("user") != null) {
-            Button logoutButton = new Button("Logout", LineAwesomeIcon.SIGN_OUT_ALT_SOLID.create(), event -> {
-                VaadinSession.getCurrent().getSession().invalidate();
-                VaadinSession.getCurrent().close();
-                UI.getCurrent().getPage().setLocation("users/login");
-            });
+            Button logoutButton = new Button("Logout", LineAwesomeIcon.SIGN_OUT_ALT_SOLID.create(),
+                event -> {
+                    VaadinSession.getCurrent().getSession().invalidate();
+                    VaadinSession.getCurrent().close();
+                    UI.getCurrent().getPage().setLocation("users/login");
+                });
             H3 username = new H3();
             username.setText("Welcome, " + session.getAttribute("user"));
+            layout.add(username);
+            layout.add(logoutButton);
+        } else if (session.getAttribute("isAdminLogin") != null) {
+            Button logoutButton = new Button("Logout", LineAwesomeIcon.SIGN_OUT_ALT_SOLID.create(),
+                event -> {
+                    VaadinSession.getCurrent().getSession().invalidate();
+                    VaadinSession.getCurrent().close();
+                    UI.getCurrent().getPage().setLocation("users/login");
+                });
+            H3 username = new H3();
+            username.setText("Welcome, " + session.getAttribute("isAdminLogin"));
             layout.add(username);
             layout.add(logoutButton);
         }
@@ -131,26 +145,46 @@ public class MainLayout extends AppLayout {
     private MenuItemInfo[] createMenuItems() {
         VaadinSession session = VaadinSession.getCurrent();
         boolean isLoggedIn = session.getAttribute("user") != null;
+        boolean isAdminLoggedIn = session.getAttribute("isAdminLogin") != null;
 
-        if(isLoggedIn){
+        System.out.println("isLoggedIn: " + isLoggedIn);
+        System.out.println("isAdminLoggedIn: " + isAdminLoggedIn);
+
+        if (isLoggedIn) {
+            if (isAdminLoggedIn) {
+                return new MenuItemInfo[]{ //
+                    new MenuItemInfo("Home", LineAwesomeIcon.HOUSE_DAMAGE_SOLID.create(),
+                        HomeView.class), //
+
+                    //new MenuItemInfo("Logout", LineAwesomeIcon.SIGN_OUT_ALT_SOLID.create(), UsersLoginView.class), //
+                };
+            } else {
+                return new MenuItemInfo[]{ //
+                    new MenuItemInfo("Home", LineAwesomeIcon.HOUSE_DAMAGE_SOLID.create(),
+                        HomeView.class), //
+
+                    new MenuItemInfo("Game Menu", LineAwesomeIcon.GAMEPAD_SOLID.create(),
+                        GameMenuView.class), //
+
+                    new MenuItemInfo("Scores", LineAwesomeIcon.LIST_SOLID.create(),
+                        ScoresView.class), //
+
+                    //new MenuItemInfo("Logout", LineAwesomeIcon.SIGN_OUT_ALT_SOLID.create(), UsersLoginView.class), //
+                };
+            }
+        } else {
             return new MenuItemInfo[]{ //
-                new MenuItemInfo("Home", LineAwesomeIcon.HOUSE_DAMAGE_SOLID.create(), HomeView.class), //
+                new MenuItemInfo("Home", LineAwesomeIcon.HOUSE_DAMAGE_SOLID.create(),
+                    HomeView.class), //
 
-                new MenuItemInfo("Game Menu", LineAwesomeIcon.GAMEPAD_SOLID.create(), GameMenuView.class), //
+                new MenuItemInfo("Login", LineAwesomeIcon.KEY_SOLID.create(), UsersLoginView.class),
+                //
 
-                new MenuItemInfo("Scores", LineAwesomeIcon.LIST_SOLID.create(), ScoresView.class), //
+                new MenuItemInfo("Register", LineAwesomeIcon.KEY_SOLID.create(),
+                    UsersRegisterView.class), //
 
-                //new MenuItemInfo("Logout", LineAwesomeIcon.SIGN_OUT_ALT_SOLID.create(), UsersLoginView.class), //
-            };
-        }else{
-            return new MenuItemInfo[]{ //
-                new MenuItemInfo("Home", LineAwesomeIcon.HOUSE_DAMAGE_SOLID.create(), HomeView.class), //
-
-                new MenuItemInfo("Login", LineAwesomeIcon.KEY_SOLID.create(), UsersLoginView.class), //
-
-                new MenuItemInfo("Register", LineAwesomeIcon.KEY_SOLID.create(), UsersRegisterView.class), //
-
-                new MenuItemInfo("Forgot Password", LineAwesomeIcon.KEY_SOLID.create(), ForgotPasswordView.class), //
+                new MenuItemInfo("Forgot Password", LineAwesomeIcon.KEY_SOLID.create(),
+                    ForgotPasswordView.class), //
             };
         }
     }

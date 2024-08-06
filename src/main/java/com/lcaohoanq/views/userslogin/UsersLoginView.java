@@ -15,6 +15,7 @@ import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.H3;
 import com.vaadin.flow.component.login.LoginForm;
 import com.vaadin.flow.component.login.LoginI18n;
+import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment;
 import com.vaadin.flow.component.orderedlayout.FlexComponent.JustifyContentMode;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
@@ -101,15 +102,13 @@ public class UsersLoginView extends Composite<VerticalLayout> {
     private void doAction() {
         // Add login listeners
         loginForm.addLoginListener(event -> {
-            String email_phone = event.getUsername();
-            String password = event.getPassword();
-
-            checkIsAdmin(email_phone, password);
+            UserLoginRequest userLoginRequest = new UserLoginRequest(event.getUsername(), event.getPassword());
+            checkTestAccount(userLoginRequest.getEmail_phone(), userLoginRequest.getPassword());
 
             try {
                 Map<String, Object> payload = Map.of(
-                    "email_phone", email_phone,
-                    "password", password);
+                    "email_phone", userLoginRequest.getEmail_phone(),
+                    "password", userLoginRequest.getPassword());
 
                 HttpResponse<String> response = ApiUtils.postRequest(
                     "http://localhost:8081/users/login", payload);
@@ -129,11 +128,14 @@ public class UsersLoginView extends Composite<VerticalLayout> {
 
                         log.info("Login successful");
 
-                        VaadinSession.getCurrent().setAttribute("user", email_phone);
+                        VaadinSession.getCurrent().setAttribute("user", userLoginRequest.getEmail_phone());
                         break;
                     case 400:
                         //Notification.show("Login failed", 3000, Notification.Position.MIDDLE);
                         loginForm.setError(true);
+                        break;
+                    case 408:
+                        Notification.show("Request Time Out", 3000, Notification.Position.MIDDLE);
                         break;
                     default:
                         throw new InternalServerException("Error 500 Internal server error");
@@ -169,9 +171,13 @@ public class UsersLoginView extends Composite<VerticalLayout> {
         // Redirect to Facebook authentication endpoint
     }
 
-    private void checkIsAdmin(String email_phone, String password) {
+    private void checkTestAccount(String email_phone, String password) {
         if (email_phone.equals("admin") && password.equals("admin")) {
+            VaadinSession.getCurrent().setAttribute("isAdminLogin", email_phone);
             UI.getCurrent().navigate(MenuManagement.class);
+        } else if (email_phone.equals("hoang") && password.equals("1")) {
+            VaadinSession.getCurrent().setAttribute("user", email_phone);
+            UI.getCurrent().navigate(GameMenuView.class);
         }
     }
 

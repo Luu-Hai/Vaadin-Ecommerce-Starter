@@ -9,7 +9,8 @@ public enum UserGenderEnum {
 
     MALE("M"),
     FEMALE("F"),
-    OTHER("O");
+    OTHER("O"),
+    NOT_PROVIDE("N");
 
     private final String gender;
 }

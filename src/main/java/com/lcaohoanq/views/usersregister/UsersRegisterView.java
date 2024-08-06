@@ -84,8 +84,8 @@ public class UsersRegisterView extends Composite<VerticalLayout> {
         textField_Address.setWidth("100%");
         datePicker_Birthday.setWidth("100%");
         select_G.setWidth("100%");
-        select_G.setItems("MALE", "FEMALE", "OTHER");
-        select_G.setValue("MALE"); //default value
+        select_G.setItems("MALE", "FEMALE", "OTHER", "NOT_PROVIDE");
+        select_G.setValue("NOT_PROVIDE"); //default value
 
         layoutRow.setWidthFull();
         layoutRow.addClassName(Gap.MEDIUM);
@@ -244,7 +244,7 @@ public class UsersRegisterView extends Composite<VerticalLayout> {
                 if (isFormValid()) {
                     try {
                         HttpResponse<String> response = ApiUtils.postRequest(
-                            "http://localhost:8081/users/register", fetchData());
+                            "http://localhost:8081/users/register", fetchData(new UserRegisterRequest(), new HashMap<>()));
                         Dialog dialog;
                         switch (response.statusCode()) {
                             case 200:
@@ -275,20 +275,13 @@ public class UsersRegisterView extends Composite<VerticalLayout> {
         });
     }
 
-    private Map<String, Object> fetchData() {
+    private Map<String, Object> fetchData(UserRegisterRequest user, Map<String, Object> payload) {
         String email_phone = textField_Email_Phone.getValue();
-        String first_name = textField_First_Name.getValue();
-        String last_name = textField_Last_Name.getValue();
-        String password = textField_Password.getValue();
-        String address = textField_Address.getValue();
         LocalDateTime birthday = datePicker_Birthday.getValue().atStartOfDay();
-        String gender = select_G.getValue();
-        String confirmed_password = textField_Confirmed_Password.getValue();
 
-        UserRegisterRequest user = new UserRegisterRequest();
         user.setId(-1L);
-        user.setFirstName(first_name);
-        user.setLastName(last_name);
+        user.setFirstName(textField_First_Name.getValue());
+        user.setLastName(textField_Last_Name.getValue());
         if (ValidateUtils.checkTypeAccount(email_phone)) {
             user.setEmail(email_phone);
             user.setPhone(null);
@@ -296,17 +289,16 @@ public class UsersRegisterView extends Composite<VerticalLayout> {
             user.setEmail(null);
             user.setPhone(email_phone);
         }
-        user.setPassword(password);
-        user.setAddress(address);
+        user.setPassword(textField_Password.getValue());
+        user.setAddress(textField_Address.getValue());
         user.setBirthday(birthday.toString());
-        user.setGender(gender);
+        user.setGender(select_G.getValue());
         user.setRole("USER");
         user.setStatus("UNVERIFIED");
         user.setCreated_at(LocalDate.now().toString());
         user.setUpdated_at(LocalDate.now().toString());
         user.setAvatar_url(null);
 
-        Map<String, Object> payload = new HashMap<>();
         payload.put("id", user.getId());
         payload.put("email", user.getEmail());
         payload.put("phone", user.getPhone());
