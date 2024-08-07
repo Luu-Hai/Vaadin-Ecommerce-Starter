@@ -59,8 +59,8 @@ public class UsersRegisterView extends Composite<VerticalLayout> {
     private VerticalLayout buttonLayout = new VerticalLayout();
     private HorizontalLayout termAndPolicy = new HorizontalLayout();
     private VerticalLayout layoutColumn2 = new VerticalLayout();
-    private Anchor link_Terms = new Anchor("https://www.example.com/terms", "Terms of Service");
-    private Anchor link_Policy = new Anchor("https://www.example.com/privacy", "Privacy Policy");
+    private Anchor link_Terms = new Anchor("http://localhost:3000/terms-of-service", "Terms of Service");
+    private Anchor link_Policy = new Anchor("http://localhost:3000/privacy-policy", "Privacy Policy");
     private Checkbox checkbox = new Checkbox();
     private Button button_Save = new Button("Save");
 
