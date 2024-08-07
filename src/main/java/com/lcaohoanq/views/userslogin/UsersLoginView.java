@@ -76,7 +76,7 @@ public class UsersLoginView extends Composite<VerticalLayout> {
         layoutColumn2.getStyle().set("height", "80vh");
         layoutColumn2.add(loginForm);
 
-        Image googleLogo = new Image("icons/logo-google.svg", "");
+        Image googleLogo = new Image("icons/icons8-google.svg", "");
         googleLogo.setHeight("16px");
         googleLogo.setWidth("16px");
         googleLoginButton = new Button("Login with Google", googleLogo);
@@ -84,7 +84,7 @@ public class UsersLoginView extends Composite<VerticalLayout> {
         googleLoginButton.getStyle().set("color", "black");
         googleLoginButton.getStyle().set("cursor", "pointer");
 
-        Image facebookLogo = new Image("icons/logo-facebook.svg", "");
+        Image facebookLogo = new Image("icons/icons8-facebook.svg", "");
         facebookLogo.setHeight("16px");
         facebookLogo.setWidth("16px");
         facebookLoginButton = new Button("Login with Facebook", facebookLogo);
