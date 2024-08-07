@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <!-- Project from https://start.vaadin.com/project/a606a716-4458-47c4-93da-98dd2ef64b80 -->
     <groupId>com.lcaohoanq</groupId>
-    <artifactId>spring-snake-game-fe</artifactId>
+    <artifactId>Vaadin-Snake-Game</artifactId>
     <name>spring-snake-game-fe</name>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
