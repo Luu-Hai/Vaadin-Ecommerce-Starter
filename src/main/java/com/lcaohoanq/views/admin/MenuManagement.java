@@ -1,5 +1,6 @@
 package com.lcaohoanq.views.admin;
 
+import com.lcaohoanq.constant.ApiConstant;
 import com.lcaohoanq.views.MainLayout;
 import com.lcaohoanq.views.userslogin.UsersLoginView;
 import com.vaadin.flow.component.Composite;
@@ -13,7 +14,7 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
 @PageTitle("Menu Management")
-@Route(value = "admin", layout = MainLayout.class)
+@Route(value = "admin/menu", layout = MainLayout.class)
 public class MenuManagement extends Composite<VerticalLayout> {
 
     //create a button for show all users data, show all score data, click to do corresponding action\
@@ -28,11 +29,9 @@ public class MenuManagement extends Composite<VerticalLayout> {
     private H3 title = new H3();
 
     public MenuManagement() {
-        if(UI.getCurrent().getSession().getAttribute("isAdminLogin") == null){
-            UI.getCurrent().navigate(UsersLoginView.class);
+        if(UI.getCurrent().getSession().getAttribute("user") == null){
+            UI.getCurrent().getPage().setLocation(ApiConstant.BASE_URL_FE + "users/login");
             return;
-        }else{
-
         }
 
         getContent().setWidth("100%");

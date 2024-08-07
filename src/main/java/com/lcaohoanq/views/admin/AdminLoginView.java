@@ -1,4 +1,4 @@
-package com.lcaohoanq.views.userslogin;
+package com.lcaohoanq.views.admin;
 
 import com.lcaohoanq.constant.ApiConstant;
 import com.lcaohoanq.enums.UserRoleEnum;
@@ -9,6 +9,7 @@ import com.lcaohoanq.views.MainLayout;
 import com.lcaohoanq.views.base.LoginPage;
 import com.lcaohoanq.views.forgotpassword.ForgotPasswordView;
 import com.lcaohoanq.views.menu.GameMenuView;
+import com.lcaohoanq.views.userslogin.UserLoginRequest;
 import com.lcaohoanq.views.utils.ComponentUtils;
 import com.vaadin.flow.component.Composite;
 import com.vaadin.flow.component.UI;
@@ -32,12 +33,11 @@ import java.net.http.HttpResponse;
 import java.util.Map;
 import lombok.extern.slf4j.Slf4j;
 
-@PageTitle("Login")
-@Route(value = "users/login", layout = MainLayout.class)
+@PageTitle("Admin Login")
+@Route(value = "admin")
 @Slf4j
-public class UsersLoginView extends LoginPage implements ComponentUtils {
-
-    public UsersLoginView() {
+public class AdminLoginView extends LoginPage implements ComponentUtils {
+    public AdminLoginView() {
         super(() -> {
             // Check if the user is already logged in
             if (VaadinSession.getCurrent().getAttribute("user") != null) {
@@ -52,7 +52,7 @@ public class UsersLoginView extends LoginPage implements ComponentUtils {
     public void initElement() {
         // Customize LoginForm labels
         i18n.getForm().setTitle("Login");
-        i18n.getForm().setUsername("Email or Phone Number");
+        i18n.getForm().setUsername("Username");
         i18n.getForm().setPassword("Password");
         i18n.getForm().setSubmit("Log in");
         i18n.getForm().setForgotPassword("Forgot your password?");
@@ -67,33 +67,6 @@ public class UsersLoginView extends LoginPage implements ComponentUtils {
         layoutColumn2.getStyle().set("height", "80vh");
         layoutColumn2.add(loginForm);
 
-        Image googleLogo = new Image("icons/icons8-google.svg", "");
-        googleLogo.setHeight("16px");
-        googleLogo.setWidth("16px");
-        googleLoginButton = new Button("Login with Google", googleLogo);
-        googleLoginButton.getStyle().set("background-color", "#F1F1F1");
-        googleLoginButton.getStyle().set("color", "black");
-        googleLoginButton.getStyle().set("cursor", "pointer");
-
-        Image facebookLogo = new Image("icons/icons8-facebook.svg", "");
-        facebookLogo.setHeight("16px");
-        facebookLogo.setWidth("16px");
-        facebookLoginButton = new Button("Login with Facebook", facebookLogo);
-        facebookLoginButton.getStyle().set("background-color", "#3479ea");
-        facebookLoginButton.getStyle().set("color", "white");
-        facebookLoginButton.getStyle().set("cursor", "pointer");
-
-        layoutRowBottom.setWidthFull();
-        layoutRowBottom.setWidth("100%");
-        layoutRowBottom.setMaxWidth("800px");
-        layoutRowBottom.setHeight("min-content");
-        layoutRowBottom.setJustifyContentMode(JustifyContentMode.CENTER);
-        layoutRowBottom.setAlignItems(Alignment.CENTER);
-
-        // Add the buttons to the layout
-        layoutRowBottom.add(googleLoginButton, facebookLoginButton);
-        layoutColumn2.add(layoutRowBottom);
-
         getContent().setWidth("100%");
         getContent().getStyle().set("flex-grow", "1");
         getContent().setJustifyContentMode(JustifyContentMode.CENTER);
@@ -106,8 +79,9 @@ public class UsersLoginView extends LoginPage implements ComponentUtils {
     public void doAction() {
         // Add login listeners
         loginForm.addLoginListener(event -> {
-            UserLoginRequest userLoginRequest = new UserLoginRequest(event.getUsername(),
-                event.getPassword());
+            UserLoginRequest userLoginRequest = new UserLoginRequest(event.getUsername(), event.getPassword());
+            checkTestAccount(userLoginRequest.getEmail_phone(), userLoginRequest.getPassword());
+
             try {
                 Map<String, Object> payload = Map.of(
                     "email_phone", userLoginRequest.getEmail_phone(),
@@ -119,10 +93,9 @@ public class UsersLoginView extends LoginPage implements ComponentUtils {
                 // Handle the response
                 switch (response.statusCode()) {
                     case 200:
-                        VaadinSession.getCurrent()
-                            .setAttribute("user", userLoginRequest.getEmail_phone());
-                        VaadinSession.getCurrent().setAttribute("role", UserRoleEnum.USER);
-                        showSuccessDialog("Login Successful!", "Close", UserRoleEnum.USER);
+                        VaadinSession.getCurrent().setAttribute("user", userLoginRequest.getEmail_phone());
+                        VaadinSession.getCurrent().setAttribute("role", UserRoleEnum.ADMIN);
+                        showSuccessDialog("Login Successful!", "Close", UserRoleEnum.ADMIN);
                         log.info("Login successful");
                         break;
                     case 400:
@@ -142,32 +115,15 @@ public class UsersLoginView extends LoginPage implements ComponentUtils {
                 System.out.println("Error: " + e.getMessage());
             }
         });
-
-        // Add forgot password listener
-        loginForm.addForgotPasswordListener(event -> {
-            UI.getCurrent().navigate(ForgotPasswordView.class);
-        });
-
-        googleLoginButton.addClickListener(e -> handleGoogleLogin());
-
-        facebookLoginButton.addClickListener(e -> handleFacebookLogin());
-    }
-
-    private void handleGoogleLogin() {
-        try {
-            String googleAuthUrl = EnvUtil.get("GOOGLE_AUTH_URL");
-            UI.getCurrent().getPage().setLocation(googleAuthUrl);
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
-    }
-
-    private void handleFacebookLogin() {
-        // Redirect to Facebook authentication endpoint
     }
 
     @Override
     public void checkTestAccount(String email_phone, String password) {
+        if (email_phone.equals("admin") && password.equals("admin")) {
+            VaadinSession.getCurrent().setAttribute("user", email_phone);
+            VaadinSession.getCurrent().setAttribute("role", UserRoleEnum.ADMIN);
+            showSuccessDialog("Login Successful!", "Close", UserRoleEnum.ADMIN);
+        }
     }
 
     @Override
@@ -183,14 +139,8 @@ public class UsersLoginView extends LoginPage implements ComponentUtils {
     private void handleCloseButton(UserRoleEnum userRole, Dialog successDialog) {
         successDialog.close();
         switch (userRole) {
-            case USER:
-                UI.getCurrent().getPage().setLocation(ApiConstant.BASE_URL_FE + "/menu");
-                break;
-            case USER_GOLD:
-                UI.getCurrent().getPage().setLocation(ApiConstant.BASE_URL_FE + "/menu/gold");
-                break;
-            case USER_PREMIUM:
-                UI.getCurrent().getPage().setLocation(ApiConstant.BASE_URL_FE + "/menu/premium");
+            case ADMIN:
+                UI.getCurrent().getPage().setLocation(ApiConstant.BASE_URL_FE + "/admin/menu");
                 break;
             default:
                 break;
