@@ -5,7 +5,6 @@ import com.lcaohoanq.models.User;
 import com.lcaohoanq.utils.ApiUtils;
 import com.lcaohoanq.utils.PBKDF2;
 import com.lcaohoanq.views.MainLayout;
-import com.lcaohoanq.views.forgotpassword.ForgotPasswordView;
 import com.vaadin.flow.component.Composite;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.H3;
@@ -20,7 +19,6 @@ import com.vaadin.flow.server.VaadinSession;
 import java.io.IOException;
 import java.net.http.HttpResponse;
 import java.util.Map;
-import org.springframework.beans.factory.annotation.Autowired;
 
 @PageTitle("Reset Password")
 @Route(value = "/users/updatePassword", layout = MainLayout.class)
@@ -82,7 +80,7 @@ public class ResetPasswordView extends Composite<VerticalLayout> {
                 User user = (User) VaadinSession.getCurrent().getAttribute("userRequiredForgotPassword");
                 String data = user.getEmail() != null ? user.getEmail() : user.getPhone();
 
-                String url = ApiConstant.BASE_URL + "/users/updatePassword";
+                String url = ApiConstant.BASE_URL_BE + "/users/updatePassword";
 
                 Map<String, Object> payload = Map.of(
                     "identifier", data,

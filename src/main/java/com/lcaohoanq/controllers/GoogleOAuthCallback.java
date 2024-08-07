@@ -2,18 +2,17 @@ package com.lcaohoanq.controllers;
 
 import com.lcaohoanq.constant.ApiConstant;
 import com.lcaohoanq.constant.GoogleAuthentication;
+import com.lcaohoanq.enums.UserRoleEnum;
 import com.lcaohoanq.models.UserGoogle;
 import com.lcaohoanq.utils.ApiUtils;
 import com.lcaohoanq.utils.AvatarConverter;
 import com.lcaohoanq.utils.PayloadUtils;
-import com.lcaohoanq.views.exception.InternalServerErrorExceptionView;
 import com.lcaohoanq.views.usersregister.UserRegisterRequest;
 import com.vaadin.flow.component.Composite;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.dialog.Dialog;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.H3;
-import com.vaadin.flow.router.InternalServerError;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.VaadinSession;
 import java.io.IOException;
@@ -96,8 +95,6 @@ public class GoogleOAuthCallback extends Composite<Div> {
     private void handleUserLogin(UserGoogle userInfo) {
         String email = userInfo.getEmail();
 
-        System.out.println("User info: " + userInfo);
-
         byte[] avatar_url = null;
 
         try {
@@ -128,7 +125,7 @@ public class GoogleOAuthCallback extends Composite<Div> {
         //call api to store user info
         try {
             HttpResponse<String> response = ApiUtils.postRequest(
-                ApiConstant.BASE_URL + "/users/oauth2/callback/google", payload);
+                ApiConstant.BASE_URL_BE + "/users/oauth2/callback/google", payload);
             Dialog dialog;
             switch (response.statusCode()) {
                 case 200:
@@ -136,6 +133,7 @@ public class GoogleOAuthCallback extends Composite<Div> {
                     dialog.add(new H3("Login successfully"));
                     dialog.open();
                     VaadinSession.getCurrent().setAttribute("user", email);
+                    VaadinSession.getCurrent().setAttribute("role", UserRoleEnum.USER);
                     UI.getCurrent().getPage().setLocation(
                         "http://localhost:3000"); // Redirect to the home page after successful login
                     break;

@@ -1,6 +1,12 @@
 package com.lcaohoanq.views;
 
 
+import com.lcaohoanq.enums.UserRoleEnum;
+import com.lcaohoanq.views.admin.MenuManagement;
+import com.lcaohoanq.views.admin.UsersManagement;
+import com.lcaohoanq.views.admin.datagrid.DataGridView;
+import com.lcaohoanq.views.admin.gridwithfilters.GridwithFiltersView;
+import com.lcaohoanq.views.admin.masterdetail.MasterDetailView;
 import com.lcaohoanq.views.forgotpassword.ForgotPasswordView;
 import com.lcaohoanq.views.home.HomeView;
 import com.lcaohoanq.views.menu.GameMenuView;
@@ -113,28 +119,18 @@ public class MainLayout extends AppLayout {
 
         }
 
-        // Add the logout button if the user is logged in
+        H3 username = new H3();
         VaadinSession session = VaadinSession.getCurrent();
-        if (session.getAttribute("user") != null) {
+        UserRoleEnum role = (UserRoleEnum) session.getAttribute("role");
+        if (session.getAttribute("user") != null && role != null) {
             Button logoutButton = new Button("Logout", LineAwesomeIcon.SIGN_OUT_ALT_SOLID.create(),
                 event -> {
                     VaadinSession.getCurrent().getSession().invalidate();
                     VaadinSession.getCurrent().close();
                     UI.getCurrent().getPage().setLocation("users/login");
                 });
-            H3 username = new H3();
-            username.setText("Welcome, " + session.getAttribute("user"));
-            layout.add(username);
-            layout.add(logoutButton);
-        } else if (session.getAttribute("isAdminLogin") != null) {
-            Button logoutButton = new Button("Logout", LineAwesomeIcon.SIGN_OUT_ALT_SOLID.create(),
-                event -> {
-                    VaadinSession.getCurrent().getSession().invalidate();
-                    VaadinSession.getCurrent().close();
-                    UI.getCurrent().getPage().setLocation("users/login");
-                });
-            H3 username = new H3();
-            username.setText("Welcome, " + session.getAttribute("isAdminLogin"));
+            String user = (String) session.getAttribute("user");
+            username.setText(role == UserRoleEnum.ADMIN ? "Admin, " + user : "Welcome, " + user);
             layout.add(username);
             layout.add(logoutButton);
         }
@@ -145,18 +141,30 @@ public class MainLayout extends AppLayout {
     private MenuItemInfo[] createMenuItems() {
         VaadinSession session = VaadinSession.getCurrent();
         boolean isLoggedIn = session.getAttribute("user") != null;
-        boolean isAdminLoggedIn = session.getAttribute("isAdminLogin") != null;
-
-        System.out.println("isLoggedIn: " + isLoggedIn);
-        System.out.println("isAdminLoggedIn: " + isAdminLoggedIn);
+        UserRoleEnum role = (UserRoleEnum) session.getAttribute("role");
 
         if (isLoggedIn) {
-            if (isAdminLoggedIn) {
+            if (role == UserRoleEnum.ADMIN) {
                 return new MenuItemInfo[]{ //
-                    new MenuItemInfo("Home", LineAwesomeIcon.HOUSE_DAMAGE_SOLID.create(),
-                        HomeView.class), //
+                    new MenuItemInfo("Menu", LineAwesomeIcon.HOUSE_DAMAGE_SOLID.create(),
+                        MenuManagement.class), //
 
-                    //new MenuItemInfo("Logout", LineAwesomeIcon.SIGN_OUT_ALT_SOLID.create(), UsersLoginView.class), //
+                    new MenuItemInfo("Manage Employees", LineAwesomeIcon.KEY_SOLID.create(),
+                        UsersManagement.class), //
+
+                    new MenuItemInfo("Master Details", LineAwesomeIcon.GET_POCKET.create(),
+                        MasterDetailView.class), //
+
+                    new MenuItemInfo("Grid", LineAwesomeIcon.BOXES_SOLID.create(),
+                        DataGridView.class), //
+
+                    new MenuItemInfo("Grid with Filter", LineAwesomeIcon.FILE_ALT_SOLID.create(),
+                        GridwithFiltersView.class), //
+                };
+            } else if(role == UserRoleEnum.EMPLOYEE) {
+                return new MenuItemInfo[]{ //
+                    new MenuItemInfo("Manage Users", LineAwesomeIcon.KEY_SOLID.create(),
+                        UsersManagement.class), //
                 };
             } else {
                 return new MenuItemInfo[]{ //
@@ -169,7 +177,6 @@ public class MainLayout extends AppLayout {
                     new MenuItemInfo("Scores", LineAwesomeIcon.LIST_SOLID.create(),
                         ScoresView.class), //
 
-                    //new MenuItemInfo("Logout", LineAwesomeIcon.SIGN_OUT_ALT_SOLID.create(), UsersLoginView.class), //
                 };
             }
         } else {

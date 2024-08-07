@@ -5,16 +5,12 @@ import com.lcaohoanq.models.User;
 import com.lcaohoanq.utils.ApiUtils;
 import com.lcaohoanq.utils.ValidateUtils;
 import com.lcaohoanq.views.MainLayout;
-import com.lcaohoanq.views.home.HomeView;
-import com.lcaohoanq.views.menu.GameMenuView;
 import com.lcaohoanq.views.resetpassword.ResetPasswordView;
-import com.lcaohoanq.views.userslogin.UsersLoginView;
 import com.vaadin.flow.component.Composite;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
 import com.vaadin.flow.component.dialog.Dialog;
-import com.vaadin.flow.component.html.H3;
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment;
 import com.vaadin.flow.component.orderedlayout.FlexComponent.JustifyContentMode;
@@ -83,7 +79,7 @@ public class ForgotPasswordView extends Composite<VerticalLayout> {
             if (textField_Email_Phone.isEmpty()) {
                 Notification.show("Email or Phone Number is required");
             } else {
-                String url = ApiConstant.BASE_URL + "/forgot-password?email_phone=" + textField_Email_Phone.getValue();
+                String url = ApiConstant.BASE_URL_BE + "/forgot-password?email_phone=" + textField_Email_Phone.getValue();
 
                 if(ValidateUtils.checkTypeAccount(textField_Email_Phone.getValue())){
                     user.setEmail(textField_Email_Phone.getValue());

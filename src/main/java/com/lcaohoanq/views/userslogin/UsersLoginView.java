@@ -1,10 +1,11 @@
 package com.lcaohoanq.views.userslogin;
 
+import com.lcaohoanq.constant.ApiConstant;
+import com.lcaohoanq.enums.UserRoleEnum;
 import com.lcaohoanq.exception.InternalServerException;
 import com.lcaohoanq.utils.ApiUtils;
 import com.lcaohoanq.utils.EnvUtil;
 import com.lcaohoanq.views.MainLayout;
-import com.lcaohoanq.views.admin.MenuManagement;
 import com.lcaohoanq.views.forgotpassword.ForgotPasswordView;
 import com.lcaohoanq.views.menu.GameMenuView;
 import com.vaadin.flow.component.Composite;
@@ -24,13 +25,10 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.VaadinSession;
-import java.awt.Desktop;
 import java.io.IOException;
-import java.net.URI;
 import java.net.http.HttpResponse;
 import java.util.Map;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.client.HttpServerErrorException.InternalServerError;
 
 @PageTitle("Login")
 @Route(value = "users/login", layout = MainLayout.class)
@@ -128,19 +126,10 @@ public class UsersLoginView extends Composite<VerticalLayout> {
                 // Handle the response
                 switch (response.statusCode()) {
                     case 200:
-                        Dialog successDialog = new Dialog();
-
-                        Button closeButton = new Button("Close",
-                            e -> handleCloseButton(successDialog));
-                        closeButton.getStyle().set("background-color", "lightblue");
-                        closeButton.getStyle().set("align-items", "center");
-
-                        successDialog.add(new H3("Login Successful!"), new Div(closeButton));
-                        successDialog.open();
-
-                        log.info("Login successful");
-
                         VaadinSession.getCurrent().setAttribute("user", userLoginRequest.getEmail_phone());
+                        VaadinSession.getCurrent().setAttribute("role", UserRoleEnum.USER);
+                        showSuccessDialog(UserRoleEnum.USER);
+                        log.info("Login successful");
                         break;
                     case 400:
                         //Notification.show("Login failed", 3000, Notification.Position.MIDDLE);
@@ -185,16 +174,39 @@ public class UsersLoginView extends Composite<VerticalLayout> {
 
     private void checkTestAccount(String email_phone, String password) {
         if (email_phone.equals("admin") && password.equals("admin")) {
-            VaadinSession.getCurrent().setAttribute("isAdminLogin", email_phone);
-            UI.getCurrent().navigate(MenuManagement.class);
+            VaadinSession.getCurrent().setAttribute("user", email_phone);
+            VaadinSession.getCurrent().setAttribute("role", UserRoleEnum.ADMIN);
+            showSuccessDialog(UserRoleEnum.ADMIN);
         } else if (email_phone.equals("hoang") && password.equals("1")) {
             VaadinSession.getCurrent().setAttribute("user", email_phone);
-            UI.getCurrent().navigate(GameMenuView.class);
+            VaadinSession.getCurrent().setAttribute("role", UserRoleEnum.EMPLOYEE);
+            showSuccessDialog(UserRoleEnum.EMPLOYEE);
         }
     }
 
-    private void handleCloseButton(Dialog successDialog) {
+    private void showSuccessDialog(UserRoleEnum userRole) {
+        Dialog successDialog = new Dialog();
+        Button closeButton = new Button("Close", e -> handleCloseButton(userRole, successDialog));
+        closeButton.getStyle().set("background-color", "lightblue");
+        closeButton.getStyle().set("align-items", "center");
+        successDialog.add(new H3("Login Successful!"), new Div(closeButton));
+        successDialog.open();
+    }
+
+    private void handleCloseButton(UserRoleEnum userRole, Dialog successDialog) {
         successDialog.close();
-        UI.getCurrent().navigate(GameMenuView.class);
+        switch (userRole) {
+            case ADMIN:
+                UI.getCurrent().getPage().setLocation(ApiConstant.BASE_URL_FE + "/admin");
+                break;
+            case USER:
+                UI.getCurrent().getPage().setLocation(ApiConstant.BASE_URL_FE + "/menu");
+                break;
+            case EMPLOYEE:
+                UI.getCurrent().getPage().setLocation(ApiConstant.BASE_URL_FE + "/admin/employee");
+                break;
+            default:
+                break;
+        }
     }
 }
