@@ -1,8 +1,10 @@
 package com.lcaohoanq.views.usersregister;
 
 import com.lcaohoanq.utils.ApiUtils;
+import com.lcaohoanq.utils.PayloadUtils;
 import com.lcaohoanq.utils.ValidateUtils;
 import com.lcaohoanq.views.MainLayout;
+import com.nimbusds.jose.Payload;
 import com.vaadin.flow.component.Composite;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
@@ -299,22 +301,7 @@ public class UsersRegisterView extends Composite<VerticalLayout> {
         user.setUpdated_at(LocalDate.now().toString());
         user.setAvatar_url(null);
 
-        payload.put("id", user.getId());
-        payload.put("email", user.getEmail());
-        payload.put("phone", user.getPhone());
-        payload.put("firstName", user.getFirstName());
-        payload.put("lastName", user.getLastName());
-        payload.put("password", user.getPassword());
-        payload.put("address", user.getAddress());
-        payload.put("birthday", user.getBirthday());
-        payload.put("gender", user.getGender());
-        payload.put("role", user.getRole());
-        payload.put("status", user.getStatus());
-        payload.put("created_at", user.getCreated_at());
-        payload.put("updated_at", user.getUpdated_at());
-        payload.put("avatar_url", user.getAvatar_url());
-
-        return payload;
+        return PayloadUtils.generatePayloadUser(payload, user);
     }
 
     private void validateAllFields() {

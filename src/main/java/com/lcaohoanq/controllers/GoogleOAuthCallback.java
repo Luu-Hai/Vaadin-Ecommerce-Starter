@@ -2,20 +2,18 @@ package com.lcaohoanq.controllers;
 
 import com.lcaohoanq.constant.ApiConstant;
 import com.lcaohoanq.constant.GoogleAuthentication;
-import com.lcaohoanq.enums.UserGenderEnum;
-import com.lcaohoanq.enums.UserStatusEnum;
-import com.lcaohoanq.models.User;
 import com.lcaohoanq.models.UserGoogle;
 import com.lcaohoanq.utils.ApiUtils;
 import com.lcaohoanq.utils.AvatarConverter;
-import com.lcaohoanq.utils.EnvUtil;
-import com.lcaohoanq.utils.ValidateUtils;
+import com.lcaohoanq.utils.PayloadUtils;
+import com.lcaohoanq.views.exception.InternalServerErrorExceptionView;
 import com.lcaohoanq.views.usersregister.UserRegisterRequest;
 import com.vaadin.flow.component.Composite;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.dialog.Dialog;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.H3;
+import com.vaadin.flow.router.InternalServerError;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.VaadinSession;
 import java.io.IOException;
@@ -30,8 +28,9 @@ import org.springframework.web.client.RestTemplate;
 
 @Route("oauth2/callback/google")
 public class GoogleOAuthCallback extends Composite<Div> {
+
     public GoogleOAuthCallback() {
-        try{
+        try {
             // Extract authorization code from the URL
             String authorizationCode = getAuthorizationCode();
 
@@ -43,21 +42,22 @@ public class GoogleOAuthCallback extends Composite<Div> {
 
             // Handle user information (e.g., store in session, redirect, etc.)
             handleUserLogin(userInfo);
-        }catch (Exception e){
+        } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
         }
     }
 
     private String getAuthorizationCode() {
-        return UI.getCurrent().getInternals().getLastHandledLocation().getQueryParameters().getParameters().get("code").get(0);
+        return UI.getCurrent().getInternals().getLastHandledLocation().getQueryParameters()
+            .getParameters().get("code").get(0);
     }
 
     private String getAccessToken(String authorizationCode) {
         String clientId = GoogleAuthentication.GOOGLE_CLIENT_ID;
         String clientSecret = GoogleAuthentication.GOOGLE_CLIENT_SECRET;
         String redirectUri = GoogleAuthentication.GOOGLE_REDIRECT_URI;
-        String tokenEndpoint =  GoogleAuthentication.GOOGLE_LINK_GET_TOKEN; //https://accounts.google.com/o/oauth2/token
-        String grantType =  GoogleAuthentication.GOOGLE_GRANT_TYPE; //authorization_code
+        String tokenEndpoint = GoogleAuthentication.GOOGLE_LINK_GET_TOKEN; //https://accounts.google.com/o/oauth2/token
+        String grantType = GoogleAuthentication.GOOGLE_GRANT_TYPE; //authorization_code
 
         RestTemplate restTemplate = new RestTemplate();
 
@@ -68,12 +68,14 @@ public class GoogleOAuthCallback extends Composite<Div> {
         requestBody.add("redirect_uri", redirectUri);
         requestBody.add("grant_type", grantType);
 
-        ResponseEntity<Map> response = restTemplate.postForEntity(tokenEndpoint, requestBody, Map.class);
+        ResponseEntity<Map> response = restTemplate.postForEntity(tokenEndpoint, requestBody,
+            Map.class);
 
         if (response.getBody() != null && response.getBody().containsKey("access_token")) {
             return (String) response.getBody().get("access_token");
         } else {
-            throw new RuntimeException("Failed to retrieve access token. Response: " + response.getBody());
+            throw new RuntimeException(
+                "Failed to retrieve access token. Response: " + response.getBody());
         }
     }
 
@@ -94,11 +96,11 @@ public class GoogleOAuthCallback extends Composite<Div> {
     private void handleUserLogin(UserGoogle userInfo) {
         String email = userInfo.getEmail();
 
-        System.out.println("User info: "+ userInfo);
+        System.out.println("User info: " + userInfo);
 
         byte[] avatar_url = null;
 
-        try{
+        try {
             avatar_url = AvatarConverter.convertAvatarUrlToByteArray(userInfo.getPicture());
         } catch (IOException e) {
             System.out.println("Failed to convert avatar URL to byte array: " + e.getMessage());
@@ -121,25 +123,7 @@ public class GoogleOAuthCallback extends Composite<Div> {
         user.setAvatar_url(avatar_url);
 
         Map<String, Object> payload = new HashMap<>();
-        payload.put("id", user.getId());
-        payload.put("email", user.getEmail());
-        payload.put("phone", user.getPhone());
-        payload.put("firstName", user.getFirstName());
-        payload.put("lastName", user.getLastName());
-        payload.put("password", user.getPassword());
-        payload.put("address", user.getAddress());
-        payload.put("birthday", user.getBirthday());
-        payload.put("gender", user.getGender());
-        payload.put("role", user.getRole());
-        payload.put("status", user.getStatus());
-        payload.put("created_at", user.getCreated_at());
-        payload.put("updated_at", user.getUpdated_at());
-        payload.put("avatar_url", user.getAvatar_url());
-
-
-        for(Map.Entry<String, Object> entry : payload.entrySet()){
-            System.out.println(entry.getKey() + " : " + entry.getValue());
-        }
+        PayloadUtils.generatePayloadUser(payload, user);
 
         //call api to store user info
         try {
@@ -152,7 +136,8 @@ public class GoogleOAuthCallback extends Composite<Div> {
                     dialog.add(new H3("Login successfully"));
                     dialog.open();
                     VaadinSession.getCurrent().setAttribute("user", email);
-                    UI.getCurrent().getPage().setLocation("http://localhost:3000"); // Redirect to the home page after successful login
+                    UI.getCurrent().getPage().setLocation(
+                        "http://localhost:3000"); // Redirect to the home page after successful login
                     break;
                 case 400:
                     dialog = new Dialog();
@@ -166,8 +151,12 @@ public class GoogleOAuthCallback extends Composite<Div> {
                     break;
             }
         } catch (Exception e) {
-            System.out.println(
-                "An error occurred while creating a new user: " + e.getMessage());
+            if (e instanceof IOException) {
+                UI.getCurrent().getPage().setLocation("http://localhost:3000/errors");
+            }
+            if (e instanceof InterruptedException) {
+                UI.getCurrent().getPage().setLocation("http://localhost:3000/errors");
+            }
         }
     }
 }
