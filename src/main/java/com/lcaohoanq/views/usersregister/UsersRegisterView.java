@@ -1,5 +1,6 @@
 package com.lcaohoanq.views.usersregister;
 
+import com.lcaohoanq.constant.Regex;
 import com.lcaohoanq.utils.ApiUtils;
 import com.lcaohoanq.utils.PayloadUtils;
 import com.lcaohoanq.utils.ValidateUtils;
@@ -160,14 +161,14 @@ public class UsersRegisterView extends Composite<VerticalLayout> {
                     textField_Email_Phone.setInvalid(true);
                 } else {
                     if (ValidateUtils.checkTypeAccount(emailPhone)) {
-                        if (!emailPhone.matches("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$")) {
+                        if (!emailPhone.matches(Regex.USER_EMAIL)) {
                             textField_Email_Phone.setErrorMessage("Invalid email format");
                             textField_Email_Phone.setInvalid(true);
                         } else {
                             textField_Email_Phone.setInvalid(false);
                         }
                     } else {
-                        if (!emailPhone.matches("(84|0[3|5|7|8|9])[0-9]{8}")) {
+                        if (!emailPhone.matches(Regex.USER_PHONE)) {
                             textField_Email_Phone.setErrorMessage("Invalid phone number format");
                             textField_Email_Phone.setInvalid(true);
                         } else {
