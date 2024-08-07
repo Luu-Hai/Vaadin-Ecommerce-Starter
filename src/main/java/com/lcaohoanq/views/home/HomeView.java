@@ -29,7 +29,7 @@ public class HomeView extends VerticalLayout {
 
         setSpacing(false);
 
-        Image img = new Image("images/empty-plant.png", "placeholder plant");
+        Image img = new Image("images/snake.png", "placeholder plant");
         img.setWidth("200px");
         add(img);
 
