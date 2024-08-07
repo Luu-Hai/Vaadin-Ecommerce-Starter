@@ -136,6 +136,7 @@
                 <includes>
                     <include>*.xml</include>
                     <include>**/*.png</include>
+                     <include>**/*.svg</include>
                     <include>application.properties</include>
                 </includes>
                 <targetPath>${project.build.outputDirectory}</targetPath>

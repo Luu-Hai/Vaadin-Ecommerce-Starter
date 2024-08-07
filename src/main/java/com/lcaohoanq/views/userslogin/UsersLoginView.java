@@ -13,6 +13,7 @@ import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.dialog.Dialog;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.H3;
+import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.login.LoginForm;
 import com.vaadin.flow.component.login.LoginI18n;
 import com.vaadin.flow.component.notification.Notification;
@@ -42,9 +43,9 @@ public class UsersLoginView extends Composite<VerticalLayout> {
     private LoginI18n i18n = LoginI18n.createDefault(); // Customize LoginForm labels
 
     // Create Google and Facebook login buttons
-    private Button googleLoginButton = new Button("Login with Google");
+    private Button googleLoginButton;
 
-    private Button facebookLoginButton = new Button("Login with Facebook");
+    private Button facebookLoginButton;
 
     public UsersLoginView() {
         // Check if the user is already logged in
@@ -75,10 +76,21 @@ public class UsersLoginView extends Composite<VerticalLayout> {
         layoutColumn2.getStyle().set("height", "80vh");
         layoutColumn2.add(loginForm);
 
+        Image googleLogo = new Image("icons/logo-google.svg", "");
+        googleLogo.setHeight("16px");
+        googleLogo.setWidth("16px");
+        googleLoginButton = new Button("Login with Google", googleLogo);
         googleLoginButton.getStyle().set("background-color", "#F1F1F1");
         googleLoginButton.getStyle().set("color", "black");
-        facebookLoginButton.getStyle().set("background-color", "#3B5998");
+        googleLoginButton.getStyle().set("cursor", "pointer");
+
+        Image facebookLogo = new Image("icons/logo-facebook.svg", "");
+        facebookLogo.setHeight("16px");
+        facebookLogo.setWidth("16px");
+        facebookLoginButton = new Button("Login with Facebook", facebookLogo);
+        facebookLoginButton.getStyle().set("background-color", "#3479ea");
         facebookLoginButton.getStyle().set("color", "white");
+        facebookLoginButton.getStyle().set("cursor", "pointer");
 
         layoutRowBottom.setWidthFull();
         layoutRowBottom.setWidth("100%");
