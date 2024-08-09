@@ -3,11 +3,14 @@ package com.lcaohoanq.controllers;
 import com.lcaohoanq.constant.ApiConstant;
 import com.lcaohoanq.constant.GoogleAuthentication;
 import com.lcaohoanq.enums.UserRoleEnum;
+import com.lcaohoanq.enums.UserStatusEnum;
+import com.lcaohoanq.models.Role;
+import com.lcaohoanq.models.Status;
 import com.lcaohoanq.models.UserGoogle;
 import com.lcaohoanq.utils.ApiUtils;
 import com.lcaohoanq.utils.AvatarConverter;
 import com.lcaohoanq.utils.PayloadUtils;
-import com.lcaohoanq.views.usersregister.UserRegisterRequest;
+import com.lcaohoanq.schemas.UserRegisterRequest;
 import com.vaadin.flow.component.Composite;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.dialog.Dialog;
@@ -113,8 +116,8 @@ public class GoogleOAuthCallback extends Composite<Div> {
         user.setAddress("");
         user.setBirthday("");
         user.setGender("NOT_PROVIDE");
-        user.setRole("USER");
-        user.setStatus("VERIFIED");
+        user.setRole(new Role(0, UserRoleEnum.USER));
+        user.setStatus(new Status(1, UserStatusEnum.VERIFIED));
         user.setCreated_at(LocalDate.now().toString());
         user.setUpdated_at(LocalDate.now().toString());
         user.setAvatar_url(avatar_url);
@@ -151,9 +154,11 @@ public class GoogleOAuthCallback extends Composite<Div> {
         } catch (Exception e) {
             if (e instanceof IOException) {
                 UI.getCurrent().getPage().setLocation("http://localhost:3000/errors");
+                System.out.println("IOException: " + e.getMessage());
             }
             if (e instanceof InterruptedException) {
                 UI.getCurrent().getPage().setLocation("http://localhost:3000/errors");
+                System.out.println("InterruptedException: " + e.getMessage());
             }
         }
     }

@@ -6,7 +6,7 @@ import com.lcaohoanq.exception.InternalServerException;
 import com.lcaohoanq.utils.ApiUtils;
 import com.lcaohoanq.views.base.LoginPage;
 import com.lcaohoanq.views.menu.GameMenuView;
-import com.lcaohoanq.views.userslogin.UserLoginRequest;
+import com.lcaohoanq.schemas.UserLoginRequest;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.dialog.Dialog;

@@ -1,11 +1,15 @@
-package com.lcaohoanq.views.usersregister;
+package com.lcaohoanq.views.user.register;
 
 import com.lcaohoanq.constant.Regex;
+import com.lcaohoanq.enums.UserRoleEnum;
+import com.lcaohoanq.enums.UserStatusEnum;
+import com.lcaohoanq.models.Role;
+import com.lcaohoanq.models.Status;
 import com.lcaohoanq.utils.ApiUtils;
 import com.lcaohoanq.utils.PayloadUtils;
 import com.lcaohoanq.utils.ValidateUtils;
 import com.lcaohoanq.views.MainLayout;
-import com.nimbusds.jose.Payload;
+import com.lcaohoanq.schemas.UserRegisterRequest;
 import com.vaadin.flow.component.Composite;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
@@ -30,9 +34,12 @@ import java.net.http.HttpResponse;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -74,10 +81,19 @@ public class UsersRegisterView extends Composite<VerticalLayout> {
         doAction();
     }
 
+    public LinkedHashMap<String, String> convertStringVisualToEnum(String... args) {
+        return Arrays.stream(args)
+            .collect(Collectors.toMap(
+                s -> s,
+                String::toUpperCase,
+                (oldValue, newValue) -> oldValue,
+                LinkedHashMap::new
+            ));
+    }
+
     private void initComponent() {
         title.setText("Register");
         title.setWidth("min-content");
-
         textField_Email_Phone.setWidth("100%");
         textField_First_Name.setWidth("min-content");
         textField_Last_Name.setWidth("min-content");
@@ -87,8 +103,8 @@ public class UsersRegisterView extends Composite<VerticalLayout> {
         textField_Address.setWidth("100%");
         datePicker_Birthday.setWidth("100%");
         select_G.setWidth("100%");
-        select_G.setItems("MALE", "FEMALE", "OTHER", "NOT_PROVIDE");
-        select_G.setValue("NOT_PROVIDE"); //default value
+        select_G.setItems("Male", "Female", "Other", "Not provide"); //MALE
+        select_G.setValue("Not provide"); //default value
 
         layoutRow.setWidthFull();
         layoutRow.addClassName(Gap.MEDIUM);
@@ -295,9 +311,9 @@ public class UsersRegisterView extends Composite<VerticalLayout> {
         user.setPassword(textField_Password.getValue());
         user.setAddress(textField_Address.getValue());
         user.setBirthday(birthday.toString());
-        user.setGender(select_G.getValue());
-        user.setRole("USER");
-        user.setStatus("UNVERIFIED");
+        user.setGender(convertStringVisualToEnum(select_G.getValue()).get(select_G.getValue()));
+        user.setRole(new Role(0, UserRoleEnum.USER));
+        user.setStatus(new Status(0, UserStatusEnum.UNVERIFIED));
         user.setCreated_at(LocalDate.now().toString());
         user.setUpdated_at(LocalDate.now().toString());
         user.setAvatar_url(null);

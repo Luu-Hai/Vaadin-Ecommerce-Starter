@@ -1,9 +1,10 @@
-package com.lcaohoanq.views.usersregister;
+package com.lcaohoanq.schemas;
 
+import com.lcaohoanq.models.Role;
+import com.lcaohoanq.models.Status;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import lombok.ToString;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
@@ -21,8 +22,8 @@ public class UserRegisterRequest {
     private String address;
     private String birthday;
     private String gender;
-    private String role;
-    private String status;
+    private Role role;
+    private Status status;
     private String created_at;
     private String updated_at;
     private byte[] avatar_url;

@@ -1,6 +1,6 @@
 package com.lcaohoanq.utils;
 
-import com.lcaohoanq.views.usersregister.UserRegisterRequest;
+import com.lcaohoanq.schemas.UserRegisterRequest;
 import java.util.Map;
 
 public class PayloadUtils {

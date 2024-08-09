@@ -1,14 +1,12 @@
 package com.lcaohoanq.views.home;
 
 import com.lcaohoanq.views.MainLayout;
-import com.lcaohoanq.views.menu.GameMenuView;
-import com.lcaohoanq.views.userslogin.UsersLoginView;
+import com.lcaohoanq.views.user.login.UsersLoginView;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.html.Paragraph;
-import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;

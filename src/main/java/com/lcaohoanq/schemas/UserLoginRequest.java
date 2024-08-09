@@ -1,4 +1,4 @@
-package com.lcaohoanq.views.userslogin;
+package com.lcaohoanq.schemas;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
