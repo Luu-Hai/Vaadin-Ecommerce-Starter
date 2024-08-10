@@ -42,7 +42,7 @@ public class AdminLoginView extends LoginPage implements ComponentUtils {
     @Override
     public void initElement() {
         // Customize LoginForm labels
-        i18n.getForm().setTitle("Login");
+        i18n.getForm().setTitle("Admin Login");
         i18n.getForm().setUsername("Username");
         i18n.getForm().setPassword("Password");
         i18n.getForm().setSubmit("Log in");

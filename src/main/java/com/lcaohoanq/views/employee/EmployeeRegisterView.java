@@ -1,4 +1,4 @@
-package com.lcaohoanq.views.admin;
+package com.lcaohoanq.views.employee;
 
 import com.lcaohoanq.constant.Regex;
 import com.lcaohoanq.enums.UserRoleEnum;
@@ -6,11 +6,10 @@ import com.lcaohoanq.enums.UserStatusEnum;
 import com.lcaohoanq.models.Role;
 import com.lcaohoanq.models.Status;
 import com.lcaohoanq.schemas.AdminRegisterRequest;
-import com.lcaohoanq.schemas.UserRegisterRequest;
+import com.lcaohoanq.schemas.EmployeeRegisterRequest;
 import com.lcaohoanq.utils.ApiUtils;
 import com.lcaohoanq.utils.PayloadUtils;
 import com.lcaohoanq.utils.ValidateUtils;
-import com.lcaohoanq.views.MainLayout;
 import com.vaadin.flow.component.Composite;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
@@ -44,11 +43,11 @@ import java.util.stream.Collectors;
 import lombok.Getter;
 import lombok.Setter;
 
-@PageTitle("Admin Register")
+@PageTitle("Employee Register")
 @Getter
 @Setter
-@Route(value = "admin/register")
-public class AdminRegisterView extends Composite<VerticalLayout> {
+@Route(value = "employee/register")
+public class EmployeeRegisterView extends Composite<VerticalLayout> {
 
     private H3 title = new H3();
     private TextField textField_Email_Phone = new TextField("Email or Phone Number");
@@ -73,7 +72,7 @@ public class AdminRegisterView extends Composite<VerticalLayout> {
     private Checkbox checkbox = new Checkbox();
     private Button button_Save = new Button("Save");
 
-    public AdminRegisterView() {
+    public EmployeeRegisterView() {
         getContent().setWidth("100%");
         getContent().setHeight("100vh");
         getContent().getStyle().set("flex-grow", "1");
@@ -94,7 +93,7 @@ public class AdminRegisterView extends Composite<VerticalLayout> {
     }
 
     private void initComponent() {
-        title.setText("Admin Register");
+        title.setText("Employee Register");
         title.setWidth("min-content");
         textField_Email_Phone.setWidth("100%");
         textField_First_Name.setWidth("min-content");
@@ -265,7 +264,7 @@ public class AdminRegisterView extends Composite<VerticalLayout> {
                 if (isFormValid()) {
                     try {
                         HttpResponse<String> response = ApiUtils.postRequest(
-                            "http://localhost:8081/admin/register", fetchData(new AdminRegisterRequest(), new HashMap<>()));
+                            "http://localhost:8081/employee/register", fetchData(new EmployeeRegisterRequest(), new HashMap<>()));
                         Dialog dialog;
                         switch (response.statusCode()) {
                             case 200:
@@ -296,7 +295,7 @@ public class AdminRegisterView extends Composite<VerticalLayout> {
         });
     }
 
-    private Map<String, Object> fetchData(AdminRegisterRequest user, Map<String, Object> payload) {
+    private Map<String, Object> fetchData(EmployeeRegisterRequest user, Map<String, Object> payload) {
         String email_phone = textField_Email_Phone.getValue();
         LocalDateTime birthday = datePicker_Birthday.getValue().atStartOfDay();
 
