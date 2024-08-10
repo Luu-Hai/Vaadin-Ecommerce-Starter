@@ -9,7 +9,9 @@ import com.lcaohoanq.schemas.AdminRegisterRequest;
 import com.lcaohoanq.schemas.EmployeeRegisterRequest;
 import com.lcaohoanq.utils.ApiUtils;
 import com.lcaohoanq.utils.PayloadUtils;
+import com.lcaohoanq.utils.StringUtils;
 import com.lcaohoanq.utils.ValidateUtils;
+import com.lcaohoanq.views.base.RegisterPage;
 import com.vaadin.flow.component.Composite;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
@@ -47,52 +49,14 @@ import lombok.Setter;
 @Getter
 @Setter
 @Route(value = "employee/register")
-public class EmployeeRegisterView extends Composite<VerticalLayout> {
-
-    private H3 title = new H3();
-    private TextField textField_Email_Phone = new TextField("Email or Phone Number");
-    private TextField textField_First_Name = new TextField("First Name");
-    private TextField textField_Last_Name = new TextField("Last Name");
-    private PasswordField textField_Password = new PasswordField("Password");
-    private TextField textField_Address = new TextField("Address");
-    private DatePicker datePicker_Birthday = new DatePicker("Birthday");
-
-    //chose gender: male, female, others
-    private ComboBox<String> select_G = new ComboBox<>("Gender");
-
-
-    private PasswordField textField_Confirmed_Password = new PasswordField("Confirmed password");
-    private FormLayout formLayout2Col = new FormLayout();
-    private HorizontalLayout layoutRow = new HorizontalLayout();
-    private VerticalLayout buttonLayout = new VerticalLayout();
-    private HorizontalLayout termAndPolicy = new HorizontalLayout();
-    private VerticalLayout layoutColumn2 = new VerticalLayout();
-    private Anchor link_Terms = new Anchor("http://localhost:3000/terms-of-service", "Terms of Service");
-    private Anchor link_Policy = new Anchor("http://localhost:3000/privacy-policy", "Privacy Policy");
-    private Checkbox checkbox = new Checkbox();
-    private Button button_Save = new Button("Save");
+public class EmployeeRegisterView extends RegisterPage<EmployeeRegisterRequest> {
 
     public EmployeeRegisterView() {
-        getContent().setWidth("100%");
-        getContent().setHeight("100vh");
-        getContent().getStyle().set("flex-grow", "1");
-        getContent().setJustifyContentMode(JustifyContentMode.CENTER);
-        getContent().setAlignItems(Alignment.CENTER);
-        initComponent();
-        doAction();
+        super();
     }
 
-    public LinkedHashMap<String, String> convertStringVisualToEnum(String... args) {
-        return Arrays.stream(args)
-            .collect(Collectors.toMap(
-                s -> s,
-                String::toUpperCase,
-                (oldValue, newValue) -> oldValue,
-                LinkedHashMap::new
-            ));
-    }
-
-    private void initComponent() {
+    @Override
+    public void initComponent() {
         title.setText("Employee Register");
         title.setWidth("min-content");
         textField_Email_Phone.setWidth("100%");
@@ -247,7 +211,8 @@ public class EmployeeRegisterView extends Composite<VerticalLayout> {
         }
     }
 
-    private void doAction() {
+    @Override
+    public void doAction() {
         textField_Email_Phone.addValueChangeListener(event -> validateFields("emailPhone"));
         textField_First_Name.addValueChangeListener(event -> validateFields("firstName"));
         textField_Last_Name.addValueChangeListener(event -> validateFields("lastName"));
@@ -295,7 +260,8 @@ public class EmployeeRegisterView extends Composite<VerticalLayout> {
         });
     }
 
-    private Map<String, Object> fetchData(EmployeeRegisterRequest user, Map<String, Object> payload) {
+    @Override
+    public Map<String, Object> fetchData(EmployeeRegisterRequest user, Map<String, Object> payload) {
         String email_phone = textField_Email_Phone.getValue();
         LocalDateTime birthday = datePicker_Birthday.getValue().atStartOfDay();
 
@@ -312,7 +278,7 @@ public class EmployeeRegisterView extends Composite<VerticalLayout> {
         user.setPassword(textField_Password.getValue());
         user.setAddress(textField_Address.getValue());
         user.setBirthday(birthday.toString());
-        user.setGender(convertStringVisualToEnum(select_G.getValue()).get(select_G.getValue()));
+        user.setGender(StringUtils.convertStringVisualToEnum(select_G.getValue()).get(select_G.getValue()));
         user.setRole(new Role(4, UserRoleEnum.ADMIN));
         user.setStatus(new Status(0, UserStatusEnum.UNVERIFIED));
         user.setCreated_at(LocalDate.now().toString());
