@@ -7,6 +7,7 @@ import com.lcaohoanq.enums.UserStatusEnum;
 import com.lcaohoanq.models.Role;
 import com.lcaohoanq.models.Status;
 import com.lcaohoanq.models.UserGoogle;
+import com.lcaohoanq.schemas.RegisterRequest;
 import com.lcaohoanq.utils.ApiUtils;
 import com.lcaohoanq.utils.AvatarConverter;
 import com.lcaohoanq.utils.PayloadUtils;
@@ -106,7 +107,7 @@ public class GoogleOAuthCallback extends Composite<Div> {
             System.out.println("Failed to convert avatar URL to byte array: " + e.getMessage());
         }
 
-        UserRegisterRequest user = new UserRegisterRequest();
+        RegisterRequest user = new UserRegisterRequest();
         user.setId(-2L); //out range of Long data, need to consider later
         user.setFirstName(userInfo.getGiven_name());
         user.setLastName(userInfo.getFamily_name());
@@ -121,6 +122,8 @@ public class GoogleOAuthCallback extends Composite<Div> {
         user.setCreated_at(LocalDate.now().toString());
         user.setUpdated_at(LocalDate.now().toString());
         user.setAvatar_url(avatar_url);
+        user.setGoogle_account_id(1);
+        user.setFacebook_account_id(0);
 
         Map<String, Object> payload = new HashMap<>();
         PayloadUtils.generatePayloadUser(payload, user);

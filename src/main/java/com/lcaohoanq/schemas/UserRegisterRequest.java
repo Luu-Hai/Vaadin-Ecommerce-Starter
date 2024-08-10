@@ -10,23 +10,11 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 
 @Getter
 @Setter
-@NoArgsConstructor
-public class UserRegisterRequest {
+public class UserRegisterRequest extends RegisterRequest {
 
-    private Long id;
-    private String email;
-    private String phone;
-    private String firstName;
-    private String lastName;
-    private String password;
-    private String address;
-    private String birthday;
-    private String gender;
-    private Role role;
-    private Status status;
-    private String created_at;
-    private String updated_at;
-    private byte[] avatar_url;
+    public UserRegisterRequest(){
+        super();
+    }
 
     @Override
     public String toString() {
