@@ -1,5 +1,6 @@
 package com.lcaohoanq.views.user.register;
 
+import com.lcaohoanq.constant.ApiConstant;
 import com.lcaohoanq.constant.Regex;
 import com.lcaohoanq.enums.UserRoleEnum;
 import com.lcaohoanq.enums.UserStatusEnum;
@@ -229,7 +230,7 @@ public class UsersRegisterView extends RegisterPage<UserRegisterRequest> {
                 if (isFormValid()) {
                     try {
                         HttpResponse<String> response = ApiUtils.postRequest(
-                            "http://localhost:8081/users/register", fetchData(new UserRegisterRequest(), new HashMap<>()));
+                            ApiConstant.BASE_URL_BE + ApiConstant.API_PATCH + "/users/register", fetchData(new UserRegisterRequest(), new HashMap<>()));
                         Dialog dialog;
                         switch (response.statusCode()) {
                             case 200:

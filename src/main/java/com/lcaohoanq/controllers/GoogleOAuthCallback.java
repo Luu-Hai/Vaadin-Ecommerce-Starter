@@ -131,7 +131,7 @@ public class GoogleOAuthCallback extends Composite<Div> {
         //call api to store user info
         try {
             HttpResponse<String> response = ApiUtils.postRequest(
-                ApiConstant.BASE_URL_BE + "/users/oauth2/callback/google", payload);
+                ApiConstant.BASE_URL_BE + ApiConstant.API_PATCH + "/users/oauth2/callback/google", payload);
             Dialog dialog;
             switch (response.statusCode()) {
                 case 200:

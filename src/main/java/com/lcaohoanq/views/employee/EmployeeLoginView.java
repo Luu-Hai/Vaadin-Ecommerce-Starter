@@ -78,7 +78,7 @@ public class EmployeeLoginView extends LoginPage {
                     "password", userLoginRequest.getPassword());
 
                 HttpResponse<String> response = ApiUtils.postRequest(
-                    "http://localhost:8081/users/login", payload);
+                    ApiConstant.BASE_URL_BE + ApiConstant.API_PATCH + "/users/login", payload);
 
                 // Handle the response
                 switch (response.statusCode()) {

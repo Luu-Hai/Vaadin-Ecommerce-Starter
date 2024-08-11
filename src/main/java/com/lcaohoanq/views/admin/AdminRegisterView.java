@@ -1,5 +1,6 @@
 package com.lcaohoanq.views.admin;
 
+import com.lcaohoanq.constant.ApiConstant;
 import com.lcaohoanq.constant.Regex;
 import com.lcaohoanq.enums.UserRoleEnum;
 import com.lcaohoanq.enums.UserStatusEnum;
@@ -230,7 +231,7 @@ public class AdminRegisterView extends RegisterPage<AdminRegisterRequest> {
                 if (isFormValid()) {
                     try {
                         HttpResponse<String> response = ApiUtils.postRequest(
-                            "http://localhost:8081/admin/register", fetchData(new AdminRegisterRequest(), new HashMap<>()));
+                            ApiConstant.BASE_URL_BE + ApiConstant.API_PATCH + "/admin/register", fetchData(new AdminRegisterRequest(), new HashMap<>()));
                         Dialog dialog;
                         switch (response.statusCode()) {
                             case 200:
