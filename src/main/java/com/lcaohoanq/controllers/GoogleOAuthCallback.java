@@ -141,7 +141,7 @@ public class GoogleOAuthCallback extends Composite<Div> {
                     VaadinSession.getCurrent().setAttribute("user", email);
                     VaadinSession.getCurrent().setAttribute("role", UserRoleEnum.USER);
                     UI.getCurrent().getPage().setLocation(
-                        "http://localhost:3000"); // Redirect to the home page after successful login
+                        "http://localhost:3000/menu"); // Redirect to the home page after successful login
                     break;
                 case 400:
                     dialog = new Dialog();

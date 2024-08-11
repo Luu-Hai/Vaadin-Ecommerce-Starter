@@ -89,11 +89,6 @@ public class UsersLoginView extends LoginPage implements ComponentUtils {
         // Add the buttons to the layout
         layoutRowBottom.add(googleLoginButton, facebookLoginButton);
         layoutColumn2.add(layoutRowBottom);
-
-        getContent().setWidth("100%");
-        getContent().getStyle().set("flex-grow", "1");
-        getContent().setJustifyContentMode(JustifyContentMode.CENTER);
-        getContent().setAlignItems(Alignment.CENTER);
         getContent().setFlexGrow(1.0, layoutColumn2);
         getContent().add(layoutColumn2);
     }

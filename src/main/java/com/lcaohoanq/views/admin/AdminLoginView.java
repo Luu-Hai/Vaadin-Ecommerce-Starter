@@ -58,10 +58,6 @@ public class AdminLoginView extends LoginPage implements ComponentUtils {
         layoutColumn2.getStyle().set("height", "80vh");
         layoutColumn2.add(loginForm);
 
-        getContent().setWidth("100%");
-        getContent().getStyle().set("flex-grow", "1");
-        getContent().setJustifyContentMode(JustifyContentMode.CENTER);
-        getContent().setAlignItems(Alignment.CENTER);
         getContent().setFlexGrow(1.0, layoutColumn2);
         getContent().add(layoutColumn2);
     }

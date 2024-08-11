@@ -6,6 +6,7 @@ import com.lcaohoanq.utils.ApiUtils;
 import com.lcaohoanq.utils.PBKDF2;
 import com.lcaohoanq.views.MainLayout;
 import com.vaadin.flow.component.Composite;
+import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.H3;
 import com.vaadin.flow.component.notification.Notification;
@@ -76,7 +77,6 @@ public class ResetPasswordView extends Composite<VerticalLayout> {
         button_Update.addClickListener(event -> {
             if (textField_New_Password.getValue().equals(textField_Confirmed_Password.getValue())) {
                 // Handle the API call to reset the password
-                Notification.show("Password reset successfully");
                 User user = (User) VaadinSession.getCurrent().getAttribute("userRequiredForgotPassword");
                 String data = user.getEmail() != null ? user.getEmail() : user.getPhone();
 
@@ -97,6 +97,7 @@ public class ResetPasswordView extends Composite<VerticalLayout> {
                             Notification.show("Password reset successfully");
                             VaadinSession.getCurrent().setAttribute("userRequiredForgotPassword", null);
                             button_Update.setEnabled(false);
+                            UI.getCurrent().getPage().setLocation("http://localhost:3000/users/login");
                             break;
                         case 400:
                             Notification.show("Password reset failed");

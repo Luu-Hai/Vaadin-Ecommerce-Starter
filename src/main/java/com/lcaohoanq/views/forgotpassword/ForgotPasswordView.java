@@ -25,7 +25,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 @PageTitle("Forgot Password")
-@Route(value = "forgot-password", layout = MainLayout.class)
+@Route(value = "forgotPassword", layout = MainLayout.class)
 @Getter
 @Setter
 public class ForgotPasswordView extends Composite<VerticalLayout> {
