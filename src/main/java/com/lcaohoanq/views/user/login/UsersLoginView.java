@@ -147,33 +147,11 @@ public class UsersLoginView extends LoginPage implements ComponentUtils {
 
     @Override
     public void checkTestAccount(String email_phone, String password) {
-    }
-
-    @Override
-    public void showSuccessDialog(String dialogMessage, String buttonMessage, UserRoleEnum userRole) {
-        Dialog successDialog = new Dialog();
-        Button closeButton = new Button(buttonMessage, e -> handleCloseButton(userRole, successDialog));
-        closeButton.getStyle().set("background-color", "lightblue");
-        closeButton.getStyle().set("align-items", "center");
-        successDialog.add(new H3(dialogMessage), new Div(closeButton));
-        successDialog.open();
-    }
-
-    @Override
-    public void handleCloseButton(UserRoleEnum userRole, Dialog successDialog) {
-        successDialog.close();
-        switch (userRole) {
-            case USER:
-                UI.getCurrent().getPage().setLocation(ApiConstant.BASE_URL_FE + "/menu");
-                break;
-            case USER_GOLD:
-                UI.getCurrent().getPage().setLocation(ApiConstant.BASE_URL_FE + "/menu/gold");
-                break;
-            case USER_PREMIUM:
-                UI.getCurrent().getPage().setLocation(ApiConstant.BASE_URL_FE + "/menu/premium");
-                break;
-            default:
-                break;
+        if (email_phone.equals("admin") && password.equals("admin")) {
+            VaadinSession.getCurrent().setAttribute("user", email_phone);
+            VaadinSession.getCurrent().setAttribute("role", UserRoleEnum.USER);
+            showSuccessDialog("Login Successful!", "Close", UserRoleEnum.USER);
         }
     }
+
 }

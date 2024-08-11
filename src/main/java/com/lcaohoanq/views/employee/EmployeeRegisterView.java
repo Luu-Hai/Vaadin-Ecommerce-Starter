@@ -12,6 +12,7 @@ import com.lcaohoanq.utils.ApiUtils;
 import com.lcaohoanq.utils.PayloadUtils;
 import com.lcaohoanq.utils.StringUtils;
 import com.lcaohoanq.utils.ValidateUtils;
+import com.lcaohoanq.utils.ValidationUtils;
 import com.lcaohoanq.views.base.RegisterPage;
 import com.vaadin.flow.component.Composite;
 import com.vaadin.flow.component.button.Button;
@@ -50,7 +51,8 @@ import lombok.Setter;
 @Getter
 @Setter
 @Route(value = "employee/register")
-public class EmployeeRegisterView extends RegisterPage<EmployeeRegisterRequest> {
+public class EmployeeRegisterView extends RegisterPage<EmployeeRegisterRequest> implements
+    ValidationUtils {
 
     public EmployeeRegisterView() {
         super();
@@ -58,171 +60,21 @@ public class EmployeeRegisterView extends RegisterPage<EmployeeRegisterRequest> 
 
     @Override
     public void initComponent() {
+        super.initComponent();
         title.setText("Employee Register");
-        title.setWidth("min-content");
-        textField_Email_Phone.setWidth("100%");
-        textField_First_Name.setWidth("min-content");
-        textField_Last_Name.setWidth("min-content");
-        textField_Password.setWidth("min-content");
-        textField_Confirmed_Password.setWidth("min-content");
-
-        textField_Address.setWidth("100%");
-        datePicker_Birthday.setWidth("100%");
-        select_G.setWidth("100%");
-        select_G.setItems("Male", "Female", "Other", "Not provide"); //MALE
-        select_G.setValue("Not provide"); //default value
-
-        layoutRow.setWidthFull();
-        layoutRow.addClassName(Gap.MEDIUM);
-        layoutRow.setWidth("100%");
-        layoutRow.setHeight("min-content");
-
-        layoutColumn2.setWidthFull();
-        layoutColumn2.setWidth("100%");
-        layoutColumn2.setMaxWidth("800px");
-        layoutColumn2.setHeight("min-content");
-        layoutColumn2.setFlexGrow(1.0, layoutRow);
-        layoutColumn2.getStyle().set("height", "80vh");
-
-        button_Save.setWidth("100%");
-        button_Save.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
-        button_Save.getStyle().set("cursor", "pointer");
-
-        getContent().setFlexGrow(1.0, layoutColumn2);
-
-        formLayout2Col.setWidth("100%");
-        formLayout2Col.add(textField_First_Name);
-        formLayout2Col.add(textField_Last_Name);
-        formLayout2Col.add(textField_Address);
-        formLayout2Col.add(datePicker_Birthday);
-        formLayout2Col.add(textField_Password);
-        formLayout2Col.add(textField_Confirmed_Password);
-        formLayout2Col.add(select_G);
-
-        layoutColumn2.add(title);
-        layoutColumn2.add(textField_Email_Phone);
-        layoutColumn2.add(formLayout2Col);
-        layoutColumn2.add(termAndPolicy);
-        layoutColumn2.add(layoutRow);
-        getContent().add(layoutColumn2);
-
-        checkbox.setLabel("I accept the terms and conditions");
-
-        buttonLayout.setWidthFull();
-        buttonLayout.setPadding(false);
-        buttonLayout.setSpacing(true);
-        buttonLayout.setAlignItems(Alignment.CENTER);
-        buttonLayout.add(link_Terms, button_Save);
-
-        termAndPolicy.setWidthFull();
-        termAndPolicy.setPadding(false);
-        termAndPolicy.setSpacing(true);
-        termAndPolicy.setAlignItems(Alignment.START);
-        termAndPolicy.setJustifyContentMode(JustifyContentMode.START);
-        termAndPolicy.add(checkbox, link_Terms, link_Policy);
-
-        layoutRow.add(buttonLayout);
-    }
-
-    private void validateFields(String fieldName) {
-        String emailPhone = textField_Email_Phone.getValue();
-        String firstName = textField_First_Name.getValue();
-        String lastName = textField_Last_Name.getValue();
-        String password = textField_Password.getValue();
-        String address = textField_Address.getValue();
-        LocalDateTime birthday =
-            datePicker_Birthday.getValue() != null ? datePicker_Birthday.getValue().atStartOfDay()
-                : null;
-        String gender = select_G.getValue();
-        String confirmedPassword = textField_Confirmed_Password.getValue();
-
-        switch (fieldName) {
-            case "emailPhone":
-                if (textField_Email_Phone.isEmpty()) {
-                    textField_Email_Phone.setErrorMessage("Email or Phone Number is required");
-                    textField_Email_Phone.setInvalid(true);
-                } else {
-                    if (ValidateUtils.checkTypeAccount(emailPhone)) {
-                        if (!emailPhone.matches(Regex.USER_EMAIL)) {
-                            textField_Email_Phone.setErrorMessage("Invalid email format");
-                            textField_Email_Phone.setInvalid(true);
-                        } else {
-                            textField_Email_Phone.setInvalid(false);
-                        }
-                    } else {
-                        if (!emailPhone.matches(Regex.USER_PHONE)) {
-                            textField_Email_Phone.setErrorMessage("Invalid phone number format");
-                            textField_Email_Phone.setInvalid(true);
-                        } else {
-                            textField_Email_Phone.setInvalid(false);
-                        }
-                    }
-                }
-                break;
-            case "firstName":
-                textField_First_Name.setInvalid(false);
-                if (firstName.isEmpty()) {
-                    textField_First_Name.setErrorMessage("First name is required");
-                    textField_First_Name.setInvalid(true);
-                }
-                break;
-            case "lastName":
-                textField_Last_Name.setInvalid(false);
-                if (lastName.isEmpty()) {
-                    textField_Last_Name.setErrorMessage("Last name is required");
-                    textField_Last_Name.setInvalid(true);
-                }
-                break;
-            case "password":
-                textField_Password.setInvalid(false);
-                if (password.isEmpty()) {
-                    textField_Password.setErrorMessage("Password is required");
-                    textField_Password.setInvalid(true);
-                }
-                break;
-            case "confirmedPassword":
-                textField_Confirmed_Password.setInvalid(false);
-                if (confirmedPassword.isEmpty()) {
-                    textField_Confirmed_Password.setErrorMessage("Confirmed password is required");
-                    textField_Confirmed_Password.setInvalid(true);
-                } else if (!confirmedPassword.equals(password)) {
-                    textField_Confirmed_Password.setErrorMessage(
-                        "Confirmed password does not match");
-                    textField_Confirmed_Password.setInvalid(true);
-                }
-                break;
-            case "address":
-                textField_Address.setInvalid(false);
-                if (address.isEmpty()) {
-                    textField_Address.setErrorMessage("Address is required");
-                    textField_Address.setInvalid(true);
-                }
-                break;
-            case "birthday":
-                if (birthday == null) {
-                    datePicker_Birthday.setInvalid(true);
-                    datePicker_Birthday.setErrorMessage("Birthday is required");
-                } else {
-                    datePicker_Birthday.setInvalid(false);
-                }
-                break;
-            case "gender":
-                select_G.setInvalid(false);
-                break;
-        }
     }
 
     @Override
     public void doAction() {
-        textField_Email_Phone.addValueChangeListener(event -> validateFields("emailPhone"));
-        textField_First_Name.addValueChangeListener(event -> validateFields("firstName"));
-        textField_Last_Name.addValueChangeListener(event -> validateFields("lastName"));
-        textField_Password.addValueChangeListener(event -> validateFields("password"));
+        textField_Email_Phone.addValueChangeListener(event -> validateFields(this, "emailPhone"));
+        textField_First_Name.addValueChangeListener(event -> validateFields(this, "firstName"));
+        textField_Last_Name.addValueChangeListener(event -> validateFields(this, "lastName"));
+        textField_Password.addValueChangeListener(event -> validateFields(this, "password"));
         textField_Confirmed_Password.addValueChangeListener(
-            event -> validateFields("confirmedPassword"));
-        textField_Address.addValueChangeListener(event -> validateFields("address"));
-        datePicker_Birthday.addValueChangeListener(event -> validateFields("birthday"));
-        select_G.addValueChangeListener(event -> validateFields("gender"));
+            event -> validateFields(this, "confirmedPassword"));
+        textField_Address.addValueChangeListener(event -> validateFields(this, "address"));
+        datePicker_Birthday.addValueChangeListener(event -> validateFields(this, "birthday"));
+        select_G.addValueChangeListener(event -> validateFields(this, "gender"));
 
         button_Save.addClickListener(event -> {
             validateAllFields();
@@ -290,14 +142,14 @@ public class EmployeeRegisterView extends RegisterPage<EmployeeRegisterRequest> 
     }
 
     private void validateAllFields() {
-        validateFields("emailPhone");
-        validateFields("firstName");
-        validateFields("lastName");
-        validateFields("password");
-        validateFields("confirmedPassword");
-        validateFields("address");
-        validateFields("birthday");
-        validateFields("gender");
+        validateFields(this, "emailPhone");
+        validateFields(this, "firstName");
+        validateFields(this, "lastName");
+        validateFields(this, "password");
+        validateFields(this, "confirmedPassword");
+        validateFields(this, "address");
+        validateFields(this, "birthday");
+        validateFields(this, "gender");
     }
 
     private boolean isFormValid() {

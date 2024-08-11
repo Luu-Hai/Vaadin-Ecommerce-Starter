@@ -1,10 +1,43 @@
 package com.lcaohoanq.views.utils;
 
+import com.lcaohoanq.constant.ApiConstant;
 import com.lcaohoanq.enums.UserRoleEnum;
+import com.vaadin.flow.component.UI;
+import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.dialog.Dialog;
+import com.vaadin.flow.component.html.Div;
+import com.vaadin.flow.component.html.H3;
 
 public interface ComponentUtils {
-    void showSuccessDialog(String message, String buttonMessage, UserRoleEnum userRole);
     void checkTestAccount(String email_phone, String password);
-    void handleCloseButton(UserRoleEnum userRole, Dialog successDialog);
+    default void showSuccessDialog(String dialogMessage, String buttonMessage, UserRoleEnum userRole){
+        Dialog successDialog = new Dialog();
+        Button closeButton = new Button(buttonMessage, e -> handleCloseButton(userRole, successDialog));
+        closeButton.getStyle().set("background-color", "lightblue");
+        closeButton.getStyle().set("align-items", "center");
+        successDialog.add(new H3(dialogMessage), new Div(closeButton));
+        successDialog.open();
+    }
+
+    default void handleCloseButton(UserRoleEnum userRole, Dialog successDialog) {
+        successDialog.close();
+        switch (userRole) {
+            case ADMIN:
+                UI.getCurrent().getPage().setLocation(ApiConstant.BASE_URL_FE + "/admin/menu");
+                break;
+            case EMPLOYEE:
+                UI.getCurrent().getPage().setLocation(ApiConstant.BASE_URL_FE + "/employee/menu");
+                break;
+            case USER:
+                UI.getCurrent().getPage().setLocation(ApiConstant.BASE_URL_FE + "/menu");
+                break;
+            case USER_GOLD:
+                UI.getCurrent().getPage().setLocation(ApiConstant.BASE_URL_FE + "/menu/gold");
+                break;
+            case USER_PREMIUM:
+                UI.getCurrent().getPage().setLocation(ApiConstant.BASE_URL_FE + "/menu/premium");
+            default:
+                break;
+        }
+    }
 }

@@ -9,10 +9,6 @@ import com.lcaohoanq.views.menu.GameMenuView;
 import com.lcaohoanq.schemas.UserLoginRequest;
 import com.lcaohoanq.views.utils.ComponentUtils;
 import com.vaadin.flow.component.UI;
-import com.vaadin.flow.component.button.Button;
-import com.vaadin.flow.component.dialog.Dialog;
-import com.vaadin.flow.component.html.Div;
-import com.vaadin.flow.component.html.H3;
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
@@ -62,7 +58,7 @@ public class AdminLoginView extends LoginPage implements ComponentUtils {
                     "password", userLoginRequest.getPassword());
 
                 HttpResponse<String> response = ApiUtils.postRequest(
-                    ApiConstant.BASE_URL_BE + ApiConstant.API_PATCH + "admin", payload);
+                    ApiConstant.BASE_URL_BE + ApiConstant.API_PATCH + "/admin/login", payload);
 
                 // Handle the response
                 switch (response.statusCode()) {
@@ -101,28 +97,6 @@ public class AdminLoginView extends LoginPage implements ComponentUtils {
             VaadinSession.getCurrent().setAttribute("user", email_phone);
             VaadinSession.getCurrent().setAttribute("role", UserRoleEnum.ADMIN);
             showSuccessDialog("Login Successful!", "Close", UserRoleEnum.ADMIN);
-        }
-    }
-
-    @Override
-    public void showSuccessDialog(String dialogMessage, String buttonMessage, UserRoleEnum userRole) {
-        Dialog successDialog = new Dialog();
-        Button closeButton = new Button(buttonMessage, e -> handleCloseButton(userRole, successDialog));
-        closeButton.getStyle().set("background-color", "lightblue");
-        closeButton.getStyle().set("align-items", "center");
-        successDialog.add(new H3(dialogMessage), new Div(closeButton));
-        successDialog.open();
-    }
-
-    @Override
-    public void handleCloseButton(UserRoleEnum userRole, Dialog successDialog) {
-        successDialog.close();
-        switch (userRole) {
-            case ADMIN:
-                UI.getCurrent().getPage().setLocation(ApiConstant.BASE_URL_FE + "/admin/menu");
-                break;
-            default:
-                break;
         }
     }
 }

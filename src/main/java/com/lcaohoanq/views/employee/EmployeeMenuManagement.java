@@ -7,8 +7,6 @@ import com.lcaohoanq.views.base.LoginPage;
 import com.lcaohoanq.views.utils.ComponentUtils;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
-import com.vaadin.flow.component.dialog.Dialog;
-import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.H3;
 import com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment;
 import com.vaadin.flow.component.orderedlayout.FlexComponent.JustifyContentMode;
@@ -86,27 +84,4 @@ public class EmployeeMenuManagement extends LoginPage implements ComponentUtils 
             showSuccessDialog("Login Successful!", "Close",UserRoleEnum.EMPLOYEE);
         }
     }
-
-    @Override
-    public void showSuccessDialog(String dialogMessage, String buttonMessage, UserRoleEnum userRole) {
-        Dialog successDialog = new Dialog();
-        Button closeButton = new Button(buttonMessage, e -> handleCloseButton(userRole, successDialog));
-        closeButton.getStyle().set("background-color", "lightblue");
-        closeButton.getStyle().set("align-items", "center");
-        successDialog.add(new H3(dialogMessage), new Div(closeButton));
-        successDialog.open();
-    }
-
-    @Override
-    public void handleCloseButton(UserRoleEnum userRole, Dialog successDialog) {
-        successDialog.close();
-        switch (userRole) {
-            case EMPLOYEE:
-                UI.getCurrent().getPage().setLocation(ApiConstant.BASE_URL_FE + "/employee/menu");
-                break;
-            default:
-                break;
-        }
-    }
-
 }
