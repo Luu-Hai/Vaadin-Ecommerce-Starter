@@ -48,19 +48,7 @@ public class UsersLoginView extends LoginPage implements ComponentUtils {
     public void initElement() {
         // Customize LoginForm labels
         i18n.getForm().setTitle("Login");
-        i18n.getForm().setUsername("Email or Phone Number");
-        i18n.getForm().setPassword("Password");
-        i18n.getForm().setSubmit("Log in");
-        i18n.getForm().setForgotPassword("Forgot your password?");
-        loginForm.setI18n(i18n);
 
-        layoutColumn2.setWidthFull();
-        layoutColumn2.setWidth("100%");
-        layoutColumn2.setMaxWidth("800px");
-        layoutColumn2.setHeight("min-content");
-        layoutColumn2.setJustifyContentMode(JustifyContentMode.CENTER);
-        layoutColumn2.setAlignItems(Alignment.CENTER);
-        layoutColumn2.getStyle().set("height", "80vh");
         layoutColumn2.add(loginForm);
 
         Image googleLogo = new Image("icons/icons8-google.svg", "");
@@ -171,7 +159,8 @@ public class UsersLoginView extends LoginPage implements ComponentUtils {
         successDialog.open();
     }
 
-    private void handleCloseButton(UserRoleEnum userRole, Dialog successDialog) {
+    @Override
+    public void handleCloseButton(UserRoleEnum userRole, Dialog successDialog) {
         successDialog.close();
         switch (userRole) {
             case USER:

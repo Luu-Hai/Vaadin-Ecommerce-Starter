@@ -7,6 +7,7 @@ import com.lcaohoanq.utils.ApiUtils;
 import com.lcaohoanq.views.base.LoginPage;
 import com.lcaohoanq.views.menu.GameMenuView;
 import com.lcaohoanq.schemas.UserLoginRequest;
+import com.lcaohoanq.views.utils.ComponentUtils;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.dialog.Dialog;
@@ -26,7 +27,8 @@ import lombok.extern.slf4j.Slf4j;
 @PageTitle("Employee Login")
 @Route(value = "employee")
 @Slf4j
-public class EmployeeLoginView extends LoginPage {
+public class EmployeeLoginView extends LoginPage implements ComponentUtils {
+
     public EmployeeLoginView() {
         super(() -> {
             // Check if the user is already logged in
@@ -42,19 +44,7 @@ public class EmployeeLoginView extends LoginPage {
     public void initElement() {
         // Customize LoginForm labels
         i18n.getForm().setTitle("Employee Login");
-        i18n.getForm().setUsername("Username");
-        i18n.getForm().setPassword("Password");
-        i18n.getForm().setSubmit("Log in");
-        i18n.getForm().setForgotPassword("Forgot your password?");
-        loginForm.setI18n(i18n);
 
-        layoutColumn2.setWidthFull();
-        layoutColumn2.setWidth("100%");
-        layoutColumn2.setMaxWidth("800px");
-        layoutColumn2.setHeight("min-content");
-        layoutColumn2.setJustifyContentMode(JustifyContentMode.CENTER);
-        layoutColumn2.setAlignItems(Alignment.CENTER);
-        layoutColumn2.getStyle().set("height", "80vh");
         layoutColumn2.add(loginForm);
 
         getContent().setWidth("100%");
@@ -69,7 +59,8 @@ public class EmployeeLoginView extends LoginPage {
     public void doAction() {
         // Add login listeners
         loginForm.addLoginListener(event -> {
-            UserLoginRequest userLoginRequest = new UserLoginRequest(event.getUsername(), event.getPassword());
+            UserLoginRequest userLoginRequest = new UserLoginRequest(event.getUsername(),
+                event.getPassword());
             checkTestAccount(userLoginRequest.getEmail_phone(), userLoginRequest.getPassword());
 
             try {
@@ -83,9 +74,10 @@ public class EmployeeLoginView extends LoginPage {
                 // Handle the response
                 switch (response.statusCode()) {
                     case 200:
-                        VaadinSession.getCurrent().setAttribute("user", userLoginRequest.getEmail_phone());
+                        VaadinSession.getCurrent()
+                            .setAttribute("user", userLoginRequest.getEmail_phone());
                         VaadinSession.getCurrent().setAttribute("role", UserRoleEnum.EMPLOYEE);
-                        showSuccessDialog(UserRoleEnum.EMPLOYEE);
+                        showSuccessDialog("Login Successful!", "Close", UserRoleEnum.EMPLOYEE);
                         log.info("Login successful");
                         break;
                     case 400:
@@ -112,20 +104,22 @@ public class EmployeeLoginView extends LoginPage {
         if (email_phone.equals("admin") && password.equals("admin")) {
             VaadinSession.getCurrent().setAttribute("user", email_phone);
             VaadinSession.getCurrent().setAttribute("role", UserRoleEnum.ADMIN);
-            showSuccessDialog(UserRoleEnum.EMPLOYEE);
+            showSuccessDialog("Login Successful!", "Close", UserRoleEnum.EMPLOYEE);
         }
     }
 
-    private void showSuccessDialog(UserRoleEnum userRole) {
+    @Override
+    public void showSuccessDialog(String dialogMessage, String buttonMessage, UserRoleEnum userRole) {
         Dialog successDialog = new Dialog();
-        Button closeButton = new Button("Close", e -> handleCloseButton(userRole, successDialog));
+        Button closeButton = new Button(buttonMessage, e -> handleCloseButton(userRole, successDialog));
         closeButton.getStyle().set("background-color", "lightblue");
         closeButton.getStyle().set("align-items", "center");
-        successDialog.add(new H3("Login Successful!"), new Div(closeButton));
+        successDialog.add(new H3(dialogMessage), new Div(closeButton));
         successDialog.open();
     }
 
-    private void handleCloseButton(UserRoleEnum userRole, Dialog successDialog) {
+    @Override
+    public void handleCloseButton(UserRoleEnum userRole, Dialog successDialog) {
         successDialog.close();
         switch (userRole) {
             case EMPLOYEE:

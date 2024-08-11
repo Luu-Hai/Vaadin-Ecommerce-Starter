@@ -42,7 +42,7 @@ public class GridwithFiltersView extends Div {
 
     private Grid<SamplePerson> grid;
 
-    private Filters filters;
+    private final Filters filters;
     private final SamplePersonService samplePersonService;
 
     public GridwithFiltersView(SamplePersonService SamplePersonService) {

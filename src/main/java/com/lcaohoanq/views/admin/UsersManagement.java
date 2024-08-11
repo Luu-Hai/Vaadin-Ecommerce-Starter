@@ -31,10 +31,10 @@ import java.util.List;
 @Route(value = "admin/users", layout = MainLayout.class)
 public class UsersManagement extends Composite<VerticalLayout> {
 
-    private Grid<User> userGrid = new Grid<>(User.class);
+    private final Grid<User> userGrid = new Grid<>(User.class);
 
     private final HttpClient httpClient;
-    private ObjectMapper objectMapper;
+    private final ObjectMapper objectMapper;
 
     public UsersManagement() {
         VerticalLayout layout = getContent();

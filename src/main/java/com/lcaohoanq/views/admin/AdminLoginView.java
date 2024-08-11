@@ -14,8 +14,6 @@ import com.vaadin.flow.component.dialog.Dialog;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.H3;
 import com.vaadin.flow.component.notification.Notification;
-import com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment;
-import com.vaadin.flow.component.orderedlayout.FlexComponent.JustifyContentMode;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.VaadinSession;
@@ -28,6 +26,7 @@ import lombok.extern.slf4j.Slf4j;
 @Route(value = "admin")
 @Slf4j
 public class AdminLoginView extends LoginPage implements ComponentUtils {
+
     public AdminLoginView() {
         super(() -> {
             // Check if the user is already logged in
@@ -43,19 +42,7 @@ public class AdminLoginView extends LoginPage implements ComponentUtils {
     public void initElement() {
         // Customize LoginForm labels
         i18n.getForm().setTitle("Admin Login");
-        i18n.getForm().setUsername("Username");
-        i18n.getForm().setPassword("Password");
-        i18n.getForm().setSubmit("Log in");
-        i18n.getForm().setForgotPassword("Forgot your password?");
-        loginForm.setI18n(i18n);
 
-        layoutColumn2.setWidthFull();
-        layoutColumn2.setWidth("100%");
-        layoutColumn2.setMaxWidth("800px");
-        layoutColumn2.setHeight("min-content");
-        layoutColumn2.setJustifyContentMode(JustifyContentMode.CENTER);
-        layoutColumn2.setAlignItems(Alignment.CENTER);
-        layoutColumn2.getStyle().set("height", "80vh");
         layoutColumn2.add(loginForm);
 
         getContent().setFlexGrow(1.0, layoutColumn2);
@@ -102,6 +89,10 @@ public class AdminLoginView extends LoginPage implements ComponentUtils {
                 System.out.println("Error: " + e.getMessage());
             }
         });
+
+        loginForm.addForgotPasswordListener(event -> {
+            Notification.show("Do not have permission to perform this action", 3000, Notification.Position.MIDDLE);
+        });
     }
 
     @Override
@@ -123,7 +114,8 @@ public class AdminLoginView extends LoginPage implements ComponentUtils {
         successDialog.open();
     }
 
-    private void handleCloseButton(UserRoleEnum userRole, Dialog successDialog) {
+    @Override
+    public void handleCloseButton(UserRoleEnum userRole, Dialog successDialog) {
         successDialog.close();
         switch (userRole) {
             case ADMIN:

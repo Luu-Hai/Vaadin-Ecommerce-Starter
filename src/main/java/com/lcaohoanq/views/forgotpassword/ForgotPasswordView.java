@@ -28,6 +28,7 @@ import lombok.Setter;
 @Route(value = "forgotPassword", layout = MainLayout.class)
 @Getter
 @Setter
+//Scope("prototype") //
 public class ForgotPasswordView extends Composite<VerticalLayout> {
 
     private TextField textField_Email_Phone = new TextField("Email or Phone Number");

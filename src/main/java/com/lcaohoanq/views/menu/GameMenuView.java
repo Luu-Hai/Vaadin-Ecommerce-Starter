@@ -16,14 +16,14 @@ import com.vaadin.flow.server.VaadinSession;
 @PageTitle("Snake Game Menu")
 @Route(value = "menu", layout = MainLayout.class)
 public class GameMenuView extends Composite<VerticalLayout> {
-    private VerticalLayout layoutRow = new VerticalLayout();
-    private VerticalLayout layoutColumn2 = new VerticalLayout();
-    private H3 title = new H3();
-    private Button button_Start_Game = new Button("Start Game");
-    private Button button_High_Score = new Button("High Score");
-    private Button button_Setting = new Button("Setting");
-    private Button button_Help = new Button("Help");
-    private Button button_Exit = new Button("Exit");
+    private final VerticalLayout layoutRow = new VerticalLayout();
+    private final VerticalLayout layoutColumn2 = new VerticalLayout();
+    private final H3 title = new H3();
+    private final Button button_Start_Game = new Button("Start Game");
+    private final Button button_High_Score = new Button("High Score");
+    private final Button button_Setting = new Button("Setting");
+    private final Button button_Help = new Button("Help");
+    private final Button button_Exit = new Button("Exit");
 
     public GameMenuView() {
 

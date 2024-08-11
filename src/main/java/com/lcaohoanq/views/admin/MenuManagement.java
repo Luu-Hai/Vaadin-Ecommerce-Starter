@@ -18,14 +18,14 @@ public class MenuManagement extends Composite<VerticalLayout> {
 
     //create a button for show all users data, show all score data, click to do corresponding action\
 
-    private Button button_Show_All_Users = new Button("Show All Users");
-    private Button button_Show_All_Scores = new Button("Show All Scores");
-    private Button button_Show_Data_Grid = new Button("Show Data Grid");
-    private Button button_Show_Grid_With_Filter = new Button("Show Grid With Filter");
-    private Button button_Show_Master_Detail = new Button("Show Master Detail");
-    private VerticalLayout layoutRow = new VerticalLayout();
-    private VerticalLayout layoutColumn2 = new VerticalLayout();
-    private H3 title = new H3();
+    private final Button button_Show_All_Users = new Button("Show All Users");
+    private final Button button_Show_All_Scores = new Button("Show All Scores");
+    private final Button button_Show_Data_Grid = new Button("Show Data Grid");
+    private final Button button_Show_Grid_With_Filter = new Button("Show Grid With Filter");
+    private final Button button_Show_Master_Detail = new Button("Show Master Detail");
+    private final VerticalLayout layoutRow = new VerticalLayout();
+    private final VerticalLayout layoutColumn2 = new VerticalLayout();
+    private final H3 title = new H3();
 
     public MenuManagement() {
         if(UI.getCurrent().getSession().getAttribute("user") == null){

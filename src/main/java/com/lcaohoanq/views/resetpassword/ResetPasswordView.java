@@ -25,12 +25,12 @@ import java.util.Map;
 @Route(value = "/users/updatePassword", layout = MainLayout.class)
 public class ResetPasswordView extends Composite<VerticalLayout> {
 
-    private H3 title = new H3();
-    private TextField textField_New_Password = new TextField("Enter New Password");
-    private TextField textField_Confirmed_Password = new TextField("Confirmed Password");
-    private Button button_Update = new Button("Send");
-    private VerticalLayout layoutRow = new VerticalLayout();
-    private VerticalLayout layoutColumn2 = new VerticalLayout();
+    private final H3 title = new H3();
+    private final TextField textField_New_Password = new TextField("Enter New Password");
+    private final TextField textField_Confirmed_Password = new TextField("Confirmed Password");
+    private final Button button_Update = new Button("Send");
+    private final VerticalLayout layoutRow = new VerticalLayout();
+    private final VerticalLayout layoutColumn2 = new VerticalLayout();
 
     public ResetPasswordView() {
         getContent().setWidth("100%");

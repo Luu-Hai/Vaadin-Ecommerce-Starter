@@ -3,10 +3,8 @@ package com.lcaohoanq.views.employee;
 import com.lcaohoanq.constant.ApiConstant;
 import com.lcaohoanq.enums.UserRoleEnum;
 import com.lcaohoanq.views.MainLayout;
-import com.lcaohoanq.views.admin.UsersManagement;
 import com.lcaohoanq.views.base.LoginPage;
 import com.lcaohoanq.views.utils.ComponentUtils;
-import com.vaadin.flow.component.Composite;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.dialog.Dialog;
@@ -25,11 +23,11 @@ public class EmployeeMenuManagement extends LoginPage implements ComponentUtils 
 
     //create a button for show all users data, show all score data, click to do corresponding action\
 
-    private Button button_Show_All_Scores = new Button("Show All Scores");
-    private Button button_Show_Data_Grid = new Button("Show Data Grid");
-    private VerticalLayout layoutRow = new VerticalLayout();
-    private VerticalLayout layoutColumn2 = new VerticalLayout();
-    private H3 title = new H3();
+    private final Button button_Show_All_Scores = new Button("Show All Scores");
+    private final Button button_Show_Data_Grid = new Button("Show Data Grid");
+    private final VerticalLayout layoutRow = new VerticalLayout();
+    private final VerticalLayout layoutColumn2 = new VerticalLayout();
+    private final H3 title = new H3();
 
     public EmployeeMenuManagement() {
         super(() -> {
@@ -99,7 +97,8 @@ public class EmployeeMenuManagement extends LoginPage implements ComponentUtils 
         successDialog.open();
     }
 
-    private void handleCloseButton(UserRoleEnum userRole, Dialog successDialog) {
+    @Override
+    public void handleCloseButton(UserRoleEnum userRole, Dialog successDialog) {
         successDialog.close();
         switch (userRole) {
             case EMPLOYEE:

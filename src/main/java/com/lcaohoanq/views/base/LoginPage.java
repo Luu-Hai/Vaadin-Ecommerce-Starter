@@ -1,7 +1,10 @@
 package com.lcaohoanq.views.base;
 
+import com.lcaohoanq.enums.UserRoleEnum;
 import com.vaadin.flow.component.Composite;
 import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.dialog.Dialog;
+import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.login.LoginForm;
 import com.vaadin.flow.component.login.LoginI18n;
 import com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment;
@@ -18,7 +21,6 @@ public abstract class LoginPage extends Composite<VerticalLayout> {
 
     // Create Google and Facebook login buttons
     protected Button googleLoginButton;
-
     protected Button facebookLoginButton;
 
     public LoginPage(Supplier<Boolean> sessionCheck) {
@@ -29,12 +31,28 @@ public abstract class LoginPage extends Composite<VerticalLayout> {
         getContent().getStyle().set("flex-grow", "1");
         getContent().setJustifyContentMode(JustifyContentMode.CENTER);
         getContent().setAlignItems(Alignment.CENTER);
+
         initElement();
+        stylingElement();
         doAction();
     }
 
     public abstract void initElement();
-    public abstract void doAction();
-    public abstract void checkTestAccount(String email_phone, String password);
+    public void stylingElement(){
+        i18n.getForm().setUsername("Email or Phone Number");
+        i18n.getForm().setPassword("Password");
+        i18n.getForm().setSubmit("Log in");
+        i18n.getForm().setForgotPassword("Forgot your password?");
+        loginForm.setI18n(i18n);
 
+        layoutColumn2.setWidthFull();
+        layoutColumn2.setWidth("100%");
+        layoutColumn2.setMaxWidth("800px");
+        layoutColumn2.setHeight("min-content");
+        layoutColumn2.setJustifyContentMode(JustifyContentMode.CENTER);
+        layoutColumn2.setAlignItems(Alignment.CENTER);
+
+        layoutColumn2.getStyle().set("height", "80vh");
+    }
+    public abstract void doAction();
 }
