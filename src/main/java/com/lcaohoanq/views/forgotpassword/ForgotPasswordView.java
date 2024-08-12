@@ -3,7 +3,7 @@ package com.lcaohoanq.views.forgotpassword;
 import com.lcaohoanq.constant.ApiConstant;
 import com.lcaohoanq.models.User;
 import com.lcaohoanq.utils.ApiUtils;
-import com.lcaohoanq.utils.ValidateUtils;
+import com.lcaohoanq.utils.ValidationUtils;
 import com.lcaohoanq.views.MainLayout;
 import com.lcaohoanq.views.resetpassword.ResetPasswordView;
 import com.vaadin.flow.component.Composite;
@@ -29,7 +29,7 @@ import lombok.Setter;
 @Getter
 @Setter
 //Scope("prototype") //
-public class ForgotPasswordView extends Composite<VerticalLayout> {
+public class ForgotPasswordView extends Composite<VerticalLayout> implements ValidationUtils {
 
     private TextField textField_Email_Phone = new TextField("Email or Phone Number");
     private Button button_Send = new Button("Send");
@@ -82,7 +82,7 @@ public class ForgotPasswordView extends Composite<VerticalLayout> {
             } else {
                 String url = ApiConstant.BASE_URL_BE + ApiConstant.API_PATCH + "/forgotPassword?email_phone=" + textField_Email_Phone.getValue();
 
-                if(ValidateUtils.checkTypeAccount(textField_Email_Phone.getValue())){
+                if(checkTypeAccount(textField_Email_Phone.getValue())){
                     user.setEmail(textField_Email_Phone.getValue());
                 } else{
                     user.setPhone(textField_Email_Phone.getValue());

@@ -1,53 +1,30 @@
 package com.lcaohoanq.views.user.register;
 
 import com.lcaohoanq.constant.ApiConstant;
-import com.lcaohoanq.constant.Regex;
 import com.lcaohoanq.enums.UserRoleEnum;
 import com.lcaohoanq.enums.UserStatusEnum;
 import com.lcaohoanq.models.Role;
 import com.lcaohoanq.models.Status;
-import com.lcaohoanq.schemas.RegisterRequest;
 import com.lcaohoanq.utils.ApiUtils;
 import com.lcaohoanq.utils.PayloadUtils;
 import com.lcaohoanq.utils.StringUtils;
-import com.lcaohoanq.utils.ValidateUtils;
 import com.lcaohoanq.utils.ValidationUtils;
 import com.lcaohoanq.views.MainLayout;
 import com.lcaohoanq.schemas.UserRegisterRequest;
 import com.lcaohoanq.views.base.RegisterPage;
 import com.lcaohoanq.views.utils.ComponentUtils;
-import com.vaadin.flow.component.Composite;
-import com.vaadin.flow.component.UI;
-import com.vaadin.flow.component.button.Button;
-import com.vaadin.flow.component.button.ButtonVariant;
-import com.vaadin.flow.component.checkbox.Checkbox;
-import com.vaadin.flow.component.combobox.ComboBox;
-import com.vaadin.flow.component.datepicker.DatePicker;
 import com.vaadin.flow.component.dialog.Dialog;
-import com.vaadin.flow.component.formlayout.FormLayout;
-import com.vaadin.flow.component.html.Anchor;
 import com.vaadin.flow.component.html.H3;
-import com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment;
-import com.vaadin.flow.component.orderedlayout.FlexComponent.JustifyContentMode;
-import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
-import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.select.Select;
-import com.vaadin.flow.component.textfield.PasswordField;
-import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
-import com.vaadin.flow.server.VaadinSession;
-import com.vaadin.flow.theme.lumo.LumoUtility.Gap;
 import java.net.http.HttpResponse;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -125,7 +102,7 @@ public class UsersRegisterView extends RegisterPage<UserRegisterRequest> impleme
         user.setId(-1L);
         user.setFirstName(textField_First_Name.getValue());
         user.setLastName(textField_Last_Name.getValue());
-        if (ValidateUtils.checkTypeAccount(email_phone)) {
+        if (checkTypeAccount(email_phone)) {
             user.setEmail(email_phone);
             user.setPhone(null);
         } else {

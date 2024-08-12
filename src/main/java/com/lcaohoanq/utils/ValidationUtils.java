@@ -25,7 +25,7 @@ public interface ValidationUtils {
                     page.getTextField_Email_Phone().setErrorMessage("Email or Phone Number is required");
                     page.getTextField_Email_Phone().setInvalid(true);
                 } else {
-                    if (ValidateUtils.checkTypeAccount(emailPhone)) {
+                    if (checkTypeAccount(emailPhone)) {
                         if (!emailPhone.matches(Regex.USER_EMAIL)) {
                             page.getTextField_Email_Phone().setErrorMessage("Invalid email format");
                             page.getTextField_Email_Phone().setInvalid(true);
@@ -93,6 +93,10 @@ public interface ValidationUtils {
                 page.getSelect_G().setInvalid(false);
                 break;
         }
+    }
+
+    default boolean checkTypeAccount(String email_phone) {
+        return email_phone.contains("@");
     }
 
 }
