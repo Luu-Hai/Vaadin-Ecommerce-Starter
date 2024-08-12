@@ -119,11 +119,9 @@ public class UsersLoginView extends LoginPage implements ComponentUtils {
                 }
 
             } catch (IOException e) {
-                System.out.println("Error 1: " + e.getMessage());
+                showFailDialog("Internal Server Error!", "Close");
             } catch (InterruptedException e) {
                 System.out.println("Error 2: " + e.getMessage());
-            } catch (InternalServerException e){
-                System.out.println("Error 3: " + e.getMessage());
             }
         });
 

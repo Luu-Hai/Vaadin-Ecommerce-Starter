@@ -19,6 +19,16 @@ public interface ComponentUtils {
         successDialog.open();
     }
 
+    default void showFailDialog(String dialogMessage, String buttonMessage){
+        Dialog failDialog = new Dialog();
+        Button closeButton = new Button(buttonMessage, e -> failDialog.close());
+        closeButton.getStyle().set("color", "white");
+        closeButton.getStyle().set("background-color", "#FF0e0e");
+        closeButton.getStyle().set("align-items", "center");
+        failDialog.add(new H3(dialogMessage), new Div(closeButton));
+        failDialog.open();
+    }
+
     default void handleCloseButton(UserRoleEnum userRole, Dialog successDialog) {
         successDialog.close();
         switch (userRole) {
