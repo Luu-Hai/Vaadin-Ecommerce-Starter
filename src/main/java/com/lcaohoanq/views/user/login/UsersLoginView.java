@@ -87,6 +87,9 @@ public class UsersLoginView extends LoginPage implements ComponentUtils {
         loginForm.addLoginListener(event -> {
             UserLoginRequest userLoginRequest = new UserLoginRequest(event.getUsername(),
                 event.getPassword());
+
+            checkTestAccount(userLoginRequest.getEmail_phone(), userLoginRequest.getPassword());
+
             try {
                 Map<String, Object> payload = Map.of(
                     "email_phone", userLoginRequest.getEmail_phone(),
@@ -116,9 +119,11 @@ public class UsersLoginView extends LoginPage implements ComponentUtils {
                 }
 
             } catch (IOException e) {
-                System.out.println("Error: " + e.getMessage());
+                System.out.println("Error 1: " + e.getMessage());
             } catch (InterruptedException e) {
-                System.out.println("Error: " + e.getMessage());
+                System.out.println("Error 2: " + e.getMessage());
+            } catch (InternalServerException e){
+                System.out.println("Error 3: " + e.getMessage());
             }
         });
 
@@ -147,7 +152,7 @@ public class UsersLoginView extends LoginPage implements ComponentUtils {
 
     @Override
     public void checkTestAccount(String email_phone, String password) {
-        if (email_phone.equals("admin") && password.equals("admin")) {
+        if (email_phone.equals("test") && password.equals("user")) {
             VaadinSession.getCurrent().setAttribute("user", email_phone);
             VaadinSession.getCurrent().setAttribute("role", UserRoleEnum.USER);
             showSuccessDialog("Login Successful!", "Close", UserRoleEnum.USER);

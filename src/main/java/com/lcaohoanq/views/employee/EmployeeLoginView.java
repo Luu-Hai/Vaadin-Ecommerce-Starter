@@ -97,7 +97,7 @@ public class EmployeeLoginView extends LoginPage implements ComponentUtils {
 
     @Override
     public void checkTestAccount(String email_phone, String password) {
-        if (email_phone.equals("admin") && password.equals("admin")) {
+        if (email_phone.equals("test") && password.equals("employee")) {
             VaadinSession.getCurrent().setAttribute("user", email_phone);
             VaadinSession.getCurrent().setAttribute("role", UserRoleEnum.EMPLOYEE);
             showSuccessDialog("Login Successful!", "Close", UserRoleEnum.EMPLOYEE);
