@@ -14,6 +14,7 @@ import com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment;
 import com.vaadin.flow.component.orderedlayout.FlexComponent.JustifyContentMode;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
+import com.vaadin.flow.router.RouteAlias;
 import com.vaadin.flow.server.VaadinSession;
 import java.io.IOException;
 import java.net.http.HttpResponse;
@@ -22,6 +23,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @PageTitle("Employee Login")
 @Route(value = "employee")
+@RouteAlias(value = "employee/login") // Alias for /employee/login
 @Slf4j
 public class EmployeeLoginView extends LoginPage implements ComponentUtils {
 
@@ -32,6 +34,12 @@ public class EmployeeLoginView extends LoginPage implements ComponentUtils {
                 UI.getCurrent().navigate(GameMenuView.class);
                 return true;
             }
+
+            if (UI.getCurrent().getInternals().getActiveViewLocation().getPath().equals("employee/login")) {
+                UI.getCurrent().navigate("employee");
+                return true;
+            }
+
             return false;
         });
     }
