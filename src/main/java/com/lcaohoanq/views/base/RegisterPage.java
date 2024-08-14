@@ -40,8 +40,8 @@ public abstract class RegisterPage<T extends RegisterRequest> extends Composite<
     protected VerticalLayout buttonLayout = new VerticalLayout();
     protected HorizontalLayout termAndPolicy = new HorizontalLayout();
     protected VerticalLayout layoutColumn2 = new VerticalLayout();
-    protected Anchor link_Terms = new Anchor("http://localhost:3000/terms-of-service", "Terms of Service");
-    protected Anchor link_Policy = new Anchor("http://localhost:3000/privacy-policy", "Privacy Policy");
+    protected Anchor link_Terms = new Anchor("http://localhost:8082/terms-of-service", "Terms of Service");
+    protected Anchor link_Policy = new Anchor("http://localhost:8082/privacy-policy", "Privacy Policy");
     protected Checkbox checkbox = new Checkbox();
     protected Button button_Save = new Button("Save");
 

@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: spring-snake-game-fe
+  name: Vaadin-Starter
   namespace: default
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: spring-snake-game-fe
+      app: Vaadin-Starter
   template:
     metadata:
       labels:
-        app: spring-snake-game-fe
+        app: Vaadin-Starter
     spec:
       containers:
-        - name: spring-snake-game-fe
-          image: spring-snake-game-fe:latest
+        - name: Vaadin-Starter
+          image: Vaadin-Starter:latest
           imagePullPolicy: Never
           ports:
             - containerPort: 8080
@@ -28,10 +28,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: spring-snake-game-fe-balancer
+  name: Vaadin-Starter-balancer
 spec:
   selector:
-    app: spring-snake-game-fe
+    app: Vaadin-Starter
   ports:
     - protocol: TCP
       port: 8000 # The port to expose to the outside

@@ -1,0 +1,358 @@
+{
+	"info": {
+		"_postman_id": "9c40558e-632e-4e79-929f-6dd1c726cdc4",
+		"name": "spring-boot-snake-game",
+		"description": "[https://github.com/lcaohoanq/Spring-Snake-Game](https://github.com/lcaohoanq/Spring-Snake-Game)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30118040"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}{{api_path}}/users"
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email_phone\": \"hoangdz1604@gmail.com\",\r\n    \"password\": \"Iloveyou123!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}{{api_path}}/users/login"
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 12,\r\n    \"email\": \"tester@gmail.com\",\r\n    \"phone\": null,\r\n    \"firstName\": \"Ky Vy\",\r\n    \"lastName\": \"Nguyen\",\r\n    \"password\": \"Iloveyou123!\",\r\n    \"address\": \"Ho chi Minh City\",\r\n    \"birthday\": \"2004-16-04\",\r\n    \"gender\": \"MALE\",\r\n    \"role\": {\r\n        \"id\": 0,\r\n        \"roleName\": \"USER\"\r\n    },\r\n    \"status\": {\r\n        \"id\" : 0,\r\n        \"statusName\": \"UNVERIFIED\"\r\n    },\r\n    \"created_at\": \"2023-08-01T10:00:00\",\r\n    \"updated_at\": \"2023-08-01T10:00:00\",\r\n    \"avatar_url\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}{{api_path}}/users/register"
+					},
+					"response": []
+				},
+				{
+					"name": "forgotPassword",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}{{api_path}}/forgotPassword?email_phone=hoangdz1604@gmail.com",
+							"host": [
+								"{{base_url}}{{api_path}}"
+							],
+							"path": [
+								"forgotPassword"
+							],
+							"query": [
+								{
+									"key": "email_phone",
+									"value": "hoangdz1604@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "udpatePassword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"identifier\": \"hoangdz1604@gmail.com\",\r\n    \"newPassword\": \"Luucaohoang1604^^\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}{{api_path}}/users/updatePassword"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "mail",
+			"item": [
+				{
+					"name": "send-otp",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}{{api_path}}/mail/send-otp?toEmail=hoangdz160@gmail.com",
+							"host": [
+								"{{base_url}}{{api_path}}"
+							],
+							"path": [
+								"mail",
+								"send-otp"
+							],
+							"query": [
+								{
+									"key": "toEmail",
+									"value": "hoangdz160@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "block",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}{{api_path}}/mail/block?toEmail=hoangdz1604@gmail.com",
+							"host": [
+								"{{base_url}}{{api_path}}"
+							],
+							"path": [
+								"mail",
+								"block"
+							],
+							"query": [
+								{
+									"key": "toEmail",
+									"value": "hoangdz1604@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forgot-password",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}{{api_path}}/mail/forgot-password?toEmail=hoangdz1604@gmail.com",
+							"host": [
+								"{{base_url}}{{api_path}}"
+							],
+							"path": [
+								"mail",
+								"forgot-password"
+							],
+							"query": [
+								{
+									"key": "toEmail",
+									"value": "hoangdz1604@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "score",
+			"item": [
+				{
+					"name": "scores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}{{api_path}}/scores"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "phone",
+			"item": [
+				{
+					"name": "send-otp",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}{{api_path}}/phone/send-otp?toPhone=0987654322",
+							"host": [
+								"{{base_url}}{{api_path}}"
+							],
+							"path": [
+								"phone",
+								"send-otp"
+							],
+							"query": [
+								{
+									"key": "toPhone",
+									"value": "0987654322"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "otp",
+			"item": [
+				{
+					"name": "mail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}{{api_path}}/otp/send?type=mail&recipient=hoangdz1604@gmail.com",
+							"host": [
+								"{{base_url}}{{api_path}}"
+							],
+							"path": [
+								"otp",
+								"send"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "mail"
+								},
+								{
+									"key": "recipient",
+									"value": "hoangdz1604@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "phone",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}{{api_path}}/otp/send?type=phone&recipient=0987654322",
+							"host": [
+								"{{base_url}}{{api_path}}"
+							],
+							"path": [
+								"otp",
+								"send"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "phone"
+								},
+								{
+									"key": "recipient",
+									"value": "0987654322"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "swagger-api",
+			"item": [
+				{
+					"name": "_api",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/swagger-ui/index.html"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "3rd-party",
+			"item": [
+				{
+					"name": "login-google",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": -2,\r\n    \"email\": \"test2@gmail.com\",\r\n    \"phone\": null,\r\n    \"firstName\": \"Ky Vy\",\r\n    \"lastName\": \"Nguyen\",\r\n    \"password\": \"\",\r\n    \"address\": \"\",\r\n    \"birthday\": \"\",\r\n    \"gender\": \"MALE\",\r\n    \"role\": {\r\n        \"id\": 0,\r\n        \"roleName\": \"USER\"\r\n    },\r\n    \"status\": {\r\n        \"id\" : 0,\r\n        \"statusName\": \"VERIFIED\"\r\n    },\r\n    \"created_at\": \"2023-08-01T10:00:00\",\r\n    \"updated_at\": \"2023-08-01T10:00:00\",\r\n    \"avatar_url\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}{{api_path}}/users/oauth2/callback/google"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "home",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{base_url}}{{api_path}}"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8081",
+			"type": "string"
+		}
+	]
+}

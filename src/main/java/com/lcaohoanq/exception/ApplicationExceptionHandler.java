@@ -16,7 +16,7 @@ public class ApplicationExceptionHandler {
     public void handleInternalServerError(InternalServerException e) {
         System.out.println(e.getMessage());
         VaadinSession.getCurrent().setAttribute("errors", e.getMessage());
-        UI.getCurrent().getPage().setLocation("http://localhost:3000/errors");
+        UI.getCurrent().getPage().setLocation("http://localhost:8082/errors");
     }
 
 }

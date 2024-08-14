@@ -7,6 +7,8 @@ import com.vaadin.flow.theme.material.Material;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.scheduling.annotation.EnableAsync;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 /**
  * The entry point of the Spring Boot application.
@@ -16,6 +18,10 @@ import org.springframework.context.annotation.ComponentScan;
  *
  */
 @SpringBootApplication
+@EnableAsync
+@EnableScheduling
+@ComponentScan(basePackages = {"com.lcaohoanq",
+    "com.lcaohoanq.listener"})
 @Theme(value = "spring-snake-game-fe", variant = Lumo.LIGHT)
 public class Application implements AppShellConfigurator {
 

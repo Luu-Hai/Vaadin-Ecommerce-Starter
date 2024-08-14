@@ -97,7 +97,7 @@ public class ResetPasswordView extends Composite<VerticalLayout> {
                             Notification.show("Password reset successfully");
                             VaadinSession.getCurrent().setAttribute("userRequiredForgotPassword", null);
                             button_Update.setEnabled(false);
-                            UI.getCurrent().getPage().setLocation("http://localhost:3000/users/login");
+                            UI.getCurrent().getPage().setLocation("http://localhost:8082/users/login");
                             break;
                         case 400:
                             Notification.show("Password reset failed");

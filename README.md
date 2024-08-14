@@ -1,16 +1,8 @@
-# Spring-Snake-Game-FE
-
-![image](https://github.com/user-attachments/assets/36ceec5b-2e88-402b-8395-5e8688faf524)
-
-![image](https://github.com/user-attachments/assets/d089f97d-115e-4fd7-92c7-b0f3e5f09273)
-
-![image](https://github.com/user-attachments/assets/68404892-670d-473c-b621-15a8892de98c)
-
 ## Running the application
 
 The project is a standard Maven project. To run it from the command line,
 type `mvnw` (Windows), or `./mvnw` (Mac & Linux), then open
-http://localhost:8080 in your browser.
+http://localhost:8081 in your browser.
 
 You can also import the project to your IDE of choice as you would with any
 Maven project. Read more on [how to import Vaadin projects to different IDEs](https://vaadin.com/docs/latest/guide/step-by-step/importing) (Eclipse, IntelliJ IDEA, NetBeans, and VS Code).

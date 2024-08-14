@@ -141,7 +141,7 @@ public class GoogleOAuthCallback extends Composite<Div> {
                     VaadinSession.getCurrent().setAttribute("user", email);
                     VaadinSession.getCurrent().setAttribute("role", UserRoleEnum.USER);
                     UI.getCurrent().getPage().setLocation(
-                        "http://localhost:3000/menu"); // Redirect to the home page after successful login
+                        "http://localhost:8082/menu"); // Redirect to the home page after successful login
                     break;
                 case 400:
                     dialog = new Dialog();
@@ -156,11 +156,11 @@ public class GoogleOAuthCallback extends Composite<Div> {
             }
         } catch (Exception e) {
             if (e instanceof IOException) {
-                UI.getCurrent().getPage().setLocation("http://localhost:3000/errors");
+                UI.getCurrent().getPage().setLocation("http://localhost:8082/errors");
                 System.out.println("IOException: " + e.getMessage());
             }
             if (e instanceof InterruptedException) {
-                UI.getCurrent().getPage().setLocation("http://localhost:3000/errors");
+                UI.getCurrent().getPage().setLocation("http://localhost:8082/errors");
                 System.out.println("InterruptedException: " + e.getMessage());
             }
         }

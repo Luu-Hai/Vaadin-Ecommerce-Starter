@@ -1,0 +1,13 @@
+services:
+  db:
+    image: lcaohoanq/sample-mysql-db:2.0
+    container_name: vaadin-ecommerce-starter
+    ports:
+      - "3310:3306"
+    env_file:
+      - .env
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:

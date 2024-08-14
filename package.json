@@ -43,6 +43,10 @@
     "workbox-core": "7.1.0",
     "workbox-precaching": "7.1.0"
   },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
   "vaadin": {
     "dependencies": {
       "@polymer/polymer": "3.5.1",
