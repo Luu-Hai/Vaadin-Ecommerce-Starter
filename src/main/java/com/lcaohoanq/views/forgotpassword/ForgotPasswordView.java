@@ -80,7 +80,7 @@ public class ForgotPasswordView extends Composite<VerticalLayout> implements Val
             if (textField_Email_Phone.isEmpty()) {
                 Notification.show("Email or Phone Number is required");
             } else {
-                String url = ApiConstant.BASE_URL_BE + ApiConstant.API_PATCH + "/forgotPassword?email_phone=" + textField_Email_Phone.getValue();
+                String url = ApiConstant.INSTANCE.getBASE_URL_BE() +  "/forgotPassword?email_phone=" + textField_Email_Phone.getValue();
 
                 if(checkTypeAccount(textField_Email_Phone.getValue())){
                     user.setEmail(textField_Email_Phone.getValue());

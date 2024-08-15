@@ -61,7 +61,7 @@ public class AdminRegisterView extends RegisterPage<AdminRegisterRequest> implem
                 if (isFormValid()) {
                     try {
                         HttpResponse<String> response = ApiUtils.postRequest(
-                            ApiConstant.BASE_URL_BE + ApiConstant.API_PATCH + "/admin/register",
+                            ApiConstant.INSTANCE.getBASE_URL_BE()+  "/admin/register",
                             fetchData(new AdminRegisterRequest(), new HashMap<>()));
                         Dialog dialog;
                         switch (response.statusCode()) {

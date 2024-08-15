@@ -5,7 +5,7 @@ import com.lcaohoanq.dto.response.ForgotPasswordResponse;
 import com.lcaohoanq.entity.User;
 import com.lcaohoanq.enums.EmailCategoriesEnum;
 import com.lcaohoanq.repository.UserRepository;
-import com.lcaohoanq.service.MailSenderService;
+import com.lcaohoanq.services.MailSenderService;
 import com.lcaohoanq.utils.OTPUtils;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;

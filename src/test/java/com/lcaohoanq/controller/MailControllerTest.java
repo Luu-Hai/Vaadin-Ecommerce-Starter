@@ -55,7 +55,7 @@ public class MailControllerTest {
 
     @Test
     void testSendForgotPassword() throws Exception {
-        mockMvc.perform(get(ApiConstant.BASE_URL_BE + ApiConstant.API_PATCH + apiForgotPassword)
+        mockMvc.perform(get(ApiConstant.INSTANCE.getBASE_URL_BE() +  apiForgotPassword)
                 .param("type", "mail")
                 .param("recipient", "hoangdz1604@gmail.com"))
             .andExpect(status().isOk())
@@ -64,7 +64,7 @@ public class MailControllerTest {
 
     @Test
     void testSendBlockAccount() throws Exception {
-        mockMvc.perform(get(ApiConstant.BASE_URL_BE + ApiConstant.API_PATCH + apiBlockAccount)
+        mockMvc.perform(get(ApiConstant.INSTANCE.getBASE_URL_BE() +  apiBlockAccount)
                 .param("type", "mail")
                 .param("recipient", "hoangdz1604@gmail.com"))
             .andExpect(status().isOk())
@@ -73,7 +73,7 @@ public class MailControllerTest {
 
     @Test
     void testSendOtp() throws Exception {
-        mockMvc.perform(get(ApiConstant.BASE_URL_BE + ApiConstant.API_PATCH + apiSentOtp)
+        mockMvc.perform(get(ApiConstant.INSTANCE.getBASE_URL_BE() +  apiSentOtp)
                 .param("type", "mail")
                 .param("recipient", "hoangdz1604@gmail.com"))
             .andExpect(status().isOk())
@@ -82,7 +82,7 @@ public class MailControllerTest {
 
     @Test
     void testSendOtpToAccountNotExist() throws Exception {
-        mockMvc.perform(get(ApiConstant.BASE_URL_BE + ApiConstant.API_PATCH + apiSentOtp)
+        mockMvc.perform(get(ApiConstant.INSTANCE.getBASE_URL_BE() +  apiSentOtp)
                 .param("type", "mail")
                 .param("recipient", "abc@gmail.com"))
             .andExpect(status().isNotFound())
@@ -91,7 +91,7 @@ public class MailControllerTest {
 
     @Test
     void testForgotPasswordToAccountNotExist() throws Exception {
-        mockMvc.perform(get(ApiConstant.BASE_URL_BE + ApiConstant.API_PATCH + apiForgotPassword)
+        mockMvc.perform(get(ApiConstant.INSTANCE.getBASE_URL_BE() +  apiForgotPassword)
                 .param("type", "mail")
                 .param("recipient", "abc@gmail.com"))
             .andExpect(status().isNotFound())
@@ -100,7 +100,7 @@ public class MailControllerTest {
 
     @Test
     void testSendBlockAccountToAccountNotExist() throws Exception {
-        mockMvc.perform(get(ApiConstant.BASE_URL_BE + ApiConstant.API_PATCH + apiBlockAccount)
+        mockMvc.perform(get(ApiConstant.INSTANCE.getBASE_URL_BE() +  apiBlockAccount)
                 .param("type", "mail")
                 .param("recipient", "abc@gmail.com"))
             .andExpect(status().isNotFound())
@@ -109,7 +109,7 @@ public class MailControllerTest {
 
 //    @Test
 //    void testSendForgotPasswordBanned() throws Exception {
-//        mockMvc.perform(get(ApiConstant.BASE_URL_BE + ApiConstant.API_PATCH + apiForgotPassword)
+//        mockMvc.perform(get(ApiConstant.INSTANCE.getBASE_URL_BE() +  apiForgotPassword)
 //                .param("type", "mail")
 //                .param("recipient", "hoangdz1604@gmail.com"))
 //            .andExpect(status().isOk())
@@ -118,7 +118,7 @@ public class MailControllerTest {
 //
 //    @Test
 //    void testSendBlockAccountBanned() throws Exception {
-//        mockMvc.perform(get(ApiConstant.BASE_URL_BE + ApiConstant.API_PATCH + apiBlockAccount)
+//        mockMvc.perform(get(ApiConstant.INSTANCE.getBASE_URL_BE() +  apiBlockAccount)
 //                .param("type", "mail")
 //                .param("recipient", "hoangdz1604@gmail.com"))
 //            .andExpect(status().isOk())
@@ -127,7 +127,7 @@ public class MailControllerTest {
 //
 //    @Test
 //    void testSendOtpBanned() throws Exception {
-//        mockMvc.perform(get(ApiConstant.BASE_URL_BE + ApiConstant.API_PATCH + apiSentOtp)
+//        mockMvc.perform(get(ApiConstant.INSTANCE.getBASE_URL_BE() +  apiSentOtp)
 //                .param("type", "mail")
 //                .param("recipient", "hoangdz1604@gmail.com"))
 //            .andExpect(status().isOk())
@@ -136,7 +136,7 @@ public class MailControllerTest {
 //
 //    @Test
 //    void testSendOtpVerified() throws Exception {
-//        mockMvc.perform(get(ApiConstant.BASE_URL_BE + ApiConstant.API_PATCH + apiSentOtp)
+//        mockMvc.perform(get(ApiConstant.INSTANCE.getBASE_URL_BE() +  apiSentOtp)
 //                .param("type", "mail")
 //                .param("recipient", "hoangdz1604@gmail.com"))
 //            .andExpect(status().isOk())

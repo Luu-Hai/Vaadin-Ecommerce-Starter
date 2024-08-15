@@ -61,7 +61,7 @@ public class EmployeeRegisterView extends RegisterPage<EmployeeRegisterRequest> 
                 if (isFormValid()) {
                     try {
                         HttpResponse<String> response = ApiUtils.postRequest(
-                            ApiConstant.BASE_URL_BE + ApiConstant.API_PATCH + "employee/register", fetchData(new EmployeeRegisterRequest(), new HashMap<>()));
+                            ApiConstant.INSTANCE.getBASE_URL_BE() +  "employee/register", fetchData(new EmployeeRegisterRequest(), new HashMap<>()));
                         Dialog dialog;
                         switch (response.statusCode()) {
                             case 200:

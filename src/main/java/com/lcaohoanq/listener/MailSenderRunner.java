@@ -1,6 +1,6 @@
 package com.lcaohoanq.listener;
 
-import com.lcaohoanq.service.MailSenderService;
+import com.lcaohoanq.services.MailSenderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;

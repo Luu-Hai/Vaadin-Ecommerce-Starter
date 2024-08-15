@@ -73,7 +73,7 @@ public class EmployeeLoginView extends LoginPage implements ComponentUtils {
                     "password", userLoginRequest.getPassword());
 
                 HttpResponse<String> response = ApiUtils.postRequest(
-                    ApiConstant.BASE_URL_BE + ApiConstant.API_PATCH + "/employee/login", payload);
+                    ApiConstant.INSTANCE.getBASE_URL_BE() +  "/employee/login", payload);
 
                 // Handle the response
                 switch (response.statusCode()) {

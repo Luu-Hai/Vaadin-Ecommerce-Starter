@@ -33,19 +33,19 @@ public interface ComponentUtils {
         successDialog.close();
         switch (userRole) {
             case ADMIN:
-                UI.getCurrent().getPage().setLocation(ApiConstant.BASE_URL_FE + "/admin/menu");
+                UI.getCurrent().getPage().setLocation(ApiConstant.INSTANCE.getBASE_URL_FE() + "/admin/menu");
                 break;
             case EMPLOYEE:
-                UI.getCurrent().getPage().setLocation(ApiConstant.BASE_URL_FE + "/employee/menu");
+                UI.getCurrent().getPage().setLocation(ApiConstant.INSTANCE.getBASE_URL_FE() + "/employee/menu");
                 break;
             case USER:
-                UI.getCurrent().getPage().setLocation(ApiConstant.BASE_URL_FE + "/menu");
+                UI.getCurrent().getPage().setLocation(ApiConstant.INSTANCE.getBASE_URL_FE() + "/menu");
                 break;
             case USER_GOLD:
-                UI.getCurrent().getPage().setLocation(ApiConstant.BASE_URL_FE + "/menu/gold");
+                UI.getCurrent().getPage().setLocation(ApiConstant.INSTANCE.getBASE_URL_FE() + "/menu/gold");
                 break;
             case USER_PREMIUM:
-                UI.getCurrent().getPage().setLocation(ApiConstant.BASE_URL_FE + "/menu/premium");
+                UI.getCurrent().getPage().setLocation(ApiConstant.INSTANCE.getBASE_URL_FE() + "/menu/premium");
             default:
                 break;
         }

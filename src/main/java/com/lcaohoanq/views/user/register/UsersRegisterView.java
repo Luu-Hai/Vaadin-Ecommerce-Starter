@@ -63,7 +63,7 @@ public class UsersRegisterView extends RegisterPage<UserRegisterRequest> impleme
                 if (isFormValid()) {
                     try {
                         HttpResponse<String> response = ApiUtils.postRequest(
-                            ApiConstant.BASE_URL_BE + ApiConstant.API_PATCH + "/users/register", fetchData(new UserRegisterRequest(), new HashMap<>()));
+                            ApiConstant.INSTANCE.getBASE_URL_BE() +  "/users/register", fetchData(new UserRegisterRequest(), new HashMap<>()));
                         Dialog dialog;
                         switch (response.statusCode()) {
                             case 200:

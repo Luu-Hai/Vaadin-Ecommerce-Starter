@@ -29,7 +29,7 @@ public class MenuManagement extends Composite<VerticalLayout> {
 
     public MenuManagement() {
         if(UI.getCurrent().getSession().getAttribute("user") == null){
-            UI.getCurrent().getPage().setLocation(ApiConstant.BASE_URL_FE + "users/login");
+            UI.getCurrent().getPage().setLocation(ApiConstant.INSTANCE.getBASE_URL_FE() + "users/login");
             return;
         }
 

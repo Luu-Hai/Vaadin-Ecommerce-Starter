@@ -66,7 +66,7 @@ public class AdminLoginView extends LoginPage implements ComponentUtils {
                     "password", userLoginRequest.getPassword());
 
                 HttpResponse<String> response = ApiUtils.postRequest(
-                    ApiConstant.BASE_URL_BE + ApiConstant.API_PATCH + "/admin/login", payload);
+                    ApiConstant.INSTANCE.getBASE_URL_BE() +  "/admin/login", payload);
 
                 // Handle the response
                 switch (response.statusCode()) {

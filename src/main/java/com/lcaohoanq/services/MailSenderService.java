@@ -1,4 +1,4 @@
-package com.lcaohoanq.service;
+package com.lcaohoanq.services;
 
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;

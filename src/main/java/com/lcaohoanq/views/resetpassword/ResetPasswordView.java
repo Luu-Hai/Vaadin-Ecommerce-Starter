@@ -80,7 +80,7 @@ public class ResetPasswordView extends Composite<VerticalLayout> {
                 User user = (User) VaadinSession.getCurrent().getAttribute("userRequiredForgotPassword");
                 String data = user.getEmail() != null ? user.getEmail() : user.getPhone();
 
-                String url = ApiConstant.BASE_URL_BE + ApiConstant.API_PATCH + "/users/updatePassword";
+                String url = ApiConstant.INSTANCE.getBASE_URL_BE() +  "/users/updatePassword";
 
                 Map<String, Object> payload = Map.of(
                     "identifier", data,

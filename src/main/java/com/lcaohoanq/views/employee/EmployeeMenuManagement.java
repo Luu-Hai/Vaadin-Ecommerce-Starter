@@ -31,7 +31,7 @@ public class EmployeeMenuManagement extends LoginPage implements ComponentUtils 
         super(() -> {
             // Check if the user is already logged in
             if (UI.getCurrent().getSession().getAttribute("user") == null) {
-                UI.getCurrent().getPage().setLocation(ApiConstant.BASE_URL_FE + "users/login");
+                UI.getCurrent().getPage().setLocation(ApiConstant.INSTANCE.getBASE_URL_FE() + "users/login");
                 return true;
             }
             return false;

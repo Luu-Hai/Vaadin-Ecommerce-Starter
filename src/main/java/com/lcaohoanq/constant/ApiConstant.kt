@@ -1,7 +1,8 @@
 package com.lcaohoanq.constant
 
+import com.lcaohoanq.utils.EnvUtil
+
 object ApiConstant {
-    const val BASE_URL_FE: String = "http://localhost:8082"
-    const val BASE_URL_BE: String = "http://localhost:8082"
-    const val API_PATCH: String = "/api/v1"
+    val BASE_URL_FE: String = EnvUtil.get("DEVELOPMENT_FRONTEND_URL") ?: "http://localhost:8082"
+    val BASE_URL_BE: String = EnvUtil.get("DEVELOPMENT_BACKEND_URL") ?: "http://localhost:8082/api/v1"
 }
